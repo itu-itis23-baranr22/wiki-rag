@@ -214,13 +214,6 @@ In the CLI, the following slash commands work:
 - `/reset`  – clear chat history (does not delete the index)
 - `/quit`   – exit
 
----
-
-## Demo Video
-
-A 5-minute walkthrough is here: **<add Loom / unlisted YouTube link before submitting>**
-
----
 
 ## License
 

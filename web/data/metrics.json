@@ -1,0 +1,593 @@
+{
+ "speed": {
+  "questions": 12,
+  "baseline": {
+   "search_s": 2.175,
+   "first_word_s": 10.758,
+   "total_s": 12.369
+  },
+  "current": {
+   "search_s": 0.044,
+   "first_word_s": 5.981,
+   "total_s": 8.749
+  },
+  "note": "Medians with each version running alone and the models already loaded."
+ },
+ "manual_review": {
+  "answers_read": 50,
+  "pattern_score_correct": 50,
+  "wrong_fact": 1,
+  "turkish_answers": 8,
+  "turkish_mixed_language": 4,
+  "turkish_confused": 1
+ },
+ "date": "2026-11-06",
+ "questions": 112,
+ "passages": 3504,
+ "model": "llama3.2:3b",
+ "embed_model": "nomic-embed-text",
+ "commands": [
+  "python -m src.ingest",
+  "python -m eval.run_eval --split dev --answers --label final-dev",
+  "python -m eval.run_eval --split test --answers --label final-test",
+  "python -m eval.publish"
+ ],
+ "splits": {
+  "test": {
+   "baseline": {
+    "overall": {
+     "questions": 56,
+     "retrieval_success": 0.76,
+     "entity_recall": 0.84,
+     "hit_at_1": 0.72,
+     "mrr": 0.7675,
+     "answer_correct": 0.78,
+     "false_refusal": 0.16,
+     "refusal_correct": 1.0,
+     "numbers_grounded": 0.8571428571428571,
+     "cited_answers": 0.0,
+     "median_latency_s": 17.8,
+     "answer_rate": 0.78
+    },
+    "categories": {
+     "anonymous": {
+      "questions": 15,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 0.9333333333333333,
+      "mrr": 0.9666666666666667,
+      "answer_correct": 0.8666666666666667,
+      "false_refusal": 0.13333333333333333,
+      "numbers_grounded": 0.8888888888888888,
+      "cited_answers": 0.0,
+      "median_latency_s": 17.8,
+      "answer_rate": 0.8666666666666667
+     },
+     "named": {
+      "questions": 9,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 17.8,
+      "answer_rate": 1.0
+     },
+     "list": {
+      "questions": 6,
+      "retrieval_success": 0.6666666666666666,
+      "entity_recall": 0.6666666666666666,
+      "hit_at_1": 0.3333333333333333,
+      "mrr": 0.4444444444444444,
+      "answer_correct": 0.5,
+      "false_refusal": 0.3333333333333333,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 10.2,
+      "answer_rate": 0.5
+     },
+     "typo": {
+      "questions": 4,
+      "retrieval_success": 0.75,
+      "entity_recall": 0.75,
+      "hit_at_1": 0.75,
+      "mrr": 0.75,
+      "answer_correct": 0.5,
+      "false_refusal": 0.25,
+      "cited_answers": 0.0,
+      "median_latency_s": 11.2,
+      "answer_rate": 0.5
+     },
+     "ambiguous": {
+      "questions": 3,
+      "retrieval_success": 0.3333333333333333,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 21.4,
+      "answer_rate": 1.0
+     },
+     "compare": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 0.6666666666666666,
+      "cited_answers": 0.0,
+      "median_latency_s": 32.3,
+      "answer_rate": 1.0
+     },
+     "turkish": {
+      "questions": 7,
+      "retrieval_success": 0.42857142857142855,
+      "entity_recall": 0.5714285714285714,
+      "hit_at_1": 0.2857142857142857,
+      "mrr": 0.3869047619047619,
+      "answer_correct": 0.7142857142857143,
+      "false_refusal": 0.2857142857142857,
+      "cited_answers": 0.0,
+      "median_latency_s": 17.6,
+      "answer_rate": 0.7142857142857143
+     },
+     "followup": {
+      "questions": 3,
+      "retrieval_success": 0.0,
+      "entity_recall": 0.3333333333333333,
+      "hit_at_1": 0.0,
+      "mrr": 0.16666666666666666,
+      "answer_correct": 0.3333333333333333,
+      "false_refusal": 0.3333333333333333,
+      "numbers_grounded": 0.5,
+      "cited_answers": 0.0,
+      "median_latency_s": 18.4,
+      "answer_rate": 0.3333333333333333
+     },
+     "refusal": {
+      "questions": 6,
+      "refusal_correct": 1.0,
+      "median_latency_s": 17.3,
+      "answer_rate": 1.0
+     }
+    }
+   },
+   "current": {
+    "overall": {
+     "questions": 56,
+     "retrieval_success": 1.0,
+     "entity_recall": 1.0,
+     "hit_at_1": 0.98,
+     "mrr": 0.99,
+     "answer_correct": 1.0,
+     "false_refusal": 0.0,
+     "refusal_correct": 0.8333333333333334,
+     "numbers_grounded": 1.0,
+     "cited_answers": 1.0,
+     "median_latency_s": 10.1,
+     "answer_rate": 1.0
+    },
+    "categories": {
+     "anonymous": {
+      "questions": 15,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 9.9,
+      "answer_rate": 1.0
+     },
+     "named": {
+      "questions": 9,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 8.6,
+      "answer_rate": 1.0
+     },
+     "list": {
+      "questions": 6,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 12.2,
+      "answer_rate": 1.0
+     },
+     "typo": {
+      "questions": 4,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 13.5,
+      "answer_rate": 1.0
+     },
+     "ambiguous": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 13.9,
+      "answer_rate": 1.0
+     },
+     "compare": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 16.8,
+      "answer_rate": 1.0
+     },
+     "turkish": {
+      "questions": 7,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 0.8571428571428571,
+      "mrr": 0.9285714285714286,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 10.5,
+      "answer_rate": 1.0
+     },
+     "followup": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 10.1,
+      "answer_rate": 1.0
+     },
+     "refusal": {
+      "questions": 6,
+      "refusal_correct": 0.8333333333333334,
+      "median_latency_s": 8.8,
+      "answer_rate": 0.8333333333333334
+     }
+    }
+   }
+  },
+  "dev": {
+   "baseline": {
+    "overall": {
+     "questions": 56,
+     "retrieval_success": 0.78,
+     "entity_recall": 0.87,
+     "hit_at_1": 0.76,
+     "mrr": 0.7996666666666666,
+     "answer_correct": 0.82,
+     "false_refusal": 0.1,
+     "refusal_correct": 1.0,
+     "numbers_grounded": 1.0,
+     "cited_answers": 0.0,
+     "median_latency_s": 16.5,
+     "answer_rate": 0.82
+    },
+    "categories": {
+     "anonymous": {
+      "questions": 15,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 0.9333333333333333,
+      "mrr": 0.9666666666666667,
+      "answer_correct": 0.9333333333333333,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 14.2,
+      "answer_rate": 0.9333333333333333
+     },
+     "named": {
+      "questions": 9,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 18.4,
+      "answer_rate": 1.0
+     },
+     "list": {
+      "questions": 6,
+      "retrieval_success": 0.3333333333333333,
+      "entity_recall": 0.4166666666666667,
+      "hit_at_1": 0.16666666666666666,
+      "mrr": 0.2916666666666667,
+      "answer_correct": 0.5,
+      "false_refusal": 0.5,
+      "cited_answers": 0.0,
+      "median_latency_s": 11.7,
+      "answer_rate": 0.5
+     },
+     "typo": {
+      "questions": 4,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 0.75,
+      "mrr": 0.8,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 14.9,
+      "answer_rate": 1.0
+     },
+     "ambiguous": {
+      "questions": 3,
+      "retrieval_success": 0.3333333333333333,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 18.1,
+      "answer_rate": 1.0
+     },
+     "compare": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 26.7,
+      "answer_rate": 1.0
+     },
+     "turkish": {
+      "questions": 7,
+      "retrieval_success": 0.7142857142857143,
+      "entity_recall": 0.7142857142857143,
+      "hit_at_1": 0.7142857142857143,
+      "mrr": 0.7142857142857143,
+      "answer_correct": 0.7142857142857143,
+      "false_refusal": 0.2857142857142857,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 15.8,
+      "answer_rate": 0.7142857142857143
+     },
+     "followup": {
+      "questions": 3,
+      "retrieval_success": 0.0,
+      "entity_recall": 0.6666666666666666,
+      "hit_at_1": 0.0,
+      "mrr": 0.17777777777777778,
+      "answer_correct": 0.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 0.0,
+      "median_latency_s": 18.2,
+      "answer_rate": 0.0
+     },
+     "refusal": {
+      "questions": 6,
+      "refusal_correct": 1.0,
+      "median_latency_s": 16.5,
+      "answer_rate": 1.0
+     }
+    }
+   },
+   "current": {
+    "overall": {
+     "questions": 56,
+     "retrieval_success": 1.0,
+     "entity_recall": 1.0,
+     "hit_at_1": 0.96,
+     "mrr": 0.98,
+     "answer_correct": 0.98,
+     "false_refusal": 0.0,
+     "refusal_correct": 0.8333333333333334,
+     "numbers_grounded": 1.0,
+     "cited_answers": 1.0,
+     "median_latency_s": 11.2,
+     "answer_rate": 0.98
+    },
+    "categories": {
+     "anonymous": {
+      "questions": 15,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 0.9333333333333333,
+      "mrr": 0.9666666666666667,
+      "answer_correct": 0.9333333333333333,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 11.1,
+      "answer_rate": 0.9333333333333333
+     },
+     "named": {
+      "questions": 9,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 11.3,
+      "answer_rate": 1.0
+     },
+     "list": {
+      "questions": 6,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 0.8333333333333334,
+      "mrr": 0.9166666666666666,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 12.0,
+      "answer_rate": 1.0
+     },
+     "typo": {
+      "questions": 4,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 13.6,
+      "answer_rate": 1.0
+     },
+     "ambiguous": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 13.7,
+      "answer_rate": 1.0
+     },
+     "compare": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 14.7,
+      "answer_rate": 1.0
+     },
+     "turkish": {
+      "questions": 7,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 11.2,
+      "answer_rate": 1.0
+     },
+     "followup": {
+      "questions": 3,
+      "retrieval_success": 1.0,
+      "entity_recall": 1.0,
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "answer_correct": 1.0,
+      "false_refusal": 0.0,
+      "numbers_grounded": 1.0,
+      "cited_answers": 1.0,
+      "median_latency_s": 8.5,
+      "answer_rate": 1.0
+     },
+     "refusal": {
+      "questions": 6,
+      "refusal_correct": 0.8333333333333334,
+      "median_latency_s": 7.3,
+      "answer_rate": 0.8333333333333334
+     }
+    }
+   }
+  }
+ },
+ "ablation": [
+  {
+   "en": "Original version",
+   "tr": "İlk sürüm",
+   "retrieval_success": 0.78,
+   "hit_at_1": 0.76
+  },
+  {
+   "en": "New chunking, and a router that handles typos, trap words and follow-ups",
+   "tr": "Yeni parçalama; yazım hatası, kelime tuzağı ve takip sorularını çözen yönlendirici",
+   "retrieval_success": 0.86,
+   "hit_at_1": 0.86
+  },
+  {
+   "en": "The task prefixes the embedding model expects",
+   "tr": "Embedding modelinin beklediği görev önekleri",
+   "retrieval_success": 0.9,
+   "hit_at_1": 0.84
+  },
+  {
+   "en": "Keyword search merged with vector search",
+   "tr": "Vektör aramasıyla birleştirilen anahtar kelime araması",
+   "retrieval_success": 0.94,
+   "hit_at_1": 0.86
+  },
+  {
+   "en": "At most two passages per page when no page is named",
+   "tr": "Sayfa adı geçmeyen sorularda sayfa başına en çok iki pasaj",
+   "retrieval_success": 0.96,
+   "hit_at_1": 0.86
+  },
+  {
+   "en": "Firm cues such as “place” restrict the page type",
+   "tr": "“Place” gibi güçlü ipuçlarının sayfa türünü sınırlaması",
+   "retrieval_success": 0.96,
+   "hit_at_1": 0.9
+  },
+  {
+   "en": "Turkish questions searched through a local translation",
+   "tr": "Türkçe soruların yerel çeviriyle aranması",
+   "retrieval_success": 1.0,
+   "hit_at_1": 0.96
+  }
+ ]
+}

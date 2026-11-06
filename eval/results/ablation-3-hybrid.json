@@ -1,0 +1,1281 @@
+{
+ "label": "ablation-3-hybrid",
+ "split": "dev",
+ "settings": {
+  "split": "dev",
+  "answers": false,
+  "label": "ablation-3-hybrid",
+  "no_lexical": false,
+  "no_vector": false,
+  "no_translate": true,
+  "entity_cap": 99,
+  "no_type_filter": true,
+  "lexical_weight": null,
+  "top_k": null,
+  "resume": false
+ },
+ "complete": true,
+ "indexed_passages": 3504,
+ "summary": {
+  "overall": {
+   "questions": 56,
+   "retrieval_success": 0.94,
+   "entity_recall": 0.95,
+   "hit_at_1": 0.86,
+   "mrr": 0.91
+  },
+  "categories": {
+   "anonymous": {
+    "questions": 15,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.9333333333333333,
+    "mrr": 0.9666666666666667
+   },
+   "named": {
+    "questions": 9,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0
+   },
+   "list": {
+    "questions": 6,
+    "retrieval_success": 0.8333333333333334,
+    "entity_recall": 0.9166666666666666,
+    "hit_at_1": 0.5,
+    "mrr": 0.75
+   },
+   "typo": {
+    "questions": 4,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0
+   },
+   "ambiguous": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0
+   },
+   "compare": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0
+   },
+   "turkish": {
+    "questions": 7,
+    "retrieval_success": 0.7142857142857143,
+    "entity_recall": 0.7142857142857143,
+    "hit_at_1": 0.5714285714285714,
+    "mrr": 0.6428571428571429
+   },
+   "followup": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0
+   },
+   "refusal": {
+    "questions": 6
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "anon-01",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who developed the theory of general relativity?",
+   "translated": null,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-03",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who wrote Hamlet and Macbeth?",
+   "translated": null,
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-05",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who painted The Starry Night?",
+   "translated": null,
+   "retrieved": [
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Vincent van Gogh"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-07",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who co-founded Apple and introduced the iPhone?",
+   "translated": null,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-09",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who wrote the first computer program for the Analytical Engine?",
+   "translated": null,
+   "retrieved": [
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-11",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who led the Salt March in India?",
+   "translated": null,
+   "retrieved": [
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-13",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who composed The Magic Flute?",
+   "translated": null,
+   "retrieved": [
+    "Mozart",
+    "Niagara Falls",
+    "Mozart",
+    "Mozart",
+    "Mozart"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-15",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which Mexican painter married Diego Rivera?",
+   "translated": null,
+   "retrieved": [
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Frida Kahlo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-17",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Where can you find fairy chimneys and hot air balloons?",
+   "translated": null,
+   "retrieved": [
+    "Mount Everest",
+    "Cappadocia",
+    "Cappadocia",
+    "Machu Picchu",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-19",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which ancient city in Jordan is carved into rock?",
+   "translated": null,
+   "retrieved": [
+    "Petra",
+    "Petra",
+    "Petra",
+    "Petra",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-21",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which amphitheatre in Rome hosted gladiator fights?",
+   "translated": null,
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Petra",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-23",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "What is the highest mountain above sea level on Earth?",
+   "translated": null,
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Fuji",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-25",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which prehistoric stone circle is on Salisbury Plain in England?",
+   "translated": null,
+   "retrieved": [
+    "Stonehenge",
+    "Stonehenge",
+    "Stonehenge",
+    "Stonehenge",
+    "Stonehenge"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-27",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which waterfalls are on the border of Canada and New York?",
+   "translated": null,
+   "retrieved": [
+    "Niagara Falls",
+    "Niagara Falls",
+    "Niagara Falls",
+    "Niagara Falls",
+    "Niagara Falls"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-29",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who designed the alternating current induction motor?",
+   "translated": null,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-01",
+   "split": "dev",
+   "category": "named",
+   "question": "When was Marie Curie born?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-03",
+   "split": "dev",
+   "category": "named",
+   "question": "In which year did Albert Einstein receive the Nobel Prize in Physics?",
+   "translated": null,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-05",
+   "split": "dev",
+   "category": "named",
+   "question": "How tall is the Eiffel Tower?",
+   "translated": null,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-07",
+   "split": "dev",
+   "category": "named",
+   "question": "Which emperor built the Colosseum?",
+   "translated": null,
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-09",
+   "split": "dev",
+   "category": "named",
+   "question": "Who built the Taj Mahal?",
+   "translated": null,
+   "retrieved": [
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-11",
+   "split": "dev",
+   "category": "named",
+   "question": "Who were the first people confirmed to reach the summit of Mount Everest?",
+   "translated": null,
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-13",
+   "split": "dev",
+   "category": "named",
+   "question": "What is Ada Lovelace known for?",
+   "translated": null,
+   "retrieved": [
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-15",
+   "split": "dev",
+   "category": "named",
+   "question": "In what year did Mustafa Kemal Atatürk die?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-17",
+   "split": "dev",
+   "category": "named",
+   "question": "Where did Alan Turing work during the Second World War?",
+   "translated": null,
+   "retrieved": [
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-01",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous place is located in Turkey?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Cappadocia",
+    "Mustafa Kemal Atatürk",
+    "Hagia Sophia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-02",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous place is located in Italy?",
+   "translated": null,
+   "retrieved": [
+    "Petra",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-04",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous place is located in Japan?",
+   "translated": null,
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mount Fuji"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-07",
+   "split": "dev",
+   "category": "list",
+   "question": "Which landmark is in Spain?",
+   "translated": null,
+   "retrieved": [
+    "Stonehenge",
+    "Sagrada Família",
+    "Eiffel Tower",
+    "Sagrada Família",
+    "Christ the Redeemer (statue)"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-09",
+   "split": "dev",
+   "category": "list",
+   "question": "Which scientists won a Nobel Prize?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.5,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-11",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous landmark is in China?",
+   "translated": null,
+   "retrieved": [
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-01",
+   "split": "dev",
+   "category": "typo",
+   "question": "Who was Einstien?",
+   "translated": null,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-03",
+   "split": "dev",
+   "category": "typo",
+   "question": "What did Marie Curei discover?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-05",
+   "split": "dev",
+   "category": "typo",
+   "question": "Why is Nicola Tesla famous?",
+   "translated": null,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-07",
+   "split": "dev",
+   "category": "typo",
+   "question": "Who was Shakespear?",
+   "translated": null,
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-01",
+   "split": "dev",
+   "category": "ambiguous",
+   "question": "What jobs did Marie Curie have?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-03",
+   "split": "dev",
+   "category": "ambiguous",
+   "question": "What jobs did Charles Darwin consider before his voyage?",
+   "translated": null,
+   "retrieved": [
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-05",
+   "split": "dev",
+   "category": "ambiguous",
+   "question": "What did Steve Jobs do at Pixar?",
+   "translated": null,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-01",
+   "split": "dev",
+   "category": "compare",
+   "question": "Compare Albert Einstein and Nikola Tesla.",
+   "translated": null,
+   "retrieved": [
+    "Nikola Tesla",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Nikola Tesla",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-03",
+   "split": "dev",
+   "category": "compare",
+   "question": "Compare Lionel Messi and Cristiano Ronaldo.",
+   "translated": null,
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Cristiano Ronaldo",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-05",
+   "split": "dev",
+   "category": "compare",
+   "question": "How are Isaac Newton and Stephen Hawking connected?",
+   "translated": null,
+   "retrieved": [
+    "Isaac Newton",
+    "Isaac Newton",
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-01",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Atatürk ne zaman doğdu?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-03",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Türkiye'deki ünlü yerler hangileri?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Cappadocia",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-05",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Hamlet'i kim yazdı?",
+   "translated": null,
+   "retrieved": [
+    "William Shakespeare",
+    "Mustafa Kemal Atatürk",
+    "Tower of London",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-07",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Fransa'daki ünlü kule hangisi?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-09",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Marie Curie neyi keşfetti?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-11",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Görelilik teorisini kim geliştirdi?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-13",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Kapadokya neden ünlü?",
+   "translated": null,
+   "retrieved": [
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "refuse-01",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Who is the president of Mars?",
+   "translated": null,
+   "retrieved": [
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Mustafa Kemal Atatürk",
+    "Steve Jobs"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-03",
+   "split": "dev",
+   "category": "refusal",
+   "question": "What is the capital of Australia?",
+   "translated": null,
+   "retrieved": [
+    "Charles Darwin",
+    "Mustafa Kemal Atatürk",
+    "Cappadocia",
+    "Petra",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-05",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Who won the 2038 FIFA World Cup?",
+   "translated": null,
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-07",
+   "split": "dev",
+   "category": "refusal",
+   "question": "What is Marie Curie's phone number?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-09",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Mars'ın başkanı kimdir?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Nikola Tesla",
+    "Mustafa Kemal Atatürk",
+    "Eiffel Tower",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-11",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Write me a recipe for lentil soup.",
+   "translated": null,
+   "retrieved": [
+    "Cappadocia",
+    "Isaac Newton",
+    "Cleopatra",
+    "Cleopatra",
+    "Hagia Sophia"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "follow-01",
+   "split": "dev",
+   "category": "followup",
+   "question": "Where was she born?",
+   "translated": null,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "follow-03",
+   "split": "dev",
+   "category": "followup",
+   "question": "How tall is it?",
+   "translated": null,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "follow-05",
+   "split": "dev",
+   "category": "followup",
+   "question": "Peki ne zaman öldü?",
+   "translated": null,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  }
+ ]
+}

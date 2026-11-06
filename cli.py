@@ -1,110 +1,102 @@
-"""Simple CLI chat interface for the Wiki-RAG system.
+"""Command-line chat for Wiki-RAG:  python cli.py
 
-Run:
-    python cli.py
-
-Slash commands:
-    /help     - list commands
-    /sources  - toggle showing source chunks
-    /reset    - clear the in-process chat history (does NOT touch the index)
-    /quit     - exit
+Commands:
+    /help     list commands
+    /sources  toggle showing the passages behind each answer
+    /reset    forget the conversation, so the next question starts fresh
+    /quit     exit
 """
 from __future__ import annotations
 
 import sys
+from typing import Dict, List
 
+from src.ollama_client import OllamaError
 from src.rag import RagSystem
-
+from src.vector_store import IndexMismatch
 
 HELP = """
 Commands:
   /help      show this help
-  /sources   toggle showing source chunks under each answer
-  /reset     clear chat history (the index on disk stays)
+  /sources   toggle showing the passages behind each answer
+  /reset     forget the conversation, so the next question starts fresh
   /quit      exit
 """
 
 
-def _print_sources(chunks):
-    if not chunks:
-        print("  (no source chunks)")
-        return
-    for i, c in enumerate(chunks, start=1):
-        meta = c.get("metadata") or {}
-        entity = meta.get("entity", "?")
-        etype = meta.get("type", "?")
-        dist = c.get("distance", float("nan"))
-        snippet = c["document"][:160].replace("\n", " ")
-        print(f"  [{i}] ({etype}: {entity}, dist={dist:.3f})")
-        print(f"      {snippet}{'...' if len(c['document']) > 160 else ''}")
+def print_sources(sources: List[Dict], used: List[int]) -> None:
+    for source in sources:
+        marker = "*" if source["number"] in used else " "
+        section = f", {source['section']}" if source["section"] else ""
+        snippet = source["text"][:160].replace("\n", " ")
+        print(f"  {marker}[{source['number']}] {source['entity']}{section}")
+        print(f"      {snippet}{'...' if len(source['text']) > 160 else ''}")
+    print("  (* cited in the answer)")
 
 
 def main() -> int:
-    print("Wiki-RAG — local chat over Wikipedia people & places.")
-    print("Type your question, or /help for commands.\n")
+    try:
+        rag = RagSystem()
+    except IndexMismatch as exc:
+        print(exc)
+        return 1
+    if not rag.store.count():
+        print("The index is empty. Build it first with: python -m src.ingest")
+        return 1
 
-    rag = RagSystem()
+    print(f"Wiki-RAG. {rag.store.count()} passages indexed. Ask in English or Turkish, or type /help.\n")
     show_sources = False
-    history = []   # local, just for the user's convenience; not sent to the LLM
+    history: List[Dict] = []
 
     while True:
         try:
-            q = input("> ").strip()
+            question = input("> ").strip()
         except (EOFError, KeyboardInterrupt):
             print()
             return 0
-        if not q:
+        if not question:
             continue
 
-        if q.startswith("/"):
-            cmd = q.lower()
-            if cmd in ("/quit", "/exit"):
+        if question.startswith("/"):
+            command = question.lower()
+            if command in ("/quit", "/exit"):
                 return 0
-            if cmd == "/help":
+            if command == "/help":
                 print(HELP)
-                continue
-            if cmd == "/sources":
+            elif command == "/sources":
                 show_sources = not show_sources
-                print(f"  sources display: {'ON' if show_sources else 'OFF'}")
-                continue
-            if cmd == "/reset":
+                print(f"  sources: {'on' if show_sources else 'off'}")
+            elif command == "/reset":
                 history.clear()
-                print("  chat history cleared.")
-                continue
-            print(f"  unknown command: {q}")
+                print("  conversation cleared.")
+            else:
+                print(f"  unknown command: {question}")
             continue
 
         try:
-            print("  (thinking...)")
-            # Stream tokens for snappier feedback
-            answer_parts = []
-            chunks = []
-            route = ""
-            rationale = ""
-            for ev in rag.ask_stream(q):
-                if ev["event"] == "retrieved":
-                    chunks = ev["chunks"]
-                    route = ev["route"]
-                    rationale = ev["rationale"]
-                    print(f"  [route={route} — {rationale}, {len(chunks)} chunks]")
-                    print()
-                elif ev["event"] == "token":
-                    sys.stdout.write(ev["token"])
+            sources: List[Dict] = []
+            done: Dict = {}
+            for event in rag.ask_stream(question, history=history):
+                if event["event"] == "route":
+                    details = ", ".join(event["entities"]) or event["reason"]
+                    translated = f" | searched as: {event['translated']}" if event["translated"] else ""
+                    print(f"  [{details}{translated}]\n")
+                elif event["event"] == "sources":
+                    sources = event["sources"]
+                elif event["event"] == "token":
+                    sys.stdout.write(event["token"])
                     sys.stdout.flush()
-                    answer_parts.append(ev["token"])
-                elif ev["event"] == "done":
+                elif event["event"] == "done":
+                    done = event
                     print("\n")
-
             if show_sources:
-                print("  --- sources ---")
-                _print_sources(chunks)
+                print_sources(sources, done["attribution"]["used_sources"])
                 print()
-
-            history.append({"q": q, "a": "".join(answer_parts), "chunks": chunks})
-
-        except Exception as e:
-            print(f"  ! error: {e}")
-            print("    (is `ollama serve` running and are the models pulled?)")
+            history.append({"question": question, "answer": done["answer"], "entities": done["entities"]})
+        except KeyboardInterrupt:
+            print("\n  stopped.\n")
+        except OllamaError as exc:
+            print(f"  ! {exc}\n")
 
 
 if __name__ == "__main__":

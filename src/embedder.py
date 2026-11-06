@@ -1,67 +1,52 @@
-"""Local embedding via Ollama.
-
-We talk to Ollama's HTTP API directly with `requests` — no SDK — to keep
-the dependency surface tiny and to make it obvious what's going on.
-
-The endpoint we use:
-    POST {OLLAMA_HOST}/api/embeddings
-    body: {"model": "nomic-embed-text", "prompt": "<text>"}
-    response: {"embedding": [...]}
-"""
+"""Local embeddings through Ollama, with the task prefixes the model expects."""
 from __future__ import annotations
 
-from typing import List, Sequence
+from functools import lru_cache
+from typing import Callable, List, Optional, Sequence
 
-import requests
-
-from src.config import EMBED_MODEL, OLLAMA_HOST
+from src.config import EMBED_BATCH_SIZE, EMBED_MODEL, EMBED_PREFIXES, EMBED_USE_PREFIXES
+from src.ollama_client import OllamaClient
 
 
 class OllamaEmbedder:
-    """Tiny wrapper that returns embedding vectors for given texts."""
+    """Embeds documents and queries. Repeated queries come from a small cache."""
 
-    def __init__(self, model: str = EMBED_MODEL, host: str = OLLAMA_HOST):
+    def __init__(
+        self,
+        model: str = EMBED_MODEL,
+        client: Optional[OllamaClient] = None,
+        use_prefixes: bool = EMBED_USE_PREFIXES,
+        batch_size: int = EMBED_BATCH_SIZE,
+    ):
         self.model = model
-        self.host = host.rstrip("/")
-        self._endpoint = f"{self.host}/api/embeddings"
+        self.client = client or OllamaClient()
+        self.batch_size = batch_size
+        prefixes = EMBED_PREFIXES.get(model.split(":")[0], ("", "")) if use_prefixes else ("", "")
+        self.document_prefix, self.query_prefix = prefixes
+        self._embed_query_cached = lru_cache(maxsize=256)(self._embed_query)
 
-    def embed_one(self, text: str) -> List[float]:
+    @property
+    def fingerprint(self) -> str:
+        """Identifies vectors made this way. An index built differently must be rebuilt."""
+        return f"{self.model}|{self.document_prefix}|{self.query_prefix}"
+
+    def embed_documents(
+        self,
+        texts: Sequence[str],
+        on_progress: Optional[Callable[[int, int], None]] = None,
+    ) -> List[List[float]]:
+        vectors: List[List[float]] = []
+        for start in range(0, len(texts), self.batch_size):
+            batch = [f"{self.document_prefix}{t}" for t in texts[start : start + self.batch_size]]
+            vectors.extend(self.client.embed(self.model, batch))
+            if on_progress:
+                on_progress(len(vectors), len(texts))
+        return vectors
+
+    def _embed_query(self, text: str) -> tuple:
+        return tuple(self.client.embed(self.model, [f"{self.query_prefix}{text}"])[0])
+
+    def embed_query(self, text: str) -> List[float]:
         if not text.strip():
-            raise ValueError("Cannot embed empty text")
-        resp = requests.post(
-            self._endpoint,
-            json={"model": self.model, "prompt": text},
-            timeout=120,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        if "embedding" not in data:
-            raise RuntimeError(f"Ollama embedding response missing 'embedding': {data}")
-        return data["embedding"]
-
-    def embed_batch(self, texts: Sequence[str]) -> List[List[float]]:
-        """Sequential batching — Ollama doesn't currently expose a batch API,
-        so we just loop. For our scale (~500 chunks) this is fine."""
-        return [self.embed_one(t) for t in texts]
-
-    # ----------------------------------------------------------------- Chroma
-    # Chroma's EmbeddingFunction protocol — Chroma 0.5+ strictly validates
-    # that __call__ has signature exactly (self, input). No **kwargs allowed.
-    def __call__(self, input):
-        if isinstance(input, str):
-            input = [input]
-        return self.embed_batch(input)
-
-    def embed_documents(self, input):
-        if isinstance(input, str):
-            input = [input]
-        return self.embed_batch(input)
-
-    def embed_query(self, input):
-        if isinstance(input, list):
-            return self.embed_batch(input)
-        return [self.embed_one(input)]
-
-    # Chroma 0.5+ requires this on custom embedding functions
-    def name(self) -> str:
-        return f"ollama-{self.model}"
+            raise ValueError("Cannot embed an empty query")
+        return list(self._embed_query_cached(text))

@@ -1,126 +1,97 @@
-# Product Requirements Document — Wiki-RAG
+# Wiki-RAG: product requirements
 
 ## 1. Overview
 
-**Wiki-RAG** is a local, retrieval-augmented chat assistant that answers natural-language questions about famous people and famous places using Wikipedia as its only source of knowledge. Everything — the embedding model, the vector database, the language model, and the UI — runs on the user's own laptop. No data leaves the machine.
+Wiki-RAG is a local question-answering application over a curated set of Wikipedia pages. The embedding model, language model, indexes and interface all run on the user's machine. Its distinguishing feature is that answers are checkable: each sentence links to the source sentence it rests on, and when the pages don't hold the answer, it says so.
 
-The system was built for **BLG483E – Project 3** and aims to combine the indexing/retrieval ideas from Project 1 with the AI-driven workflow ideas from Project 2 into one end-to-end application.
+It began as a course project (BLG483E, Project 3) and was then rebuilt around measured retrieval quality and a purpose-built interface.
 
 ## 2. Goals
 
-- G1. Let a user ask a free-form question about any of 40+ canonical entities (20+ famous people, 20+ famous places) and receive a grounded, factual answer.
-- G2. Run **fully on localhost** — no external LLM API, no external embedding API.
-- G3. Keep the implementation **transparent**: chunking, routing, and orchestration are written from scratch (not delegated to a heavy framework like LangChain) so each component is easy to inspect and tune.
-- G4. Provide both a **chat-style UI** (Streamlit) and a **CLI** so the system can be demoed quickly and scripted easily.
-- G5. Fail safely: when the indexed data does not contain the answer, the system says **"I don't know based on the available information"** rather than hallucinating.
+- **G1.** Answer free-form questions about the indexed pages, in English or Turkish, using only those pages.
+- **G2.** Run fully on one machine. Answering a question must not contact any remote service.
+- **G3.** Make each answer checkable down to the sentence.
+- **G4.** Keep every stage visible and simple enough to inspect, without a framework such as LangChain.
+- **G5.** Decline rather than guess when the pages lack the answer.
+- **G6.** Back every claim about quality with a reproducible measurement.
 
 ## 3. Non-goals
 
-- Not a general-purpose web search agent. The knowledge base is intentionally limited to a curated entity list.
-- Not a multi-user, internet-deployed service. (See `recommendation.md` for what would change to make it one.)
-- Not a multimodal system. Text in, text out.
-- Not a multi-turn reasoning system. Each question is answered independently; chat history is shown for the user's benefit but is not fed back into the LLM.
+- A general web search agent. The corpus is limited to chosen pages.
+- A multi-user internet service. See `recommendation.md`.
+- Multimodal input or output.
+- Unbounded conversation memory. Follow-ups use the last few turns.
 
-## 4. Users and use cases
+## 4. Users
 
-The primary users are course evaluators and the developer. Typical use cases:
-
-- "Who was Albert Einstein and what is he known for?" — single-entity factual lookup.
-- "Compare Lionel Messi and Cristiano Ronaldo." — multi-entity comparison within one type.
-- "Compare the Eiffel Tower and the Statue of Liberty." — multi-entity comparison across the place corpus.
-- "Which famous place is located in Turkey?" — semantic search across one type with no named entity in the query.
-- "Who is the president of Mars?" — adversarial / out-of-distribution; the system must refuse to fabricate.
+- **Portfolio reviewers** arrive from GitHub with little time. They need to understand the product and judge its engineering within a minute, often without installing anything. The recorded demo serves them.
+- **The owner** uses it for everyday questions in Turkish or English.
 
 ## 5. Functional requirements
 
-### 5.1 Ingestion
-- **F-1.** The system must ingest at least 20 famous people and 20 famous places from English Wikipedia. Default lists are stored in `src/config.py` and include all entities required by the brief.
-- **F-2.** Each Wikipedia page is split into chunks of ~800 characters with ~150 character overlap, paragraph-aware. Sentences and paragraphs are not split unless they exceed `chunk_size` on their own.
-- **F-3.** Each chunk is stored with metadata: `entity` (canonical name), `type` (`person` | `place`), `chunk_idx`, `source` (Wikipedia URL).
-- **F-4.** Ingestion is idempotent at the entity level: the same entity can be re-ingested with `--reset` to wipe and rebuild.
-- **F-5.** Raw Wikipedia text is cached on disk under `data/raw/` so re-runs without `--reset` don't refetch.
+### Ingestion
+- **F-1.** Index at least 20 people and 20 places from English Wikipedia (`src/config.py`).
+- **F-2.** Split each page section into passages of at most 800 characters, on sentence boundaries, with up to 150 characters of whole-sentence overlap.
+- **F-3.** Exclude sections that hold no facts about the subject, such as references and external links, when they appear as top-level headings.
+- **F-4.** Store each passage with its page, type, section, position, source URL, revision and a content hash.
+- **F-5.** Cache downloaded pages. Skip pages whose chunks have not changed. An interrupted run can be restarted safely.
+- **F-6.** Refuse to query an index built with different embedding or chunking settings, with a message explaining how to rebuild it.
 
-### 5.2 Embedding & storage
-- **F-6.** Embeddings are produced locally via Ollama's `nomic-embed-text` model (768 dimensions). No external API.
-- **F-7.** Embeddings are stored in a single ChromaDB collection persisted at `chroma_db/`. Cosine distance is used.
-- **F-8.** No on-disk format other than what Chroma needs; no parallel SQLite store.
+### Retrieval
+- **F-7.** Recognise page names and aliases, ignoring case and accents. Words that are also ordinary vocabulary ("jobs", "swift") count only when capitalised.
+- **F-8.** Recognise close misspellings of page names.
+- **F-9.** Resolve follow-up questions to the previous turn's pages.
+- **F-10.** Search with vector similarity and BM25, merged by reciprocal rank fusion.
+- **F-11.** When pages are named, search within them and share the passage budget. Overview questions include the page's opening passage.
+- **F-12.** When no page is named, allow at most two passages per page unless too few pages match, and let firm keyword cues restrict the page type.
+- **F-13.** Search Turkish questions through a local translation to English.
 
-### 5.3 Retrieval & routing
-- **F-9.** Each user query is routed to one of three targets — `person`, `place`, or `both` — using a deterministic rule-based classifier (entity-name detection with a small alias table, falling back to keyword cues).
-- **F-10.** For routed `person` or `place` queries, the system runs a top-K (default K=5) cosine similarity search filtered by `type` metadata.
-- **F-11.** For `both` queries, the system runs two parallel top-K searches (one per type) with K=4 each, then merges and re-sorts by distance, yielding up to 8 chunks.
+### Generation
+- **F-14.** Generate with the local model, streaming tokens. The model is configurable.
+- **F-15.** Instruct the model to use only the passages, cite them by number, answer in the question's language and use a pinned sentence to decline.
+- **F-16.** Parse citations, drop invalid ones and find the supporting sentence in each cited passage. Sentences the model left uncited are matched by text comparison and marked as such; sentences with no support are marked as having no source.
 
-### 5.4 Generation
-- **F-12.** Answers are generated locally via Ollama using `llama3.2:3b` by default. The model is configurable via `src/config.py`.
-- **F-13.** The prompt includes a fixed system message that instructs the model to (a) use only the supplied context, (b) refuse and reply `"I don't know based on the available information."` if the context is insufficient, and (c) avoid speaking about "the context" by name.
-- **F-14.** Tokens are streamed back to the UI for responsiveness.
+### Interface
+- **F-17.** Show retrieved passages before the model starts writing, with honest progress during the wait, and allow stopping.
+- **F-18.** Highlight each answer sentence and its source sentence in a matching color.
+- **F-19.** Show how each passage was found, and how the question was interpreted (translation, spelling correction, follow-up).
+- **F-20.** List indexed pages, and allow adding and removing pages from the interface.
+- **F-21.** Publish evaluation results in the interface.
+- **F-22.** Offer English and Turkish interface text, light and dark themes, keyboard operation and reduced motion.
+- **F-23.** Provide a command-line interface with the same core behavior.
+- **F-25.** Let the user choose the language model and the passage count, as the original interface did.
+- **F-24.** Provide a static replay of recorded real answers, labelled as a recording.
 
-### 5.5 Interface
-- **F-15.** A Streamlit chat UI displays the running conversation, lets the user toggle a "Show source chunks" panel, and exposes a "Clear chat history" button. Each assistant turn shows the route the classifier picked and the retrieved chunks (with Wikipedia links).
-- **F-16.** A CLI provides the same core capabilities (ask, show sources, reset, quit) for headless usage.
-- **F-17.** Both UIs print the exact retrieval route used for each question, so reviewers can verify the router is doing the right thing.
+## 6. Design rationale
 
-## 6. Design choices and rationale
+**One collection with metadata, not two stores.** Questions spanning people and places become one search with optional filters, and there is one index to maintain.
 
-### 6.1 Why Option B (one collection + metadata) for the vector store?
+**Hybrid search.** Each method fails differently: vector search can drift to pages that merely sound similar, while keyword search finds exact terms but returns many passages from one page. Merging them and capping passages per page raised search success on the tuning questions from 90% to 96%. The missing embedding prefixes, not vector search itself, turned out to be the main reason the original version missed country questions.
 
-The brief offered two options:
-- **A.** Two vector stores, one for people, one for places.
-- **B.** One vector store with `type` metadata.
+**Rule-based routing.** For a known list of pages, deterministic rules are faster and easier to debug than a model, and every decision can be explained on screen.
 
-We chose **B**. Reasons:
-- **Mixed queries are first-class.** Questions like "Compare Einstein and the Eiffel Tower" or "Which person is associated with electricity, and which place is in Turkey?" can be answered with one HNSW index by either dropping the type filter or running two filtered queries. Option A would require manually fanning out and merging.
-- **One operational surface.** One persistence directory, one HNSW index to tune, one schema.
-- **Filtering is cheap.** Chroma's metadata-filtered search at our scale (~500 chunks total) is effectively free, so we lose nothing by not partitioning physically.
-- **The classifier still does the heavy lifting.** When the query is unambiguously about one type, we still pass `where={"type": "person"}` so we don't waste candidate slots on irrelevant chunks. Option A would offer no extra precision here.
+**Translating questions instead of a multilingual embedding model.** This needs no re-indexing and no extra download, and it performs well on the Turkish questions. The cost is a short model call per Turkish question.
 
-### 6.2 Chunking strategy
+**No distance threshold for refusals.** Measured distances for unanswerable questions overlap with those of valid ones, and so does the share of question words found in the passages, so either check would reject good questions. The model decides, using the pinned sentence. As a second check, an answer with no sentence traceable to any passage is withheld. Asking for citations made the small model less willing to decline (100% to 83% on the held-out questions), a real cost accepted in exchange for checkable answers.
 
-- **Paragraph-aware**, then **sentence-aware**, then **word-aware** as a last resort. We never split mid-sentence unless the sentence itself is bigger than `CHUNK_SIZE`.
-- **800 characters / 150 overlap** by default. Roughly 150–200 tokens, which is in the sweet spot for `nomic-embed-text`. The 150-char overlap recovers facts that straddle a chunk boundary (e.g. "...he was born in 1879. // The young Einstein...").
-- The splitter is implemented in `src/chunker.py` from scratch — no LangChain — to honor the project's "language-native" guidance.
+**A custom interface instead of Streamlit.** Sentence-level highlighting, stopping generation and sources appearing before the answer all need control Streamlit doesn't offer. Removing it also removes its default usage statistics, which conflicted with G2.
 
-### 6.3 Rule-based router
+## 7. Quality criteria
 
-For a closed, finite knowledge base (40 entities), an LLM-based router would be overkill, slow, and harder to debug. Our router:
-1. Builds an alias table from `PEOPLE`, `PLACES`, and `ALIASES` once at import time.
-2. Looks for the **longest** alias match in the lowered query (so "great wall" beats "wall").
-3. Aggregates the matched entities' types: if all matched entities are people → route `person`; all places → `place`; mixed → `both`.
-4. Falls back to keyword cues (`who/where/scientist/monument/...`) when no entity name matches; in a tie or total miss, routes to `both`.
+Measured by `eval/`: 112 questions frozen before the improvements, split evenly into a tuning set and a held-out set. Published on the Measurements page and in the README.
 
-This is deterministic, explainable, and adds <1 ms of latency.
+| Measure | Definition |
+|---|---|
+| Search success | The top 5 passages contain the expected pages, and the answer text where defined, without forbidden pages |
+| Answer correct | The answer contains the expected fact, checked by pattern |
+| Refusal correct | The system declines questions the pages cannot answer |
+| Numbers grounded | Every multi-digit number in the answer appears in the passages |
+| Cited answers | The answer links to at least one passage |
 
-### 6.4 Generation prompt
+## 8. Known limitations
 
-The prompt explicitly forbids fabrication and pins the refusal phrasing. Temperature is set to 0.2 for determinism. We don't pass chat history to the model — each question is answered independently — because (a) the brief doesn't require it, (b) it bounds the prompt size, and (c) it makes the system's behavior much more predictable for evaluation.
-
-### 6.5 Streaming
-
-Both UIs stream tokens. For a 3-billion-parameter model on a CPU laptop, perceived latency is dominated by generation, not retrieval, so streaming is the cheapest UX win available.
-
-## 7. Quality and acceptance criteria
-
-| # | Criterion |
-|---|-----------|
-| Q-1 | Ingestion covers all 20 required people and 20 required places, plus 10 extras of each. |
-| Q-2 | All 14 example questions in the brief produce a sensible answer or a refusal, with no hallucinated facts. |
-| Q-3 | Failure-case prompts ("president of Mars", "John Doe") trigger the "I don't know" refusal. |
-| Q-4 | The Streamlit UI renders, accepts chat input, streams tokens, and lets the user inspect sources. |
-| Q-5 | The system runs end-to-end on a fresh machine by following only the README. |
-
-## 8. Tradeoffs and limitations
-
-- **Closed-domain.** Anything outside the 40-entity corpus produces a refusal. This is by design but limits utility.
-- **CPU latency.** A 3B-parameter model on CPU produces ~10–30 tokens/second. Streaming masks but doesn't eliminate this.
-- **Naive sentence splitter.** Our regex-based splitter mishandles abbreviations like "Dr." and "U.S.". For our prose-heavy Wikipedia inputs the impact is small.
-- **No reranker.** Cosine on `nomic-embed-text` is the only ranking signal; a cross-encoder reranker would improve precision at top-K but would double per-query latency on CPU.
-- **No multi-turn reasoning.** Each question is answered independently. Follow-ups like "and his wife?" won't resolve pronouns from the previous turn.
-
-## 9. Future work
-
-See `recommendation.md` for what would change for a production deployment. Lightweight improvements within the local scope:
-
-- Add a tiny reranker (e.g. `cross-encoder/ms-marco-MiniLM-L-6-v2` via sentence-transformers) for query-time precision.
-- Cache `(question → answer)` and `(question → embedding)` so repeated questions are instant.
-- Latency telemetry surfaced in the UI (retrieval time, generation time, tokens/sec).
-- Multi-turn rewriting: rewrite each follow-up question into a self-contained one before retrieval.
+- **Small model.** A 3-billion-parameter model on CPU sometimes writes wrong statements even with the right passages, and its written Turkish often mixes in English words. Citations make errors visible but do not prevent them.
+- **Pattern-based scoring** can mark an unusually worded correct answer as wrong, and cannot detect every wrong statement. An AI assistant reading the 50 held-out answers found one wrong fact it accepted; no person has repeated that check.
+- **The golden set was written for this project,** not sampled from real use, and is probably easier than real traffic. The held-out half guards against tuning to it, not against that bias.
+- **Sentence matching is lexical.** Turkish answers share only names and numbers with English sources, so their highlighted evidence is less precise.
+- **English Wikipedia only.**

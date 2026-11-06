@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T18:30:00+03:00",
+  "title": "Design System: Wiki-RAG",
+  "extensions": {
+    "colorMeta": {
+      "toner": { "role": "primary", "displayName": "Toner", "canonical": "#111111", "tonalRamp": ["#111111", "#2a2b28", "#43453f", "#55574f", "#7a7c75", "#a9aba4", "#c3c5be", "#e8e9e6"] },
+      "photocopy-grey": { "role": "primary", "displayName": "Photocopy Grey", "canonical": "#e8e9e6", "tonalRamp": ["#3d3e39", "#55574f", "#7a7c75", "#a9aba4", "#c3c5be", "#d6d7d2", "#e8e9e6", "#fbfbf9"] },
+      "ink-yellow": { "role": "secondary", "displayName": "Source 1 Yellow", "canonical": "#f4ff3a" },
+      "ink-pink": { "role": "secondary", "displayName": "Source 2 Pink", "canonical": "#ff9ccb" },
+      "ink-green": { "role": "secondary", "displayName": "Source 3 Green", "canonical": "#8cffb0" },
+      "ink-orange": { "role": "secondary", "displayName": "Source 4 Orange", "canonical": "#ffc266" },
+      "ink-blue": { "role": "secondary", "displayName": "Source 5 Blue", "canonical": "#9edcff" },
+      "danger": { "role": "neutral", "displayName": "Danger", "canonical": "#a3123f" },
+      "danger-dark-theme": { "role": "neutral", "displayName": "Danger, dark theme", "canonical": "#ff6b5e" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page headings and the current question." },
+      "answer": { "displayName": "Answer", "purpose": "What the model wrote." },
+      "source": { "displayName": "Source", "purpose": "Text quoted from Wikipedia." },
+      "label": { "displayName": "Label", "purpose": "Page names on passages and contents group headings." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "The highlighter stroke, press feedback and the settings popover." },
+      { "name": "highlighter-stroke", "value": "background-size 320ms, 70ms apart per sentence", "purpose": "One sweep when an answer finishes. Fades instead under reduced motion." },
+      { "name": "press", "value": "transform 120ms", "purpose": "Scale 0.97 on buttons." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "860px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action on a form.",
+      "html": "<button class=\"ds-button\">Add page</button>",
+      "css": ".ds-button { background: #111111; color: #e8e9e6; border: 2px solid #111111; font-weight: 800; padding: 8px 16px; transition: transform 120ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-button:hover { background: #fbfbf9; color: #111111; } .ds-button:active { transform: scale(0.97); } .ds-button:focus-visible { outline: 2px solid #111111; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square field with a toner border.",
+      "html": "<input class=\"ds-input\" placeholder=\"Page title\">",
+      "css": ".ds-input { background: #fbfbf9; color: #111111; border: 2px solid #111111; border-radius: 0; padding: 8px 10px; font-size: 16px; } .ds-input:focus-visible { outline: 2px solid #111111; outline-offset: 1px; }"
+    },
+    {
+      "name": "Current Tab",
+      "kind": "nav",
+      "refersTo": "nav-current",
+      "description": "Marks the current view in the top bar.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-current\" href=\"#\">Ask</a><a href=\"#\">Library</a></nav>",
+      "css": ".ds-nav { background: #111111; color: #e8e9e6; display: flex; gap: 6px; padding: 12px; font-size: 14px; } .ds-nav a { color: inherit; padding: 2px 8px; text-decoration: none; } .ds-nav a:hover { box-shadow: inset 0 -2px 0 #e8e9e6; } .ds-nav .ds-current { background: #f4ff3a; color: #111111; font-weight: 600; box-shadow: none; }"
+    },
+    {
+      "name": "Citation Pair",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "An answer sentence and its source sentence in the same numbered ink.",
+      "html": "<p class=\"ds-answer\"><mark>Hagia Sophia is in Istanbul.</mark><button class=\"ds-cite\">1</button></p><p class=\"ds-source\"><mark>Hagia Sophia is a mosque in Istanbul, Turkey.</mark></p>",
+      "css": ".ds-answer mark, .ds-source mark { background: #f4ff3a; color: #111111; } .ds-answer { font-size: 19px; } .ds-source { font-family: Tinos, 'Times New Roman', serif; font-size: 17.5px; } .ds-cite { background: #f4ff3a; color: #111111; border: 1px solid #111111; font-weight: 800; font-size: 13px; margin-left: 3px; }"
+    },
+    {
+      "name": "Refusal Block",
+      "kind": "custom",
+      "refersTo": "refusal-block",
+      "description": "Stands in place of an answer when the pages can't answer.",
+      "html": "<div class=\"ds-refusal\"><strong>I don't know based on the available information.</strong><span>Checked 5 passages and none of them answers this.</span></div>",
+      "css": ".ds-refusal { background: #111111; color: #f3f4f1; padding: 18px 20px; } .ds-refusal strong { display: block; font-size: 22px; font-weight: 800; } .ds-refusal span { display: block; margin-top: 6px; font-size: 15px; color: #c9cbc5; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Marked-Up Reading Packet",
+    "overview": "Wiki-RAG looks like a photocopied course reader someone has been through with a highlighter. That is not decoration. The product's claim is that an answer can be checked, and a stroke of the same color on an answer sentence and on its source sentence shows that claim working.",
+    "keyCharacteristics": [
+      "Two voices: heavy sans for what the model wrote, photocopied book serif for what Wikipedia says.",
+      "Fluorescent ink means \"this came from a source\", and each ink belongs to one source number.",
+      "Square corners and 2px toner rules everywhere.",
+      "Refusing is a solid toner block, as deliberate as an answer.",
+      "Honest about waiting: stages and elapsed time, never a bare spinner."
+    ],
+    "rules": [
+      { "name": "The One Job Rule", "body": "Wherever sources are shown, an ink means a source. It never marks status, selection, warnings or a button's hover.", "section": "colors" },
+      { "name": "The Plain Selection Rule", "body": "Selected text is inverted toner. A fluorescent selection would look like a citation to source 1.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Text from Wikipedia is set in the serif, including page names in Contents and Library. Everything the model or the interface says is in the sans.", "section": "typography" },
+      { "name": "The Flat Toner Rule", "body": "Nothing casts a shadow, and nothing imitates a physical material. A photocopy is flat.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep each ink tied to one source number wherever sources are shown.",
+      "Do set anything quoted from Wikipedia in the serif.",
+      "Do show real recorded content in demonstrations, and label recordings as recordings.",
+      "Do self-host every font.",
+      "Do name the problem and the exact command in setup and error messages."
+    ],
+    "donts": [
+      "Don't use an ink for warnings, status, selection or button hovers.",
+      "Don't add shadows, grain, paper texture or other imitation material.",
+      "Don't round corners on controls.",
+      "Don't animate hovers or anything triggered by the keyboard.",
+      "Don't use a font or asset from a CDN."
+    ]
+  }
+}

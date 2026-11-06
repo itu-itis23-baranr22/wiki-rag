@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Wiki-RAG</title>
+<meta name="description" content="Ask questions about Wikipedia pages with models running on your own machine. Every claim links to the sentence it rests on.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#111111">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#E8E9E6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Crect x='5' y='13' width='22' height='7' fill='%23F4FF3A'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/AnekLatin-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+<script>
+  // Set the theme before first paint so the page never flashes the wrong one.
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("wiki-rag-theme"); } catch (e) {}
+    var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
+  })();
+</script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" width="0" height="0">
+  <symbol id="i-send" viewBox="0 0 20 20"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 20 20"><rect x="5" y="5" width="10" height="10" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 20 20"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.5 1.5M14.2 14.2l1.5 1.5M4.3 15.7l1.5-1.5M14.2 5.8l1.5-1.5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 20 20"><path d="M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 20 20"><path d="M3 6h7M14 6h3M3 14h3M10 14h7"/><rect x="10" y="4" width="4" height="4"/><rect x="6" y="12" width="4" height="4"/></symbol>
+  <symbol id="i-out" viewBox="0 0 20 20"><path d="M8 4H4v12h12v-4M11 3h6v6M17 3l-8 8"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 20 20"><rect x="7" y="7" width="10" height="10"/><path d="M13 7V3H3v10h4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></symbol>
+  <symbol id="i-up" viewBox="0 0 20 20"><path d="M10 16V5M5.5 9.5 10 5l4.5 4.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 20 20"><path d="m7.5 4.5 5.5 5.5-5.5 5.5"/></symbol>
+</svg>
+
+<a class="skip" href="#question" data-t="skip"></a>
+
+<header class="bar">
+  <a class="wordmark" href="#ask">Wiki-RAG</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#ask" data-view="ask" data-t="nav_ask"></a>
+    <a href="#library" data-view="library" data-t="nav_library"></a>
+    <a href="#metrics" data-view="metrics" data-t="nav_metrics"></a>
+  </nav>
+  <div class="bar-tools">
+    <span class="status" id="status" role="status"></span>
+    <button class="tool" id="settings-toggle" type="button" popovertarget="settings"><svg class="icon"><use href="#i-sliders"/></svg><span class="sr" data-t="settings"></span></button>
+    <button class="tool tool-text" id="lang-toggle" type="button"></button>
+    <button class="tool" id="theme-toggle" type="button"><svg class="icon"><use id="theme-icon" href="#i-moon"/></svg><span class="sr" data-t="toggle_theme"></span></button>
+  </div>
+</header>
+
+<div class="notice" id="notice" hidden></div>
+
+<main class="split" id="view-ask">
+  <section class="left" data-t-label="conversation">
+    <div class="thread" id="thread"></div>
+    <form class="composer" id="composer" autocomplete="off">
+      <label class="sr" for="question" data-t="question_label"></label>
+      <div class="composer-row">
+        <textarea id="question" rows="1" maxlength="2000" enterkeyhint="send"></textarea>
+        <button class="send" id="send" type="submit"></button>
+      </div>
+      <div class="composer-foot">
+        <span class="hint" id="composer-hint"></span>
+        <button class="link" id="new-chat" type="button" hidden data-t="new_chat"></button>
+      </div>
+    </form>
+  </section>
+  <aside class="sheet" id="sheet" tabindex="-1" data-t-label="sources"></aside>
+</main>
+
+<main class="page" id="view-library" hidden></main>
+<main class="page" id="view-metrics" hidden></main>
+
+<div class="settings" id="settings" popover>
+  <h2 data-t="settings"></h2>
+  <label class="field" for="model-select"><span data-t="setting_model"></span>
+    <select id="model-select"></select>
+  </label>
+  <label class="field" for="topk-range">
+    <span data-t="setting_topk"></span>
+    <span class="field-row"><input id="topk-range" type="range" min="1" max="10" step="1"><output id="topk-value" for="topk-range"></output></span>
+    <small data-t="setting_topk_help"></small>
+  </label>
+</div>
+
+<div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+<noscript><p class="noscript">Wiki-RAG needs JavaScript to run.</p></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

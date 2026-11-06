@@ -1,0 +1,7 @@
+{
+  "schema": 2,
+  "embedder": "nomic-embed-text|search_document: |search_query: ",
+  "chunk_size": 800,
+  "chunk_overlap": 150,
+  "chunk_min": 120
+}

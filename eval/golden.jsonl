@@ -1,0 +1,112 @@
+{"id":"anon-01","split":"dev","category":"anonymous","lang":"en","question":"Who developed the theory of general relativity?","entities_any":["Albert Einstein"],"answer_regex":"Einstein"}
+{"id":"anon-02","split":"test","category":"anonymous","lang":"en","question":"Who discovered radium and polonium?","entities_any":["Marie Curie"],"answer_regex":"Curie"}
+{"id":"anon-03","split":"dev","category":"anonymous","lang":"en","question":"Who wrote Hamlet and Macbeth?","entities_any":["William Shakespeare"],"answer_regex":"Shakespeare"}
+{"id":"anon-04","split":"test","category":"anonymous","lang":"en","question":"Who painted the Mona Lisa?","entities_any":["Leonardo da Vinci"],"answer_regex":"Leonardo"}
+{"id":"anon-05","split":"dev","category":"anonymous","lang":"en","question":"Who painted The Starry Night?","entities_any":["Vincent van Gogh"],"answer_regex":"Gogh"}
+{"id":"anon-06","split":"test","category":"anonymous","lang":"en","question":"Who proposed natural selection and wrote On the Origin of Species?","entities_any":["Charles Darwin"],"answer_regex":"Darwin"}
+{"id":"anon-07","split":"dev","category":"anonymous","lang":"en","question":"Who co-founded Apple and introduced the iPhone?","entities_any":["Steve Jobs"],"answer_regex":"Jobs"}
+{"id":"anon-08","split":"test","category":"anonymous","lang":"en","question":"Who broke the Enigma code at Bletchley Park?","entities_any":["Alan Turing"],"answer_regex":"Turing"}
+{"id":"anon-09","split":"dev","category":"anonymous","lang":"en","question":"Who wrote the first computer program for the Analytical Engine?","entities_any":["Ada Lovelace"],"answer_regex":"Lovelace"}
+{"id":"anon-10","split":"test","category":"anonymous","lang":"en","question":"Who led the Turkish War of Independence?","entities_any":["Mustafa Kemal Atatürk"],"answer_regex":"Atat"}
+{"id":"anon-11","split":"dev","category":"anonymous","lang":"en","question":"Who led the Salt March in India?","entities_any":["Mahatma Gandhi"],"answer_regex":"Gandhi"}
+{"id":"anon-12","split":"test","category":"anonymous","lang":"en","question":"Who was the last active ruler of the Ptolemaic Kingdom of Egypt?","entities_any":["Cleopatra"],"answer_regex":"Cleopatra"}
+{"id":"anon-13","split":"dev","category":"anonymous","lang":"en","question":"Who composed The Magic Flute?","entities_any":["Mozart"],"answer_regex":"Mozart"}
+{"id":"anon-14","split":"test","category":"anonymous","lang":"en","question":"Who wrote A Brief History of Time?","entities_any":["Stephen Hawking"],"answer_regex":"Hawking"}
+{"id":"anon-15","split":"dev","category":"anonymous","lang":"en","question":"Which Mexican painter married Diego Rivera?","entities_any":["Frida Kahlo"],"answer_regex":"Kahlo"}
+{"id":"anon-16","split":"test","category":"anonymous","lang":"en","question":"Which mausoleum was built by Shah Jahan for his wife?","entities_any":["Taj Mahal"],"answer_regex":"Taj Mahal"}
+{"id":"anon-17","split":"dev","category":"anonymous","lang":"en","question":"Where can you find fairy chimneys and hot air balloons?","entities_any":["Cappadocia"],"answer_regex":"Cappadocia"}
+{"id":"anon-18","split":"test","category":"anonymous","lang":"en","question":"Which Inca citadel sits high in the Andes of Peru?","entities_any":["Machu Picchu"],"answer_regex":"Machu Picchu"}
+{"id":"anon-19","split":"dev","category":"anonymous","lang":"en","question":"Which ancient city in Jordan is carved into rock?","entities_any":["Petra"],"answer_regex":"Petra"}
+{"id":"anon-20","split":"test","category":"anonymous","lang":"en","question":"Which Antoni Gaudí basilica in Barcelona is still unfinished?","entities_any":["Sagrada Família"],"answer_regex":"Sagrada"}
+{"id":"anon-21","split":"dev","category":"anonymous","lang":"en","question":"Which amphitheatre in Rome hosted gladiator fights?","entities_any":["Colosseum"],"answer_regex":"Colosseum"}
+{"id":"anon-22","split":"test","category":"anonymous","lang":"en","question":"Which monument was a gift from France to the United States?","entities_any":["Statue of Liberty"],"answer_regex":"Statue of Liberty"}
+{"id":"anon-23","split":"dev","category":"anonymous","lang":"en","question":"What is the highest mountain above sea level on Earth?","entities_any":["Mount Everest"],"answer_regex":"Everest"}
+{"id":"anon-24","split":"test","category":"anonymous","lang":"en","question":"Which Khmer temple complex is in Cambodia?","entities_any":["Angkor Wat"],"answer_regex":"Angkor"}
+{"id":"anon-25","split":"dev","category":"anonymous","lang":"en","question":"Which prehistoric stone circle is on Salisbury Plain in England?","entities_any":["Stonehenge"],"answer_regex":"Stonehenge"}
+{"id":"anon-26","split":"test","category":"anonymous","lang":"en","question":"Which volcano is the highest peak in Japan?","entities_any":["Mount Fuji"],"answer_regex":"Fuji"}
+{"id":"anon-27","split":"dev","category":"anonymous","lang":"en","question":"Which waterfalls are on the border of Canada and New York?","entities_any":["Niagara Falls"],"answer_regex":"Niagara"}
+{"id":"anon-28","split":"test","category":"anonymous","lang":"en","question":"Which large statue overlooks Rio de Janeiro?","entities_any":["Christ the Redeemer (statue)"],"answer_regex":"Redeemer"}
+{"id":"anon-29","split":"dev","category":"anonymous","lang":"en","question":"Who designed the alternating current induction motor?","entities_any":["Nikola Tesla"],"answer_regex":"Tesla"}
+{"id":"anon-30","split":"test","category":"anonymous","lang":"en","question":"Which singer released the album 1989 and the Eras Tour?","entities_any":["Taylor Swift"],"answer_regex":"Swift"}
+{"id":"named-01","split":"dev","category":"named","lang":"en","question":"When was Marie Curie born?","entities_all":["Marie Curie"],"passage_regex":"1867","answer_regex":"1867"}
+{"id":"named-02","split":"test","category":"named","lang":"en","question":"Where was Albert Einstein born?","entities_all":["Albert Einstein"],"passage_regex":"Ulm","answer_regex":"Ulm"}
+{"id":"named-03","split":"dev","category":"named","lang":"en","question":"In which year did Albert Einstein receive the Nobel Prize in Physics?","entities_all":["Albert Einstein"],"passage_regex":"1921","answer_regex":"1921"}
+{"id":"named-04","split":"test","category":"named","lang":"en","question":"Who designed the Eiffel Tower's company?","entities_all":["Eiffel Tower"],"passage_regex":"Gustave Eiffel","answer_regex":"Eiffel"}
+{"id":"named-05","split":"dev","category":"named","lang":"en","question":"How tall is the Eiffel Tower?","entities_all":["Eiffel Tower"],"passage_regex":"33\\d ?(m|metres|meters)","answer_regex":"33\\d|1,?0\\d\\d"}
+{"id":"named-06","split":"test","category":"named","lang":"en","question":"In which city is Hagia Sophia located?","entities_all":["Hagia Sophia"],"passage_regex":"Istanbul","answer_regex":"Istanbul"}
+{"id":"named-07","split":"dev","category":"named","lang":"en","question":"Which emperor built the Colosseum?","entities_all":["Colosseum"],"passage_regex":"Vespasian","answer_regex":"Vespasian"}
+{"id":"named-08","split":"test","category":"named","lang":"en","question":"In what country is Machu Picchu?","entities_all":["Machu Picchu"],"passage_regex":"Peru","answer_regex":"Peru"}
+{"id":"named-09","split":"dev","category":"named","lang":"en","question":"Who built the Taj Mahal?","entities_all":["Taj Mahal"],"passage_regex":"Shah Jahan","answer_regex":"Shah Jahan"}
+{"id":"named-10","split":"test","category":"named","lang":"en","question":"When did Nikola Tesla die?","entities_all":["Nikola Tesla"],"passage_regex":"1943","answer_regex":"1943"}
+{"id":"named-11","split":"dev","category":"named","lang":"en","question":"Who were the first people confirmed to reach the summit of Mount Everest?","entities_all":["Mount Everest"],"passage_regex":"Tenzing","answer_regex":"Tenzing|Hillary"}
+{"id":"named-12","split":"test","category":"named","lang":"en","question":"Who sculpted the Statue of Liberty?","entities_all":["Statue of Liberty"],"passage_regex":"Bartholdi","answer_regex":"Bartholdi"}
+{"id":"named-13","split":"dev","category":"named","lang":"en","question":"What is Ada Lovelace known for?","entities_all":["Ada Lovelace"],"passage_regex":"Analytical Engine","answer_regex":"Analytical Engine|first computer|programmer"}
+{"id":"named-14","split":"test","category":"named","lang":"en","question":"Where was William Shakespeare born?","entities_all":["William Shakespeare"],"passage_regex":"Stratford","answer_regex":"Stratford"}
+{"id":"named-15","split":"dev","category":"named","lang":"en","question":"In what year did Mustafa Kemal Atatürk die?","entities_all":["Mustafa Kemal Atatürk"],"passage_regex":"1938","answer_regex":"1938"}
+{"id":"named-16","split":"test","category":"named","lang":"en","question":"What river carved the Grand Canyon?","entities_all":["Grand Canyon"],"passage_regex":"Colorado River","answer_regex":"Colorado"}
+{"id":"named-17","split":"dev","category":"named","lang":"en","question":"Where did Alan Turing work during the Second World War?","entities_all":["Alan Turing"],"passage_regex":"Bletchley","answer_regex":"Bletchley"}
+{"id":"named-18","split":"test","category":"named","lang":"en","question":"Which company did Steve Jobs found after leaving Apple?","entities_all":["Steve Jobs"],"passage_regex":"NeXT","answer_regex":"NeXT"}
+{"id":"list-01","split":"dev","category":"list","lang":"en","question":"Which famous place is located in Turkey?","entities_all":["Hagia Sophia","Cappadocia"],"answer_regex":"Hagia Sophia|Cappadocia"}
+{"id":"list-02","split":"dev","category":"list","lang":"en","question":"Which famous place is located in Italy?","entities_all":["Colosseum"],"answer_regex":"Colosseum"}
+{"id":"list-03","split":"test","category":"list","lang":"en","question":"Which famous place is located in Egypt?","entities_all":["Giza pyramid complex"],"answer_regex":"Giza|Pyramid"}
+{"id":"list-04","split":"dev","category":"list","lang":"en","question":"Which famous place is located in Japan?","entities_all":["Mount Fuji"],"answer_regex":"Fuji"}
+{"id":"list-05","split":"test","category":"list","lang":"en","question":"Which famous place is located in India?","entities_all":["Taj Mahal"],"answer_regex":"Taj Mahal"}
+{"id":"list-06","split":"test","category":"list","lang":"en","question":"Which famous place is located in France?","entities_all":["Eiffel Tower"],"answer_regex":"Eiffel"}
+{"id":"list-07","split":"dev","category":"list","lang":"en","question":"Which landmark is in Spain?","entities_all":["Sagrada Família"],"answer_regex":"Sagrada"}
+{"id":"list-08","split":"test","category":"list","lang":"en","question":"Which landmark is in Greece?","entities_all":["Acropolis of Athens"],"answer_regex":"Acropolis"}
+{"id":"list-09","split":"dev","category":"list","lang":"en","question":"Which scientists won a Nobel Prize?","entities_all":["Marie Curie","Albert Einstein"],"answer_regex":"Curie|Einstein"}
+{"id":"list-10","split":"test","category":"list","lang":"en","question":"Which footballers are the most famous in the world?","entities_all":["Lionel Messi","Cristiano Ronaldo"],"answer_regex":"Messi|Ronaldo"}
+{"id":"list-11","split":"dev","category":"list","lang":"en","question":"Which famous landmark is in China?","entities_all":["Great Wall of China"],"answer_regex":"Great Wall"}
+{"id":"list-12","split":"test","category":"list","lang":"en","question":"Which famous place is located in England?","entities_any":["Stonehenge","Tower of London"],"answer_regex":"Stonehenge|Tower of London"}
+{"id":"typo-01","split":"dev","category":"typo","lang":"en","question":"Who was Einstien?","entities_all":["Albert Einstein"],"answer_regex":"Einstein"}
+{"id":"typo-02","split":"test","category":"typo","lang":"en","question":"Where is the Eifel Tower?","entities_all":["Eiffel Tower"],"answer_regex":"Paris"}
+{"id":"typo-03","split":"dev","category":"typo","lang":"en","question":"What did Marie Curei discover?","entities_all":["Marie Curie"],"answer_regex":"polonium|radium"}
+{"id":"typo-04","split":"test","category":"typo","lang":"en","question":"Who built the Collosseum?","entities_all":["Colosseum"],"answer_regex":"Vespasian|Titus|Flavian"}
+{"id":"typo-05","split":"dev","category":"typo","lang":"en","question":"Why is Nicola Tesla famous?","entities_all":["Nikola Tesla"],"answer_regex":"current|AC|electric"}
+{"id":"typo-06","split":"test","category":"typo","lang":"en","question":"Where is Machu Pichu?","entities_all":["Machu Picchu"],"answer_regex":"Peru"}
+{"id":"typo-07","split":"dev","category":"typo","lang":"en","question":"Who was Shakespear?","entities_all":["William Shakespeare"],"answer_regex":"playwright|poet|writer"}
+{"id":"typo-08","split":"test","category":"typo","lang":"en","question":"What did Isaac Newtn discover?","entities_all":["Isaac Newton"],"answer_regex":"gravit|motion|calculus"}
+{"id":"trap-01","split":"dev","category":"ambiguous","lang":"en","question":"What jobs did Marie Curie have?","entities_all":["Marie Curie"],"entities_forbid":["Steve Jobs"]}
+{"id":"trap-02","split":"test","category":"ambiguous","lang":"en","question":"How swift was the construction of the Great Wall?","entities_all":["Great Wall of China"],"entities_forbid":["Taylor Swift"]}
+{"id":"trap-03","split":"dev","category":"ambiguous","lang":"en","question":"What jobs did Charles Darwin consider before his voyage?","entities_all":["Charles Darwin"],"entities_forbid":["Steve Jobs"]}
+{"id":"trap-04","split":"test","category":"ambiguous","lang":"en","question":"How swift was Lionel Messi's rise at Barcelona?","entities_all":["Lionel Messi"],"entities_forbid":["Taylor Swift"]}
+{"id":"trap-05","split":"dev","category":"ambiguous","lang":"en","question":"What did Steve Jobs do at Pixar?","entities_all":["Steve Jobs"],"passage_regex":"Pixar"}
+{"id":"trap-06","split":"test","category":"ambiguous","lang":"en","question":"Which albums did Swift release in 2020?","entities_all":["Taylor Swift"],"passage_regex":"Folklore|Evermore"}
+{"id":"compare-01","split":"dev","category":"compare","lang":"en","question":"Compare Albert Einstein and Nikola Tesla.","entities_all":["Albert Einstein","Nikola Tesla"],"answer_regex":"Einstein"}
+{"id":"compare-02","split":"test","category":"compare","lang":"en","question":"Compare the Eiffel Tower and the Statue of Liberty.","entities_all":["Eiffel Tower","Statue of Liberty"],"answer_regex":"Eiffel"}
+{"id":"compare-03","split":"dev","category":"compare","lang":"en","question":"Compare Lionel Messi and Cristiano Ronaldo.","entities_all":["Lionel Messi","Cristiano Ronaldo"],"answer_regex":"Messi"}
+{"id":"compare-04","split":"test","category":"compare","lang":"en","question":"Compare Mount Fuji and Mount Everest.","entities_all":["Mount Fuji","Mount Everest"],"answer_regex":"Fuji"}
+{"id":"compare-05","split":"dev","category":"compare","lang":"en","question":"How are Isaac Newton and Stephen Hawking connected?","entities_all":["Isaac Newton","Stephen Hawking"],"answer_regex":"Newton"}
+{"id":"compare-06","split":"test","category":"compare","lang":"en","question":"Compare Albert Einstein and the Eiffel Tower.","entities_all":["Albert Einstein","Eiffel Tower"],"answer_regex":"Einstein"}
+{"id":"tr-01","split":"dev","category":"turkish","lang":"tr","question":"Atatürk ne zaman doğdu?","entities_all":["Mustafa Kemal Atatürk"],"passage_regex":"1881","answer_regex":"1881"}
+{"id":"tr-02","split":"test","category":"turkish","lang":"tr","question":"Ayasofya nerede?","entities_all":["Hagia Sophia"],"passage_regex":"Istanbul","answer_regex":"[İI]stanbul"}
+{"id":"tr-03","split":"dev","category":"turkish","lang":"tr","question":"Türkiye'deki ünlü yerler hangileri?","entities_any":["Hagia Sophia","Cappadocia"],"answer_regex":"Ayasofya|Hagia Sophia|Kapadokya|Cappadocia"}
+{"id":"tr-04","split":"test","category":"turkish","lang":"tr","question":"Mona Lisa'yı kim yaptı?","entities_any":["Leonardo da Vinci"],"answer_regex":"Leonardo"}
+{"id":"tr-05","split":"dev","category":"turkish","lang":"tr","question":"Hamlet'i kim yazdı?","entities_any":["William Shakespeare"],"answer_regex":"Shakespeare"}
+{"id":"tr-06","split":"test","category":"turkish","lang":"tr","question":"Elektrikle ilişkilendirilen ünlü mucit kimdir?","entities_any":["Nikola Tesla"],"answer_regex":"Tesla"}
+{"id":"tr-07","split":"dev","category":"turkish","lang":"tr","question":"Fransa'daki ünlü kule hangisi?","entities_any":["Eiffel Tower"],"answer_regex":"Eyfel|Eiffel"}
+{"id":"tr-08","split":"test","category":"turkish","lang":"tr","question":"Peru'daki antik İnka şehri hangisidir?","entities_any":["Machu Picchu"],"answer_regex":"Machu Picchu"}
+{"id":"tr-09","split":"dev","category":"turkish","lang":"tr","question":"Marie Curie neyi keşfetti?","entities_all":["Marie Curie"],"answer_regex":"polonyum|radyum|polonium|radium"}
+{"id":"tr-10","split":"test","category":"turkish","lang":"tr","question":"Çin Seddi nerede bulunur?","entities_all":["Great Wall of China"],"answer_regex":"Çin|China"}
+{"id":"tr-11","split":"dev","category":"turkish","lang":"tr","question":"Görelilik teorisini kim geliştirdi?","entities_any":["Albert Einstein"],"answer_regex":"Einstein"}
+{"id":"tr-12","split":"test","category":"turkish","lang":"tr","question":"Dünyanın en yüksek dağı hangisidir?","entities_any":["Mount Everest"],"answer_regex":"Everest"}
+{"id":"tr-13","split":"dev","category":"turkish","lang":"tr","question":"Kapadokya neden ünlü?","entities_all":["Cappadocia"],"answer_regex":"Kapadokya|Cappadocia|peri|balon"}
+{"id":"tr-14","split":"test","category":"turkish","lang":"tr","question":"Leonardo da Vinci hangi şehirde doğdu?","entities_all":["Leonardo da Vinci"],"passage_regex":"Vinci","answer_regex":"Vinci"}
+{"id":"refuse-01","split":"dev","category":"refusal","lang":"en","question":"Who is the president of Mars?","expect_refusal":true}
+{"id":"refuse-02","split":"test","category":"refusal","lang":"en","question":"Tell me about a random unknown person John Doe.","expect_refusal":true}
+{"id":"refuse-03","split":"dev","category":"refusal","lang":"en","question":"What is the capital of Australia?","expect_refusal":true}
+{"id":"refuse-04","split":"test","category":"refusal","lang":"en","question":"What is the boiling point of water at sea level?","expect_refusal":true}
+{"id":"refuse-05","split":"dev","category":"refusal","lang":"en","question":"Who won the 2038 FIFA World Cup?","expect_refusal":true}
+{"id":"refuse-06","split":"test","category":"refusal","lang":"en","question":"What is Lionel Messi's favourite pizza topping?","expect_refusal":true}
+{"id":"refuse-07","split":"dev","category":"refusal","lang":"en","question":"What is Marie Curie's phone number?","expect_refusal":true}
+{"id":"refuse-08","split":"test","category":"refusal","lang":"en","question":"How many floors does the Eiffel Tower's underground parking garage in Tokyo have?","expect_refusal":true}
+{"id":"refuse-09","split":"dev","category":"refusal","lang":"tr","question":"Mars'ın başkanı kimdir?","expect_refusal":true}
+{"id":"refuse-10","split":"test","category":"refusal","lang":"tr","question":"Python'da liste nasıl sıralanır?","expect_refusal":true}
+{"id":"refuse-11","split":"dev","category":"refusal","lang":"en","question":"Write me a recipe for lentil soup.","expect_refusal":true}
+{"id":"refuse-12","split":"test","category":"refusal","lang":"en","question":"What did Albert Einstein say about smartphones in his 2015 interview?","expect_refusal":true}
+{"id":"follow-01","split":"dev","category":"followup","lang":"en","history":["Who was Marie Curie?"],"question":"Where was she born?","entities_all":["Marie Curie"],"passage_regex":"Warsaw","answer_regex":"Warsaw"}
+{"id":"follow-02","split":"test","category":"followup","lang":"en","history":["Who was Albert Einstein?"],"question":"What prize did he win?","entities_all":["Albert Einstein"],"passage_regex":"Nobel","answer_regex":"Nobel"}
+{"id":"follow-03","split":"dev","category":"followup","lang":"en","history":["Tell me about the Eiffel Tower."],"question":"How tall is it?","entities_all":["Eiffel Tower"],"passage_regex":"33\\d ?(m|metres|meters)","answer_regex":"33\\d|1,?0\\d\\d"}
+{"id":"follow-04","split":"test","category":"followup","lang":"en","history":["Who was Nikola Tesla?"],"question":"And when did he die?","entities_all":["Nikola Tesla"],"passage_regex":"1943","answer_regex":"1943"}
+{"id":"follow-05","split":"dev","category":"followup","lang":"tr","history":["Atatürk kimdir?"],"question":"Peki ne zaman öldü?","entities_all":["Mustafa Kemal Atatürk"],"passage_regex":"1938","answer_regex":"1938"}
+{"id":"follow-06","split":"test","category":"followup","lang":"tr","history":["Ayasofya nedir?"],"question":"Peki nerede?","entities_all":["Hagia Sophia"],"passage_regex":"Istanbul","answer_regex":"[İI]stanbul"}

@@ -1,0 +1,164 @@
+{
+ "questions": 12,
+ "baseline": {
+  "search_s": 2.175,
+  "first_word_s": 10.758,
+  "total_s": 12.369
+ },
+ "current": {
+  "search_s": 0.044,
+  "first_word_s": 5.981,
+  "total_s": 8.749
+ },
+ "note": "Medians with each version running alone and the models already loaded.",
+ "rows": {
+  "baseline": [
+   {
+    "question": "When was Marie Curie born?",
+    "search_s": 2.178362700040452,
+    "first_word_s": 11.83480149996467,
+    "total_s": 12.884542700019665
+   },
+   {
+    "question": "Where was William Shakespeare born?",
+    "search_s": 2.165643500047736,
+    "first_word_s": 10.841376600088552,
+    "total_s": 12.685663199983537
+   },
+   {
+    "question": "Who built the Taj Mahal?",
+    "search_s": 2.178506699972786,
+    "first_word_s": 10.970319899963215,
+    "total_s": 19.41711659997236
+   },
+   {
+    "question": "How tall is the Eiffel Tower?",
+    "search_s": 2.1511836000718176,
+    "first_word_s": 10.675506200059317,
+    "total_s": 11.943420100025833
+   },
+   {
+    "question": "Compare Lionel Messi and Cristiano Ronaldo.",
+    "search_s": 4.328435300034471,
+    "first_word_s": 13.46100450004451,
+    "total_s": 21.313570099999197
+   },
+   {
+    "question": "Which famous place is located in Japan?",
+    "search_s": 2.201164000085555,
+    "first_word_s": 11.340251700021327,
+    "total_s": 13.215866800048389
+   },
+   {
+    "question": "Who wrote A Brief History of Time?",
+    "search_s": 2.230665300041437,
+    "first_word_s": 10.119830399984494,
+    "total_s": 10.844975700019859
+   },
+   {
+    "question": "Who is the president of Mars?",
+    "search_s": 2.171213799971156,
+    "first_word_s": 10.179545299964957,
+    "total_s": 10.910231500049122
+   },
+   {
+    "question": "What did Alan Turing do at Bletchley Park?",
+    "search_s": 2.15673919999972,
+    "first_word_s": 9.518069899990223,
+    "total_s": 11.110548600088805
+   },
+   {
+    "question": "Atatürk ne zaman doğdu?",
+    "search_s": 2.1702565000159666,
+    "first_word_s": 10.30450130009558,
+    "total_s": 11.18074360000901
+   },
+   {
+    "question": "Ayasofya nerede?",
+    "search_s": 2.164641199982725,
+    "first_word_s": 10.647271900088526,
+    "total_s": 12.052874100045301
+   },
+   {
+    "question": "Dünyanın en yüksek dağı hangisidir?",
+    "search_s": 4.286075999960303,
+    "first_word_s": 16.80801249993965,
+    "total_s": 17.624626399949193
+   }
+  ],
+  "current": [
+   {
+    "question": "When was Marie Curie born?",
+    "search_s": 0.04081399994902313,
+    "first_word_s": 6.535923799965531,
+    "total_s": 8.241254799999297
+   },
+   {
+    "question": "Where was William Shakespeare born?",
+    "search_s": 0.03952650004066527,
+    "first_word_s": 5.624916599947028,
+    "total_s": 6.653996599954553
+   },
+   {
+    "question": "Who built the Taj Mahal?",
+    "search_s": 0.041007200023159385,
+    "first_word_s": 6.390977000002749,
+    "total_s": 13.529913200065494
+   },
+   {
+    "question": "How tall is the Eiffel Tower?",
+    "search_s": 0.03808750002644956,
+    "first_word_s": 5.228572400053963,
+    "total_s": 8.89843479997944
+   },
+   {
+    "question": "Compare Lionel Messi and Cristiano Ronaldo.",
+    "search_s": 0.046240300056524575,
+    "first_word_s": 6.236888300045393,
+    "total_s": 17.32158280001022
+   },
+   {
+    "question": "Which famous place is located in Japan?",
+    "search_s": 0.044208699953742325,
+    "first_word_s": 5.717629799968563,
+    "total_s": 11.569248000043444
+   },
+   {
+    "question": "Who wrote A Brief History of Time?",
+    "search_s": 0.04222010006196797,
+    "first_word_s": 5.725130200036801,
+    "total_s": 8.475680900039151
+   },
+   {
+    "question": "Who is the president of Mars?",
+    "search_s": 0.04707449988927692,
+    "first_word_s": 4.910859299940057,
+    "total_s": 5.989300399902277
+   },
+   {
+    "question": "What did Alan Turing do at Bletchley Park?",
+    "search_s": 0.04289610008709133,
+    "first_word_s": 5.272424800088629,
+    "total_s": 10.389795200084336
+   },
+   {
+    "question": "Atatürk ne zaman doğdu?",
+    "search_s": 1.1992709001060575,
+    "first_word_s": 8.774242800078355,
+    "total_s": 9.74628320010379
+   },
+   {
+    "question": "Ayasofya nerede?",
+    "search_s": 0.6269843999762088,
+    "first_word_s": 7.13415920000989,
+    "total_s": 8.016055700019933
+   },
+   {
+    "question": "Dünyanın en yüksek dağı hangisidir?",
+    "search_s": 0.7892711999593303,
+    "first_word_s": 7.57421859994065,
+    "total_s": 8.599790400010534
+   }
+  ]
+ }
+}

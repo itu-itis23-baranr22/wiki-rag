@@ -1,0 +1,2611 @@
+{
+ "label": "final-dev",
+ "split": "dev",
+ "settings": {
+  "split": "dev",
+  "answers": true,
+  "label": "final-dev",
+  "no_lexical": false,
+  "no_vector": false,
+  "no_translate": false,
+  "entity_cap": null,
+  "no_type_filter": false,
+  "lexical_weight": null,
+  "top_k": null,
+  "resume": true
+ },
+ "complete": true,
+ "indexed_passages": 3504,
+ "summary": {
+  "overall": {
+   "questions": 56,
+   "retrieval_success": 1.0,
+   "entity_recall": 1.0,
+   "hit_at_1": 0.96,
+   "mrr": 0.98,
+   "answer_correct": 0.98,
+   "false_refusal": 0.0,
+   "refusal_correct": 0.8333333333333334,
+   "numbers_grounded": 1.0,
+   "cited_answers": 1.0,
+   "median_latency_s": 11.2
+  },
+  "categories": {
+   "anonymous": {
+    "questions": 15,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.9333333333333333,
+    "mrr": 0.9666666666666667,
+    "answer_correct": 0.9333333333333333,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 11.1
+   },
+   "named": {
+    "questions": 9,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 11.3
+   },
+   "list": {
+    "questions": 6,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.8333333333333334,
+    "mrr": 0.9166666666666666,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 12.0
+   },
+   "typo": {
+    "questions": 4,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 13.6
+   },
+   "ambiguous": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 13.7
+   },
+   "compare": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 14.7
+   },
+   "turkish": {
+    "questions": 7,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 11.2
+   },
+   "followup": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 8.5
+   },
+   "refusal": {
+    "questions": 6,
+    "refusal_correct": 0.8333333333333334,
+    "median_latency_s": 7.3
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "anon-01",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who developed the theory of general relativity?",
+   "answer": "Albert Einstein developed the theory of general relativity [1]. Einstein developed the theory between 1907 and 1915 [1]. Einstein's theory of general relativity was developed to address the preference of inertial motions within special relativity [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 53,
+    "first_token_ms": 7791,
+    "total_ms": 11593,
+    "prompt_tokens": 989,
+    "answer_tokens": 52,
+    "tokens_per_second": 13.9
+   },
+   "latency_s": 11.6,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-03",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who wrote Hamlet and Macbeth?",
+   "answer": "William Shakespeare wrote Hamlet and Macbeth [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 45,
+    "first_token_ms": 6626,
+    "total_ms": 7475,
+    "prompt_tokens": 954,
+    "answer_tokens": 12,
+    "tokens_per_second": 15.0
+   },
+   "latency_s": 7.5,
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "Tower of London",
+    "Tower of London",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-05",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who painted The Starry Night?",
+   "answer": "Vincent van Gogh painted The Starry Night [1]. The painting is characterized by swirls and is one of his works from the time he was at Saint-Rémy [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 44,
+    "first_token_ms": 8276,
+    "total_ms": 11305,
+    "prompt_tokens": 1120,
+    "answer_tokens": 40,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 11.3,
+   "retrieved": [
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Frida Kahlo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-07",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who co-founded Apple and introduced the iPhone?",
+   "answer": "Steve Jobs co-founded Apple with his early business partner Steve Wozniak as Apple Computer Company in 1976 [2]. Steve Jobs introduced the iPhone, which was released on June 29, 2007 [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 48,
+    "first_token_ms": 8151,
+    "total_ms": 11721,
+    "prompt_tokens": 1128,
+    "answer_tokens": 47,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 11.7,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Cristiano Ronaldo",
+    "Taylor Swift",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-09",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who wrote the first computer program for the Analytical Engine?",
+   "answer": "The first computer program for the Analytical Engine was written by Ada Lovelace, as described in her Note G, which is often called the first published computer program [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 47,
+    "first_token_ms": 7921,
+    "total_ms": 10733,
+    "prompt_tokens": 1091,
+    "answer_tokens": 37,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 10.7,
+   "retrieved": [
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Alan Turing",
+    "Alan Turing",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-11",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who led the Salt March in India?",
+   "answer": "Gandhi led the Salt March in India [1]. Gandhi and volunteers marched 388 kilometres from Ahmedabad to Dandi, Gujarat to make salt himself, with the declared intention of breaking the salt laws, watched by huge crowds [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 44,
+    "first_token_ms": 7157,
+    "total_ms": 10902,
+    "prompt_tokens": 1010,
+    "answer_tokens": 50,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 10.9,
+   "retrieved": [
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Hagia Sophia",
+    "Tower of London",
+    "Frida Kahlo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-13",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who composed The Magic Flute?",
+   "answer": "The person who composed The Magic Flute is Wolfgang Amadeus Mozart [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 6994,
+    "total_ms": 8300,
+    "prompt_tokens": 975,
+    "answer_tokens": 18,
+    "tokens_per_second": 14.4
+   },
+   "latency_s": 8.3,
+   "retrieved": [
+    "Mozart",
+    "Niagara Falls",
+    "Mozart",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-15",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which Mexican painter married Diego Rivera?",
+   "answer": "Frida Kahlo married Diego Rivera [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 75,
+    "first_token_ms": 7464,
+    "total_ms": 8358,
+    "prompt_tokens": 1014,
+    "answer_tokens": 12,
+    "tokens_per_second": 14.7
+   },
+   "latency_s": 8.4,
+   "retrieved": [
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-17",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Where can you find fairy chimneys and hot air balloons?",
+   "answer": "You can find fairy chimneys in Cappadocia [2] and hot air balloons in Cappadocia [2] as well as Mount Everest [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 74,
+    "first_token_ms": 7834,
+    "total_ms": 10643,
+    "prompt_tokens": 1101,
+    "answer_tokens": 37,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 10.6,
+   "retrieved": [
+    "Mount Everest",
+    "Cappadocia",
+    "Cappadocia",
+    "Machu Picchu",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-19",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which ancient city in Jordan is carved into rock?",
+   "answer": "Petra is carved into rock [1]. The colour of the sandstone from which it is carved is the reason it is also called the \"Rose City\" [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 56,
+    "first_token_ms": 8375,
+    "total_ms": 11081,
+    "prompt_tokens": 1163,
+    "answer_tokens": 36,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 11.1,
+   "retrieved": [
+    "Petra",
+    "Petra",
+    "Acropolis of Athens",
+    "Giza pyramid complex",
+    "Giza pyramid complex"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-21",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which amphitheatre in Rome hosted gladiator fights?",
+   "answer": "The Colosseum in Rome hosted gladiator fights [1]. The Colosseum was the largest ancient amphitheatre ever built, and it is the largest standing amphitheatre in the world [2]. Gladiator fights are last mentioned around 435 [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 8376,
+    "total_ms": 12671,
+    "prompt_tokens": 1147,
+    "answer_tokens": 56,
+    "tokens_per_second": 13.2
+   },
+   "latency_s": 12.7,
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Petra",
+    "Cleopatra",
+    "Tower of London"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-23",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "What is the highest mountain above sea level on Earth?",
+   "answer": "Mount Everest is the highest mountain above sea level on Earth, with a height of 8,848.86 m [2]. It is located in the Mahalangur Himal sub-range of the Himalayas and marks part of the China–Nepal border at its summit [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 70,
+    "first_token_ms": 9328,
+    "total_ms": 13944,
+    "prompt_tokens": 1222,
+    "answer_tokens": 60,
+    "tokens_per_second": 13.2
+   },
+   "latency_s": 13.9,
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Fuji",
+    "Eiffel Tower",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-25",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which prehistoric stone circle is on Salisbury Plain in England?",
+   "answer": "Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury [1]. It consists of an outer ring of vertical sarsen standing stones, each around 13 feet (4.0 m) high, seven feet (2.1 m) wide, and weighing around 25 tons [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 8525,
+    "total_ms": 14764,
+    "prompt_tokens": 1145,
+    "answer_tokens": 82,
+    "tokens_per_second": 13.3
+   },
+   "latency_s": 14.8,
+   "retrieved": [
+    "Stonehenge",
+    "Stonehenge",
+    "Sagrada Família",
+    "Charles Darwin",
+    "Sagrada Família"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-27",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Which waterfalls are on the border of Canada and New York?",
+   "answer": "The waterfalls on the border of Canada and New York are Horseshoe Falls and Bridal Veil Falls [1]. Horseshoe Falls straddles the international border of the two countries [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 52,
+    "first_token_ms": 7537,
+    "total_ms": 10902,
+    "prompt_tokens": 1040,
+    "answer_tokens": 45,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 10.9,
+   "retrieved": [
+    "Niagara Falls",
+    "Niagara Falls",
+    "Statue of Liberty",
+    "Grand Canyon",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-29",
+   "split": "dev",
+   "category": "anonymous",
+   "question": "Who designed the alternating current induction motor?",
+   "answer": "Nikola Tesla developed the induction motor that ran on alternating current [1]. Tesla claimed to have conceived the principle of the rotating magnetic field in 1882 [1]. The motor was patented in May 1888 [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 43,
+    "first_token_ms": 7539,
+    "total_ms": 11167,
+    "prompt_tokens": 1034,
+    "answer_tokens": 48,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 11.2,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Alan Turing",
+    "Ada Lovelace",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-01",
+   "split": "dev",
+   "category": "named",
+   "question": "When was Marie Curie born?",
+   "answer": "Maria Salomea Skłodowska was born on 7 November 1867 in Warsaw [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 8690,
+    "total_ms": 10494,
+    "prompt_tokens": 1156,
+    "answer_tokens": 24,
+    "tokens_per_second": 13.7
+   },
+   "latency_s": 10.5,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-03",
+   "split": "dev",
+   "category": "named",
+   "question": "In which year did Albert Einstein receive the Nobel Prize in Physics?",
+   "answer": "Einstein received the Nobel Prize in Physics in 1921, as it was carried forward from 1921 to 1922 [1, 3]. However, the prize was officially awarded in 1922 [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 7367,
+    "total_ms": 10855,
+    "prompt_tokens": 1000,
+    "answer_tokens": 47,
+    "tokens_per_second": 13.7
+   },
+   "latency_s": 10.9,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-05",
+   "split": "dev",
+   "category": "named",
+   "question": "How tall is the Eiffel Tower?",
+   "answer": "The Eiffel Tower is 330 metres tall [1]. It is also about the same height as an 81-storey building [1]. The tower's height was surpassed by the Chrysler Building in New York City in 1930 [3]. The Eiffel Tower was the world's tallest structure when completed in 1889 [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 50,
+    "first_token_ms": 7075,
+    "total_ms": 12418,
+    "prompt_tokens": 949,
+    "answer_tokens": 72,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 12.4,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-07",
+   "split": "dev",
+   "category": "named",
+   "question": "Which emperor built the Colosseum?",
+   "answer": "The Colosseum was built under the rule of Vespasian [1], and its construction was completed by his son, Titus [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 8824,
+    "total_ms": 11338,
+    "prompt_tokens": 1143,
+    "answer_tokens": 33,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 11.3,
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-09",
+   "split": "dev",
+   "category": "named",
+   "question": "Who built the Taj Mahal?",
+   "answer": "Shah Jahan commissioned the Taj Mahal in 1631, to be built in the memory of his wife Mumtaz Mahal [2]. The construction of the mausoleum was completed in 1648, and it is widely accepted that Shah Jahan was the one who oversaw its construction [1]. There is no evidence in the passages to suggest that a Hindu king, such as Paramardi or Paramardi's predecessor, built the Taj Mahal [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 8277,
+    "total_ms": 15818,
+    "prompt_tokens": 1120,
+    "answer_tokens": 99,
+    "tokens_per_second": 13.2
+   },
+   "latency_s": 15.8,
+   "retrieved": [
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-11",
+   "split": "dev",
+   "category": "named",
+   "question": "Who were the first people confirmed to reach the summit of Mount Everest?",
+   "answer": "The first people confirmed to reach the summit of Mount Everest were Tenzing Norgay and Edmund Hillary, who made the first documented ascent of Everest in 1953, using the Southeast Ridge route [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 52,
+    "first_token_ms": 8715,
+    "total_ms": 12037,
+    "prompt_tokens": 1158,
+    "answer_tokens": 44,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 12.0,
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-13",
+   "split": "dev",
+   "category": "named",
+   "question": "What is Ada Lovelace known for?",
+   "answer": "Ada Lovelace is known for work on Charles Babbage's proposed mechanical general-purpose computer, the analytical engine [4]. She is often considered the first computer programmer [4]. She was the first to recognise the machine had applications beyond pure calculation [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 7964,
+    "total_ms": 11946,
+    "prompt_tokens": 1088,
+    "answer_tokens": 53,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 11.9,
+   "retrieved": [
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-15",
+   "split": "dev",
+   "category": "named",
+   "question": "In what year did Mustafa Kemal Atatürk die?",
+   "answer": "Mustafa Kemal Atatürk died in 1938 [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 59,
+    "first_token_ms": 7235,
+    "total_ms": 8177,
+    "prompt_tokens": 1002,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.7
+   },
+   "latency_s": 8.2,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-17",
+   "split": "dev",
+   "category": "named",
+   "question": "Where did Alan Turing work during the Second World War?",
+   "answer": "During the Second World War, Alan Turing worked at the Government Code and Cypher School at Bletchley Park [2]. He also worked at Hanslope Park, which was part of the Secret Service's Radio Security Service [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 52,
+    "first_token_ms": 7084,
+    "total_ms": 10673,
+    "prompt_tokens": 981,
+    "answer_tokens": 49,
+    "tokens_per_second": 13.9
+   },
+   "latency_s": 10.7,
+   "retrieved": [
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-01",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous place is located in Turkey?",
+   "answer": "Cappadocia is a historical region in Central Anatolia region, Turkey [4]. Göreme is a Christian monastic centre in Cappadocia [1]. Hagia Sophia is a museum in Turkey, and later a mosque [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 7962,
+    "total_ms": 11954,
+    "prompt_tokens": 1087,
+    "answer_tokens": 53,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 12.0,
+   "retrieved": [
+    "Cappadocia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Cappadocia",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-02",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous place is located in Italy?",
+   "answer": "The Colosseum is located in Italy [1]. Rome is the city where the Colosseum is situated [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 7750,
+    "total_ms": 9831,
+    "prompt_tokens": 1059,
+    "answer_tokens": 28,
+    "tokens_per_second": 13.8
+   },
+   "latency_s": 9.8,
+   "retrieved": [
+    "Colosseum",
+    "Petra",
+    "Colosseum",
+    "Petra",
+    "Giza pyramid complex"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-04",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous place is located in Japan?",
+   "answer": "Mount Fuji is a Japanese cultural icon and is frequently depicted in art and photography, as well as visited by sightseers, hikers, and mountain climbers [1]. It is one of Japan's \"Three Holy Mountains\" along with Mount Tate and Mount Haku [1]. Mount Fuji was added to the World Heritage List as a Cultural Site on June 22, 2013 [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 7095,
+    "total_ms": 13123,
+    "prompt_tokens": 986,
+    "answer_tokens": 81,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 13.1,
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Fuji",
+    "Machu Picchu",
+    "Eiffel Tower",
+    "Angkor Wat"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-07",
+   "split": "dev",
+   "category": "list",
+   "question": "Which landmark is in Spain?",
+   "answer": "The Sagrada Família is a Catholic Basilica in the Eixample district of Barcelona, Catalonia, Spain [3]. The Statue of Jesus Christ on the top of Temple Expiatori del Sagrat Cor, Barcelona, Spain is also located in Spain [5].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 50,
+    "first_token_ms": 7744,
+    "total_ms": 11838,
+    "prompt_tokens": 1063,
+    "answer_tokens": 55,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 11.8,
+   "retrieved": [
+    "Stonehenge",
+    "Sagrada Família",
+    "Sagrada Família",
+    "Eiffel Tower",
+    "Christ the Redeemer (statue)"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-09",
+   "split": "dev",
+   "category": "list",
+   "question": "Which scientists won a Nobel Prize?",
+   "answer": "Marie Curie won a Nobel Prize in Physics in 1903 and a Nobel Prize in Chemistry in 1911 [1, 2]. Albert Einstein won a Nobel Prize in Physics in 1921 [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 58,
+    "first_token_ms": 7692,
+    "total_ms": 11135,
+    "prompt_tokens": 1055,
+    "answer_tokens": 46,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 11.1,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-11",
+   "split": "dev",
+   "category": "list",
+   "question": "Which famous landmark is in China?",
+   "answer": "The Great Wall of China is a series of fortifications in China [1]. The Great Wall utilized watchtowers, troop barracks, garrison stations, signaling capabilities through the means of smoke or fire, and its status as a transportation corridor [1]. The wall system was expanded by successive dynasties, with the best-known sections built by the Ming dynasty [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 7014,
+    "total_ms": 12590,
+    "prompt_tokens": 971,
+    "answer_tokens": 76,
+    "tokens_per_second": 13.8
+   },
+   "latency_s": 12.6,
+   "retrieved": [
+    "Great Wall of China",
+    "Great Wall of China",
+    "Stonehenge",
+    "Eiffel Tower",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-01",
+   "split": "dev",
+   "category": "typo",
+   "question": "Who was Einstien?",
+   "answer": "Albert Einstein was a German-born theoretical physicist [1]. He was best known for developing the theory of relativity [1]. Einstein also made important contributions to quantum theory [1]. He received the 1921 Nobel Prize in Physics [1]. Einstein was a member of the Geneva-based International Committee on Intellectual Cooperation of the League of Nations [5].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 44,
+    "first_token_ms": 8207,
+    "total_ms": 13590,
+    "prompt_tokens": 1110,
+    "answer_tokens": 71,
+    "tokens_per_second": 13.3
+   },
+   "latency_s": 13.6,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-03",
+   "split": "dev",
+   "category": "typo",
+   "question": "What did Marie Curei discover?",
+   "answer": "Marie Curie discovered the elements radium and polonium [2]. She isolated radium and studied its nature and compounds [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 7632,
+    "total_ms": 9765,
+    "prompt_tokens": 1042,
+    "answer_tokens": 29,
+    "tokens_per_second": 13.9
+   },
+   "latency_s": 9.8,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-05",
+   "split": "dev",
+   "category": "typo",
+   "question": "Why is Nicola Tesla famous?",
+   "answer": "Nikola Tesla is famous for his contributions to the design of the modern alternating current (AC) electricity supply system [1]. He is also famous for his work on the Tesla coil, a resonant transformer circuit used to produce high-voltage, low-current, high frequency alternating-current electricity [5]. Additionally, Tesla's work has been recognized with a unit of measurement in the International System of Units (SI) named after him, the tesla, which measures magnetic flux density [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 6695,
+    "total_ms": 14443,
+    "prompt_tokens": 955,
+    "answer_tokens": 100,
+    "tokens_per_second": 13.0
+   },
+   "latency_s": 14.4,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-07",
+   "split": "dev",
+   "category": "typo",
+   "question": "Who was Shakespear?",
+   "answer": "Shakespeare was an English playwright, poet and actor [1]. He is widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist [1]. He is often called England's national poet and the \"Bard of Avon\" or simply \"the Bard\" [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 7678,
+    "total_ms": 12523,
+    "prompt_tokens": 1033,
+    "answer_tokens": 65,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 12.5,
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-01",
+   "split": "dev",
+   "category": "ambiguous",
+   "question": "What jobs did Marie Curie have?",
+   "answer": "Marie Curie was a physicist and chemist [1]. She was also a professor, as she was awarded her doctorate from the University of Paris in June 1903 [2]. Additionally, she was a researcher, as she was involved in the discovery of the elements radium and polonium [1]. She also worked on the radioactivity phenomena discovered by Professor Henri Becquerel [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 7406,
+    "total_ms": 13650,
+    "prompt_tokens": 1031,
+    "answer_tokens": 83,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 13.7,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-03",
+   "split": "dev",
+   "category": "ambiguous",
+   "question": "What jobs did Charles Darwin consider before his voyage?",
+   "answer": "Before his voyage, Charles Darwin considered being a naturalist for a self-funded supernumerary place on HMS Beagle [3]. He was initially hesitant about the two-year voyage, but was persuaded by his brother-in-law, Josiah Wedgwood II, to agree to participate [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 48,
+    "first_token_ms": 7668,
+    "total_ms": 12152,
+    "prompt_tokens": 1046,
+    "answer_tokens": 60,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 12.2,
+   "retrieved": [
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-05",
+   "split": "dev",
+   "category": "ambiguous",
+   "question": "What did Steve Jobs do at Pixar?",
+   "answer": "Steve Jobs funded the spinout of The Graphics Group (later renamed Pixar) from Lucasfilm's computer graphics division for the price of $10 million, $5 million of which was given to the company as capital and $5 million of which was paid to Lucasfilm for technology rights [2]. He became the chairman and majority shareholder of Pixar in 1986 [2]. He was credited as executive producer for the film Toy Story (1995) [2]. He produced several successful films at Pixar, including A Bug's Life, Toy Story 2, Monsters, Inc., Finding Nemo, The Incredibles, Cars, Ratatouille, WALL-E, Up, Toy Story 3, and Cars 2 [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 45,
+    "first_token_ms": 9629,
+    "total_ms": 21421,
+    "prompt_tokens": 1227,
+    "answer_tokens": 150,
+    "tokens_per_second": 12.8
+   },
+   "latency_s": 21.4,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-01",
+   "split": "dev",
+   "category": "compare",
+   "question": "Compare Albert Einstein and Nikola Tesla.",
+   "answer": "Albert Einstein and Nikola Tesla were both renowned scientists, but their contributions and personalities differed [1]. Einstein was a theoretical physicist who developed the theory of relativity and made important contributions to quantum theory, including the mass-energy equivalence formula E = mc2 [2]. Tesla, on the other hand, was an engineer, futurist, and inventor who is known for his contributions to the design of the modern alternating current (AC) electricity supply system [4]. While Einstein's work focused on theoretical physics, Tesla's work was more practical, with a focus on developing new technologies [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 58,
+    "first_token_ms": 5965,
+    "total_ms": 14716,
+    "prompt_tokens": 861,
+    "answer_tokens": 119,
+    "tokens_per_second": 13.7
+   },
+   "latency_s": 14.7,
+   "retrieved": [
+    "Nikola Tesla",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Nikola Tesla",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-03",
+   "split": "dev",
+   "category": "compare",
+   "question": "Compare Lionel Messi and Cristiano Ronaldo.",
+   "answer": "Both Lionel Messi and Cristiano Ronaldo are widely regarded as one of the greatest footballers of all time [1]. Messi is lauded for his combination of dribbling, playmaking, passing and goalscoring, while Ronaldo has received praise for his exceptional speed and athleticism, goalscoring skills, and performance under pressure [2]. Ronaldo is one of the most decorated players in the history of professional football [3]. Both Ronaldo and Messi have scored in multiple UEFA Champions League finals, have regularly broken the 50-goal barrier in a single season, and are the two leading goal scorers in history [4]. Among his contemporary peers, Messi is most often compared and contrasted with Cristiano Ronaldo, who many consider his career rival [5].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 70,
+    "first_token_ms": 8122,
+    "total_ms": 19477,
+    "prompt_tokens": 1074,
+    "answer_tokens": 149,
+    "tokens_per_second": 13.2
+   },
+   "latency_s": 19.5,
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Cristiano Ronaldo",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-05",
+   "split": "dev",
+   "category": "compare",
+   "question": "How are Isaac Newton and Stephen Hawking connected?",
+   "answer": "Isaac Newton and Stephen Hawking are connected as both were Lucasian Professors of Mathematics at the University of Cambridge [3]. Stephen Hawking was also buried in Westminster Abbey, next to Isaac Newton and Charles Darwin [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 6283,
+    "total_ms": 9809,
+    "prompt_tokens": 899,
+    "answer_tokens": 48,
+    "tokens_per_second": 13.8
+   },
+   "latency_s": 9.8,
+   "retrieved": [
+    "Isaac Newton",
+    "Isaac Newton",
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-01",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Atatürk ne zaman doğdu?",
+   "answer": "Atatürk, c. 1881 doğdu [1].",
+   "language": "tr",
+   "translated": "When was Atatürk born?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 1303,
+    "retrieve_ms": 45,
+    "first_token_ms": 8918,
+    "total_ms": 11249,
+    "prompt_tokens": 1036,
+    "answer_tokens": 14,
+    "tokens_per_second": 14.3
+   },
+   "latency_s": 11.2,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-03",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Türkiye'deki ünlü yerler hangileri?",
+   "answer": "Cappadocia [4], Hagia Sophia [2] ve Petra [5] Türkiye'deki ünlü yerlerdir.",
+   "language": "tr",
+   "translated": "What are the famous places in Turkey?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 755,
+    "retrieve_ms": 58,
+    "first_token_ms": 9621,
+    "total_ms": 12473,
+    "prompt_tokens": 1092,
+    "answer_tokens": 28,
+    "tokens_per_second": 13.8
+   },
+   "latency_s": 12.5,
+   "retrieved": [
+    "Cappadocia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Cappadocia",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-05",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Hamlet'i kim yazdı?",
+   "answer": "Hamlet'i kim yazdı? William Shakespeare [1].",
+   "language": "tr",
+   "translated": "Who wrote Hamlet?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 1,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 531,
+    "retrieve_ms": 43,
+    "first_token_ms": 7877,
+    "total_ms": 9340,
+    "prompt_tokens": 914,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.7
+   },
+   "latency_s": 9.3,
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "Tower of London",
+    "Tower of London",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-07",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Fransa'daki ünlü kule hangisi?",
+   "answer": "Fransa'daki ünlü kule Eiffel Kulesidir [1].",
+   "language": "tr",
+   "translated": "Which tower is in France?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 632,
+    "retrieve_ms": 46,
+    "first_token_ms": 9257,
+    "total_ms": 11150,
+    "prompt_tokens": 1059,
+    "answer_tokens": 17,
+    "tokens_per_second": 14.0
+   },
+   "latency_s": 11.2,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Tower of London",
+    "Tower of London",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-09",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Marie Curie neyi keşfetti?",
+   "answer": "Marie Curie, polonium ve radium gibi elementleri keşfetti [1].",
+   "language": "tr",
+   "translated": "What did Marie Curie discover?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 707,
+    "retrieve_ms": 50,
+    "first_token_ms": 9220,
+    "total_ms": 11440,
+    "prompt_tokens": 1055,
+    "answer_tokens": 20,
+    "tokens_per_second": 13.7
+   },
+   "latency_s": 11.4,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-11",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Görelilik teorisini kim geliştirdi?",
+   "answer": "Görelilik teorisini Albert Einstein geliştirdi [1]. Einstein, bu teoriyi 1907-1915 yılları arasında geliştirdi [1].",
+   "language": "tr",
+   "translated": "Who developed the theory of relativity?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 823,
+    "retrieve_ms": 48,
+    "first_token_ms": 9602,
+    "total_ms": 13760,
+    "prompt_tokens": 1041,
+    "answer_tokens": 42,
+    "tokens_per_second": 12.9
+   },
+   "latency_s": 13.8,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-13",
+   "split": "dev",
+   "category": "turkish",
+   "question": "Kapadokya neden ünlü?",
+   "answer": "Kapadokya, turistik Kapadokya Bölgesi olarak today, Nevşehir province'de yer alan bir region olarak bilinir [2]. Kapadokya, Cappadocians tarafından 499 BC'de reported olarak bir region olarak sınıflandırılmıştır [2]. Kapadokya, 314 yılında Roma İmparatorluğu'nun en büyük ilidir ve Pontus Diyasinin bir parçası idi [3]. Kapadokya, Strabon'un zamanında, Cilicia olarak bilinen bir district olarak sınıflandırılmıştır [5].",
+   "language": "tr",
+   "translated": "Why is Cappadocia famous?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 720,
+    "retrieve_ms": 41,
+    "first_token_ms": 122,
+    "total_ms": 9898,
+    "prompt_tokens": 1172,
+    "answer_tokens": 121,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 9.9,
+   "retrieved": [
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "refuse-01",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Who is the president of Mars?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 48,
+    "first_token_ms": 5095,
+    "total_ms": 6271,
+    "prompt_tokens": 860,
+    "answer_tokens": 16,
+    "tokens_per_second": 14.2
+   },
+   "latency_s": 6.3,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Mustafa Kemal Atatürk",
+    "Lionel Messi",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-03",
+   "split": "dev",
+   "category": "refusal",
+   "question": "What is the capital of Australia?",
+   "answer": "The capital of Australia is Darwin [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": true,
+    "correct": false,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 42,
+    "first_token_ms": 6199,
+    "total_ms": 6913,
+    "prompt_tokens": 1118,
+    "answer_tokens": 10,
+    "tokens_per_second": 14.9
+   },
+   "latency_s": 6.9,
+   "retrieved": [
+    "Charles Darwin",
+    "Mustafa Kemal Atatürk",
+    "Cappadocia",
+    "Petra",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-05",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Who won the 2038 FIFA World Cup?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 40,
+    "first_token_ms": 7282,
+    "total_ms": 8228,
+    "prompt_tokens": 1255,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.4
+   },
+   "latency_s": 8.2,
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Cristiano Ronaldo",
+    "Christ the Redeemer (statue)"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-07",
+   "split": "dev",
+   "category": "refusal",
+   "question": "What is Marie Curie's phone number?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 43,
+    "first_token_ms": 6167,
+    "total_ms": 7269,
+    "prompt_tokens": 1108,
+    "answer_tokens": 15,
+    "tokens_per_second": 14.2
+   },
+   "latency_s": 7.3,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-09",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Mars'ın başkanı kimdir?",
+   "answer": "Elimdeki bilgilere göre bunu bilmiyorum.",
+   "language": "tr",
+   "translated": "Who is the president of Mars?",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 1167,
+    "retrieve_ms": 11,
+    "first_token_ms": 5506,
+    "total_ms": 7333,
+    "prompt_tokens": 864,
+    "answer_tokens": 10,
+    "tokens_per_second": 15.4
+   },
+   "latency_s": 7.3,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Mustafa Kemal Atatürk",
+    "Lionel Messi",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-11",
+   "split": "dev",
+   "category": "refusal",
+   "question": "Write me a recipe for lentil soup.",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 38,
+    "first_token_ms": 4616,
+    "total_ms": 5361,
+    "prompt_tokens": 786,
+    "answer_tokens": 11,
+    "tokens_per_second": 15.6
+   },
+   "latency_s": 5.4,
+   "retrieved": [
+    "Cappadocia",
+    "Isaac Newton",
+    "Cleopatra",
+    "Cleopatra",
+    "Hagia Sophia"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "follow-01",
+   "split": "dev",
+   "category": "followup",
+   "question": "Where was she born?",
+   "answer": "She was born in Warsaw, the capital of Congress Poland in the Russian Empire [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 38,
+    "first_token_ms": 7051,
+    "total_ms": 8461,
+    "prompt_tokens": 1224,
+    "answer_tokens": 19,
+    "tokens_per_second": 13.8
+   },
+   "latency_s": 8.5,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "follow-03",
+   "split": "dev",
+   "category": "followup",
+   "question": "How tall is it?",
+   "answer": "The Eiffel Tower is 330 metres tall [1]. It is about the same height as an 81-storey building [1]. The pinnacle height of the Eiffel Tower has changed multiple times over the years [5].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 39,
+    "first_token_ms": 4845,
+    "total_ms": 8313,
+    "prompt_tokens": 907,
+    "answer_tokens": 49,
+    "tokens_per_second": 14.3
+   },
+   "latency_s": 8.4,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "follow-05",
+   "split": "dev",
+   "category": "followup",
+   "question": "Peki ne zaman öldü?",
+   "answer": "Atatürk 10 Kasım 1938 tarihinde öldü [1].",
+   "language": "tr",
+   "translated": "When did he die?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 473,
+    "retrieve_ms": 38,
+    "first_token_ms": 6238,
+    "total_ms": 7766,
+    "prompt_tokens": 963,
+    "answer_tokens": 15,
+    "tokens_per_second": 14.8
+   },
+   "latency_s": 8.7,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  }
+ ]
+}

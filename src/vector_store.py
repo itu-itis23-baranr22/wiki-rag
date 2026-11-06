@@ -1,115 +1,165 @@
-"""Vector store wrapper around ChromaDB.
+"""Persistent vector store: one ChromaDB collection with page metadata.
 
-Design choice (Option B from the brief): one collection, with a `type`
-metadata field per document set to either "person" or "place". Reasons:
-
-  * Mixed queries ("compare Einstein and the Eiffel Tower", "which famous
-    place is in Turkey") become natural single-collection searches with
-    optional filters.
-  * One HNSW index, one persistence dir, one set of operational concerns.
-  * We can still scope a query to one type with `where={"type": ...}`,
-    which is what the router does for unambiguous queries.
-
-We persist to disk under `CHROMA_DIR` so re-running the chat doesn't
-re-embed everything.
+Embeddings are always computed by the caller and passed in, so Chroma never needs
+its own embedding function. A small manifest records how the index was built,
+because vectors made with different settings must not be mixed.
 """
 from __future__ import annotations
 
+import json
+import shutil
+from pathlib import Path
 from typing import Dict, List, Optional, Sequence
 
 import chromadb
+from chromadb.config import Settings
 
-from src.config import CHROMA_DIR, COLLECTION_NAME
-from src.embedder import OllamaEmbedder
+from src.config import COLLECTION_NAME, INDEX_DIR
+
+_PAGE_SIZE = 1000
+
+
+class IndexMismatch(RuntimeError):
+    """The index on disk was built with different settings and has to be rebuilt."""
 
 
 class WikiVectorStore:
-    """Thin wrapper around a single persistent Chroma collection."""
+    def __init__(self, path: Path = INDEX_DIR, collection: str = COLLECTION_NAME):
+        self.path = Path(path)
+        self.collection_name = collection
+        self.path.mkdir(parents=True, exist_ok=True)
+        self._stats: Optional[Dict[str, Dict]] = None
+        # Telemetry is off: answering questions must not contact any remote service.
+        self.client = chromadb.PersistentClient(path=str(self.path), settings=Settings(anonymized_telemetry=False))
+        self.collection = self._open()
 
-    def __init__(self, embedder: Optional[OllamaEmbedder] = None):
-        self.embedder = embedder or OllamaEmbedder()
-        CHROMA_DIR.mkdir(parents=True, exist_ok=True)
-        self.client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-        # `get_or_create_collection` is idempotent — reusing across runs.
-        self.collection = self.client.get_or_create_collection(
-            name=COLLECTION_NAME,
-            embedding_function=self.embedder,
+    def _open(self):
+        return self.client.get_or_create_collection(
+            name=self.collection_name,
+            embedding_function=None,
             metadata={"hnsw:space": "cosine"},
         )
 
+    @property
+    def _manifest_path(self) -> Path:
+        return self.path / "manifest.json"
+
+    def read_manifest(self) -> Dict:
+        if not self._manifest_path.exists():
+            return {}
+        return json.loads(self._manifest_path.read_text(encoding="utf-8"))
+
+    def write_manifest(self, manifest: Dict) -> None:
+        self._manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+
+    def check_manifest(self, expected: Dict) -> None:
+        """Raise IndexMismatch if a non-empty index was built with other settings."""
+        current = self.read_manifest()
+        if self.count() and current != expected:
+            raise IndexMismatch(
+                "The index was built with different settings. Rebuild it with: python -m src.ingest --reset"
+            )
+
     # ------------------------------------------------------------------ write
-    def add(
+    def upsert(
         self,
         ids: Sequence[str],
         documents: Sequence[str],
         metadatas: Sequence[Dict],
+        embeddings: Sequence[Sequence[float]],
     ) -> None:
-        """Insert chunks. Chroma will call our embedder for us."""
-        if not ids:
-            return
-        self.collection.add(
-            ids=list(ids),
-            documents=list(documents),
-            metadatas=list(metadatas),
-        )
+        if ids:
+            self._stats = None
+            self.collection.upsert(
+                ids=list(ids),
+                documents=list(documents),
+                metadatas=list(metadatas),
+                embeddings=[list(e) for e in embeddings],
+            )
+
+    def delete_entity(self, title: str) -> None:
+        self._stats = None
+        self.collection.delete(where={"entity": title})
 
     def reset(self) -> None:
-        """Delete the collection and recreate it empty."""
-        try:
-            self.client.delete_collection(COLLECTION_NAME)
-        except Exception:
-            # collection might not exist — fine
-            pass
-        self.collection = self.client.get_or_create_collection(
-            name=COLLECTION_NAME,
-            embedding_function=self.embedder,
-            metadata={"hnsw:space": "cosine"},
-        )
+        self._stats = None
+        self.client.delete_collection(self.collection_name)
+        self.collection = self._open()
+        self._manifest_path.unlink(missing_ok=True)
 
     # ------------------------------------------------------------------- read
     def count(self) -> int:
         return self.collection.count()
 
+    def all_records(self) -> List[Dict]:
+        """Every stored passage as {id, document, metadata}."""
+        records: List[Dict] = []
+        total = self.count()
+        for offset in range(0, total, _PAGE_SIZE):
+            page = self.collection.get(include=["documents", "metadatas"], limit=_PAGE_SIZE, offset=offset)
+            records.extend(
+                {"id": i, "document": d, "metadata": m}
+                for i, d, m in zip(page["ids"], page["documents"], page["metadatas"], strict=True)
+            )
+        return records
+
+    def entity_stats(self) -> Dict[str, Dict]:
+        """Per-page facts: passage count, URL, type, revision and content hash. Cached until a write."""
+        if self._stats is not None:
+            return self._stats
+        stats: Dict[str, Dict] = {}
+        total = self.count()
+        for offset in range(0, total, _PAGE_SIZE):
+            page = self.collection.get(include=["metadatas"], limit=_PAGE_SIZE, offset=offset)
+            for meta in page["metadatas"]:
+                entry = stats.setdefault(
+                    meta["entity"],
+                    {
+                        "passages": 0,
+                        "url": meta.get("source", ""),
+                        "type": meta.get("type", "other"),
+                        "revision": meta.get("revision"),
+                        "content_hash": meta.get("content_hash"),
+                    },
+                )
+                entry["passages"] += 1
+        self._stats = stats
+        return stats
+
     def query(
         self,
-        text: str,
+        embedding: Sequence[float],
         top_k: int = 5,
         type_filter: Optional[str] = None,
-        entity_filter: Optional[List[str]] = None,
+        entity_filter: Optional[Sequence[str]] = None,
     ) -> List[Dict]:
-        """Semantic search. Returns a list of dicts:
-            {id, document, metadata, distance}
-        sorted ascending by distance (so [0] is the closest match).
-
-        - `type_filter`: "person" or "place" to scope by type.
-        - `entity_filter`: list of canonical entity titles to restrict to.
-        """
-        where: Optional[Dict] = None
-        clauses = []
+        """Nearest passages, closest first, as {id, document, metadata, distance}."""
+        clauses: List[Dict] = []
         if type_filter:
             clauses.append({"type": type_filter})
         if entity_filter:
             clauses.append({"entity": {"$in": list(entity_filter)}})
+        where: Optional[Dict] = None
         if len(clauses) == 1:
             where = clauses[0]
-        elif len(clauses) > 1:
+        elif clauses:
             where = {"$and": clauses}
 
-        # We compute the query embedding ourselves and pass query_embeddings
-        # rather than query_texts. This sidesteps fragile internal contracts
-        # in Chroma about how its EmbeddingFunction is invoked at query time.
-        q_emb = self.embedder.embed_one(text)
-        res = self.collection.query(
-            query_embeddings=[q_emb],
-            n_results=top_k,
-            where=where,
-        )
-        # Chroma returns parallel lists keyed by query; we have one query.
-        ids = res["ids"][0]
-        docs = res["documents"][0]
-        metas = res["metadatas"][0]
-        dists = res["distances"][0]
+        result = self.collection.query(query_embeddings=[list(embedding)], n_results=top_k, where=where)
         return [
             {"id": i, "document": d, "metadata": m, "distance": dist}
-            for i, d, m, dist in zip(ids, docs, metas, dists)
+            for i, d, m, dist in zip(
+                result["ids"][0], result["documents"][0], result["metadatas"][0], result["distances"][0], strict=True
+            )
         ]
+
+    def close(self) -> None:
+        """Release file handles, used before removing a temporary index in tests."""
+        try:
+            self.client.close()
+        except AttributeError:
+            pass
+
+
+def remove_index(path: Path = INDEX_DIR) -> None:
+    shutil.rmtree(path, ignore_errors=True)

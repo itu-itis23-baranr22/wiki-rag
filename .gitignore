@@ -7,8 +7,30 @@ __pycache__/
 venv/
 env/
 .env
+.pytest_cache/
+.ruff_cache/
+
+# Built locally and rebuilt with `python -m src.ingest`
+data/index/
+data/pages/
+data/custom_pages.json
+
+# Left by the previous version; safe to delete
 chroma_db/
 data/raw/
+
+# Intermediate evaluation runs. Only final and ablation results are kept.
+eval/results/scratch-*.json
+
+# Private notes left in the working folder, including a link removed from the README on purpose
+github link.txt
+video link.txt
+
+# Design tool working files. PRODUCT.md, DESIGN.md and .impeccable/surfaces are kept.
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/review/
+
 .DS_Store
 .idea/
 .vscode/

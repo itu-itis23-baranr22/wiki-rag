@@ -1,0 +1,223 @@
+{
+ "description": "Each answer in final-test.json to an answerable question, read in full and judged for correctness and coherence. This was a reading check using general knowledge, not a sentence-by-sentence comparison with the passages.",
+ "reader": "Claude Opus 5.5, an AI assistant, not the project's author. No person has repeated this check.",
+ "answers_read": 50,
+ "pattern_score_correct": 50,
+ "wrong_fact": 1,
+ "turkish_answers": 8,
+ "turkish_mixed_language": 4,
+ "turkish_confused": 1,
+ "answers": [
+  {
+   "id": "anon-02",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-04",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-06",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-08",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-10",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-12",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-14",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-16",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-18",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-20",
+   "finding": "style",
+   "note": "Says 'According to the passage', which the prompt forbids."
+  },
+  {
+   "id": "anon-22",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-24",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-26",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-28",
+   "finding": "ok"
+  },
+  {
+   "id": "anon-30",
+   "finding": "ok"
+  },
+  {
+   "id": "named-02",
+   "finding": "ok"
+  },
+  {
+   "id": "named-04",
+   "finding": "question_quality",
+   "note": "The question itself is badly formed, so its answer shows little."
+  },
+  {
+   "id": "named-06",
+   "finding": "ok"
+  },
+  {
+   "id": "named-08",
+   "finding": "ok"
+  },
+  {
+   "id": "named-10",
+   "finding": "ok"
+  },
+  {
+   "id": "named-12",
+   "finding": "ok"
+  },
+  {
+   "id": "named-14",
+   "finding": "ok"
+  },
+  {
+   "id": "named-16",
+   "finding": "ok"
+  },
+  {
+   "id": "named-18",
+   "finding": "ok"
+  },
+  {
+   "id": "list-03",
+   "finding": "ok"
+  },
+  {
+   "id": "list-05",
+   "finding": "ok"
+  },
+  {
+   "id": "list-06",
+   "finding": "ok"
+  },
+  {
+   "id": "list-08",
+   "finding": "ok"
+  },
+  {
+   "id": "list-10",
+   "finding": "ok"
+  },
+  {
+   "id": "list-12",
+   "finding": "ok"
+  },
+  {
+   "id": "typo-02",
+   "finding": "ok"
+  },
+  {
+   "id": "typo-04",
+   "finding": "style",
+   "note": "Names who built it, then says it is not specified."
+  },
+  {
+   "id": "typo-06",
+   "finding": "ok"
+  },
+  {
+   "id": "typo-08",
+   "finding": "ok"
+  },
+  {
+   "id": "trap-02",
+   "finding": "speculation",
+   "note": "Infers from the passages with 'implying' and 'suggests' rather than stating a fact from them."
+  },
+  {
+   "id": "trap-04",
+   "finding": "ok"
+  },
+  {
+   "id": "trap-06",
+   "finding": "ok"
+  },
+  {
+   "id": "compare-02",
+   "finding": "style",
+   "note": "Ends by setting a 2022 visitor count against a dedication date, which compares nothing."
+  },
+  {
+   "id": "compare-04",
+   "finding": "ok"
+  },
+  {
+   "id": "compare-06",
+   "finding": "ok"
+  },
+  {
+   "id": "tr-02",
+   "finding": "turkish_mixed_language",
+   "note": "Türkiye'de located"
+  },
+  {
+   "id": "tr-04",
+   "finding": "ok"
+  },
+  {
+   "id": "tr-06",
+   "finding": "ok"
+  },
+  {
+   "id": "tr-08",
+   "finding": "turkish_mixed_language",
+   "note": "estate olarak"
+  },
+  {
+   "id": "tr-10",
+   "finding": "turkish_mixed_language",
+   "note": "historical northern bordersındaki"
+  },
+  {
+   "id": "tr-12",
+   "finding": "ok"
+  },
+  {
+   "id": "tr-14",
+   "finding": "turkish_confused",
+   "note": "Says the birthplace cannot be given, then names Vinci."
+  },
+  {
+   "id": "follow-02",
+   "finding": "wrong_fact",
+   "note": "Says Einstein won the 1921 and the 1922 Nobel Prize in Physics. There was one prize: the 1921 prize, awarded in 1922."
+  },
+  {
+   "id": "follow-04",
+   "finding": "ok"
+  },
+  {
+   "id": "follow-06",
+   "finding": "turkish_mixed_language",
+   "note": "locationu"
+  }
+ ]
+}

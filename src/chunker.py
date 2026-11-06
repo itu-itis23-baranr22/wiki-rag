@@ -1,127 +1,138 @@
-"""Paragraph-aware overlapping chunker.
+"""Section-aware, sentence-aligned chunking.
 
-We deliberately don't use a library like LangChain's RecursiveCharacterTextSplitter
-because the project asks us to use language-native functionality where possible.
-
-Strategy:
-1. Split text into paragraphs (blank-line delimited).
-2. Greedily pack paragraphs into a chunk until adding the next paragraph would
-   exceed `chunk_size`. If a single paragraph is larger than `chunk_size` we
-   sub-split it on sentence boundaries, then on word boundaries as a last resort.
-3. Between chunks, include a `chunk_overlap` tail of the previous chunk so that
-   facts spanning chunk boundaries are recoverable.
+Each Wikipedia section is split on its own, so a chunk never mixes topics from two
+sections. Chunks are built from whole sentences, and the overlap between
+neighbouring chunks is also made of whole sentences, so no chunk starts or ends in
+the middle of a word.
 """
 from __future__ import annotations
 
 import re
-from typing import List
+from dataclasses import dataclass
+from typing import Iterable, List, Sequence, Tuple
 
-# Sentence boundary heuristic — good enough for English Wikipedia prose.
-# We avoid heavy NLP libs to keep the system lightweight.
-_SENT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'\(])")
-
-
-def _split_paragraphs(text: str) -> List[str]:
-    """Split on blank lines, strip whitespace, drop empties."""
-    paras = re.split(r"\n\s*\n", text.strip())
-    return [p.strip() for p in paras if p.strip()]
+_BOUNDARY_RE = re.compile(r"(?<=[.!?])[\"')\]]*\s+")
+_ABBREVIATIONS = re.compile(
+    r"(?:\b(?:Dr|Mr|Mrs|Ms|Prof|Sr|Jr|St|Mt|Ft|No|vs|etc|c|ca|e\.g|i\.e|U\.S|U\.K|Gen|Col|Lt|Sgt|Rev|Hon|Jan|Feb|"
+    r"Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)|\b[A-Z])\.$"
+)
 
 
-def _split_sentences(paragraph: str) -> List[str]:
-    """Naive sentence splitter — good enough for our use case."""
-    parts = _SENT_RE.split(paragraph.strip())
-    return [s.strip() for s in parts if s.strip()]
+@dataclass(frozen=True)
+class Chunk:
+    text: str
+    section: str
+    index: int
 
 
-def _hard_split(text: str, size: int) -> List[str]:
-    """Last-resort word-level split for paragraphs without sentence boundaries."""
-    words = text.split()
-    out, cur, cur_len = [], [], 0
-    for w in words:
-        # +1 for the space we'll add when joining
-        if cur and cur_len + len(w) + 1 > size:
-            out.append(" ".join(cur))
-            cur, cur_len = [w], len(w)
-        else:
-            cur.append(w)
-            cur_len += len(w) + (1 if cur_len else 0)
-    if cur:
-        out.append(" ".join(cur))
-    return out
-
-
-def _atomize(text: str, max_size: int) -> List[str]:
-    """Break text into atomic units no bigger than `max_size`.
-
-    Atoms are paragraphs, or — if a paragraph is too long — sentences, or
-    — if a sentence is too long — fixed-size word groups.
-    """
-    atoms: List[str] = []
-    for para in _split_paragraphs(text):
-        if len(para) <= max_size:
-            atoms.append(para)
+def split_sentences(text: str) -> List[str]:
+    """Split prose into sentences, keeping abbreviations and initials together."""
+    sentences: List[str] = []
+    for paragraph in re.split(r"\n+", text):
+        paragraph = paragraph.strip()
+        if not paragraph:
             continue
-        for sent in _split_sentences(para):
-            if len(sent) <= max_size:
-                atoms.append(sent)
-            else:
-                atoms.extend(_hard_split(sent, max_size))
-    return atoms
+        pending = ""
+        cursor = 0
+        for match in _BOUNDARY_RE.finditer(paragraph):
+            piece = paragraph[cursor : match.end()].strip()
+            cursor = match.end()
+            next_char = paragraph[cursor : cursor + 1]
+            pending = f"{pending} {piece}".strip()
+            if _ABBREVIATIONS.search(pending) or (next_char and next_char.islower()):
+                continue
+            sentences.append(pending)
+            pending = ""
+        tail = paragraph[cursor:].strip()
+        pending = f"{pending} {tail}".strip()
+        if pending:
+            sentences.append(pending)
+    return sentences
 
 
-def chunk_text(
-    text: str,
-    chunk_size: int = 800,
-    chunk_overlap: int = 150,
-) -> List[str]:
-    """Return a list of chunks of approximately `chunk_size` characters with
-    `chunk_overlap` characters of overlap between consecutive chunks.
+def _split_long(sentence: str, size: int) -> List[str]:
+    """Break a sentence longer than `size` at word boundaries."""
+    parts: List[str] = []
+    current = ""
+    for word in sentence.split():
+        while len(word) > size:
+            if current:
+                parts.append(current)
+                current = ""
+            parts.append(word[:size])
+            word = word[size:]
+        candidate = f"{current} {word}".strip()
+        if len(candidate) > size:
+            parts.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        parts.append(current)
+    return parts
 
-    Each chunk is the concatenation of one or more atoms (paragraphs/sentences)
-    so we never split mid-sentence unless a single sentence is itself larger
-    than `chunk_size`.
-    """
+
+def _overlap_tail(sentences: Sequence[str], budget: int) -> List[str]:
+    """The trailing whole sentences of a chunk that fit in `budget` characters."""
+    tail: List[str] = []
+    used = 0
+    for sentence in reversed(sentences):
+        cost = len(sentence) + (1 if tail else 0)
+        if used + cost > budget:
+            break
+        tail.insert(0, sentence)
+        used += cost
+    return tail
+
+
+def chunk_text(text: str, chunk_size: int = 800, chunk_overlap: int = 150, chunk_min: int = 120) -> List[str]:
+    """Split text into chunks of at most `chunk_size` characters, on sentence boundaries."""
     if chunk_overlap >= chunk_size:
         raise ValueError("chunk_overlap must be smaller than chunk_size")
 
-    atoms = _atomize(text, chunk_size)
+    atoms: List[str] = []
+    for sentence in split_sentences(text):
+        atoms.extend([sentence] if len(sentence) <= chunk_size else _split_long(sentence, chunk_size))
     if not atoms:
         return []
 
-    chunks: List[str] = []
+    chunks: List[List[str]] = []
     current: List[str] = []
-    current_len = 0
-
+    length = 0
+    fresh = 0  # sentences in `current` that are not overlap from the previous chunk
     for atom in atoms:
-        # +1 for the join separator " " between atoms
-        sep = 1 if current else 0
-        if current and current_len + sep + len(atom) > chunk_size:
-            # flush
-            chunks.append(" ".join(current))
-            # build overlap tail from the chunk we just emitted
-            tail = chunks[-1][-chunk_overlap:] if chunk_overlap else ""
-            current = [tail, atom] if tail else [atom]
-            current_len = sum(len(x) for x in current) + max(0, len(current) - 1)
-        else:
-            current.append(atom)
-            current_len += sep + len(atom)
+        cost = len(atom) + (1 if current else 0)
+        if current and length + cost > chunk_size:
+            chunks.append(current)
+            budget = min(chunk_overlap, chunk_size - len(atom) - 1)
+            current = _overlap_tail(current, budget)
+            length = sum(len(s) for s in current) + max(0, len(current) - 1)
+            fresh = 0
+            cost = len(atom) + (1 if current else 0)
+        current.append(atom)
+        length += cost
+        fresh += 1
+    if fresh:
+        chunks.append(current)
 
-    if current:
-        chunks.append(" ".join(current))
+    joined = [" ".join(c) for c in chunks]
+    if len(joined) > 1 and len(joined[-1]) < chunk_min:
+        unseen = [s for s in chunks[-1] if s not in chunks[-2]]
+        merged = " ".join([joined[-2], *unseen])
+        if len(merged) <= chunk_size:
+            joined[-2:] = [merged]
+    return joined
 
-    # Defensive: drop empty/whitespace-only and collapse internal whitespace
-    return [re.sub(r"\s+", " ", c).strip() for c in chunks if c.strip()]
 
-
-if __name__ == "__main__":
-    # tiny smoke test
-    sample = (
-        "Albert Einstein was a German-born physicist.\n\n"
-        "He developed the theory of relativity, one of the two pillars of "
-        "modern physics. " * 20
-        + "\n\nHe received the 1921 Nobel Prize in Physics."
-    )
-    out = chunk_text(sample, chunk_size=300, chunk_overlap=50)
-    for i, c in enumerate(out):
-        print(f"--- chunk {i} ({len(c)} chars) ---")
-        print(c[:120], "...")
+def chunk_sections(
+    sections: Iterable[Tuple[str, str]],
+    chunk_size: int = 800,
+    chunk_overlap: int = 150,
+    chunk_min: int = 120,
+) -> List[Chunk]:
+    """Chunk `(section title, text)` pairs in order, numbering chunks across the page."""
+    out: List[Chunk] = []
+    for title, text in sections:
+        for piece in chunk_text(text, chunk_size, chunk_overlap, chunk_min):
+            out.append(Chunk(text=piece, section=title, index=len(out)))
+    return out

@@ -1,0 +1,2611 @@
+{
+ "label": "final-test",
+ "split": "test",
+ "settings": {
+  "split": "test",
+  "answers": true,
+  "label": "final-test",
+  "no_lexical": false,
+  "no_vector": false,
+  "no_translate": false,
+  "entity_cap": null,
+  "no_type_filter": false,
+  "lexical_weight": null,
+  "top_k": null,
+  "resume": true
+ },
+ "complete": true,
+ "indexed_passages": 3504,
+ "summary": {
+  "overall": {
+   "questions": 56,
+   "retrieval_success": 1.0,
+   "entity_recall": 1.0,
+   "hit_at_1": 0.98,
+   "mrr": 0.99,
+   "answer_correct": 1.0,
+   "false_refusal": 0.0,
+   "refusal_correct": 0.8333333333333334,
+   "numbers_grounded": 1.0,
+   "cited_answers": 1.0,
+   "median_latency_s": 10.1
+  },
+  "categories": {
+   "anonymous": {
+    "questions": 15,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 9.9
+   },
+   "named": {
+    "questions": 9,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 8.6
+   },
+   "list": {
+    "questions": 6,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 12.2
+   },
+   "typo": {
+    "questions": 4,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 13.5
+   },
+   "ambiguous": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 13.9
+   },
+   "compare": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 16.8
+   },
+   "turkish": {
+    "questions": 7,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.8571428571428571,
+    "mrr": 0.9285714285714286,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 10.5
+   },
+   "followup": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 1.0,
+    "median_latency_s": 10.1
+   },
+   "refusal": {
+    "questions": 6,
+    "refusal_correct": 0.8333333333333334,
+    "median_latency_s": 8.8
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "anon-02",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who discovered radium and polonium?",
+   "answer": "Marie Curie discovered radium and polonium [1, 2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 60,
+    "first_token_ms": 8913,
+    "total_ms": 9932,
+    "prompt_tokens": 1045,
+    "answer_tokens": 17,
+    "tokens_per_second": 17.8
+   },
+   "latency_s": 9.9,
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-04",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who painted the Mona Lisa?",
+   "answer": "The Mona Lisa was painted by Leonardo da Vinci [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 43,
+    "first_token_ms": 7241,
+    "total_ms": 7988,
+    "prompt_tokens": 1015,
+    "answer_tokens": 13,
+    "tokens_per_second": 18.5
+   },
+   "latency_s": 8.0,
+   "retrieved": [
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-06",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who proposed natural selection and wrote On the Origin of Species?",
+   "answer": "Charles Darwin proposed natural selection and wrote On the Origin of Species [1]. He discussed his ideas with Alfred Russel Wallace, who sent him an essay outlining the same idea, prompting their joint submission to the Linnean Society of London [1]. Darwin published his theory of evolution with compelling evidence in On the Origin of Species (1859) [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 51,
+    "first_token_ms": 7894,
+    "total_ms": 12264,
+    "prompt_tokens": 1098,
+    "answer_tokens": 73,
+    "tokens_per_second": 16.9
+   },
+   "latency_s": 12.3,
+   "retrieved": [
+    "Charles Darwin",
+    "Charles Darwin",
+    "Statue of Liberty",
+    "Isaac Newton",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-08",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who broke the Enigma code at Bletchley Park?",
+   "answer": "The person who broke the Enigma code at Bletchley Park was Alan Turing [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 7532,
+    "total_ms": 8800,
+    "prompt_tokens": 1068,
+    "answer_tokens": 21,
+    "tokens_per_second": 17.3
+   },
+   "latency_s": 8.8,
+   "retrieved": [
+    "Alan Turing",
+    "Alan Turing",
+    "Steve Jobs",
+    "Mount Fuji",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-10",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who led the Turkish War of Independence?",
+   "answer": "Mustafa Kemal Atatürk led the Turkish War of Independence [1, 2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 52,
+    "first_token_ms": 7148,
+    "total_ms": 8146,
+    "prompt_tokens": 1022,
+    "answer_tokens": 17,
+    "tokens_per_second": 18.0
+   },
+   "latency_s": 8.1,
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-12",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who was the last active ruler of the Ptolemaic Kingdom of Egypt?",
+   "answer": "Cleopatra VII was the last active ruler of the Ptolemaic Kingdom of Egypt [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 53,
+    "first_token_ms": 8739,
+    "total_ms": 10206,
+    "prompt_tokens": 1203,
+    "answer_tokens": 24,
+    "tokens_per_second": 17.0
+   },
+   "latency_s": 10.2,
+   "retrieved": [
+    "Cleopatra",
+    "Cleopatra",
+    "Giza pyramid complex",
+    "Giza pyramid complex",
+    "Cappadocia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-14",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Who wrote A Brief History of Time?",
+   "answer": "The book \"A Brief History of Time\" was written by Stephen Hawking [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 55,
+    "first_token_ms": 7235,
+    "total_ms": 8345,
+    "prompt_tokens": 976,
+    "answer_tokens": 19,
+    "tokens_per_second": 18.1
+   },
+   "latency_s": 8.3,
+   "retrieved": [
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Niagara Falls",
+    "Isaac Newton",
+    "Mahatma Gandhi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-16",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which mausoleum was built by Shah Jahan for his wife?",
+   "answer": "The Taj Mahal was built by Shah Jahan for his wife Mumtaz Mahal [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 67,
+    "first_token_ms": 10090,
+    "total_ms": 11534,
+    "prompt_tokens": 1293,
+    "answer_tokens": 22,
+    "tokens_per_second": 16.0
+   },
+   "latency_s": 11.5,
+   "retrieved": [
+    "Taj Mahal",
+    "Taj Mahal",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Giza pyramid complex"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-18",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which Inca citadel sits high in the Andes of Peru?",
+   "answer": "Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a mountain ridge at 2,430 meters [1]. It is situated in the Machupicchu District of Urubamba Province about 80 kilometers northwest of Cusco, above the Sacred Valley and along the Urubamba River [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 51,
+    "first_token_ms": 9147,
+    "total_ms": 14067,
+    "prompt_tokens": 1204,
+    "answer_tokens": 77,
+    "tokens_per_second": 15.8
+   },
+   "latency_s": 14.1,
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Acropolis of Athens",
+    "Mount Everest",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-20",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which Antoni Gaudí basilica in Barcelona is still unfinished?",
+   "answer": "The Sagrada Família is still unfinished [1]. According to the passage, construction began in 1882 under Francisco de Paula del Villar, but it was Antoni Gaudí who took over as chief architect in 1883 and transformed the project with his architectural and engineering style [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 50,
+    "first_token_ms": 6616,
+    "total_ms": 10336,
+    "prompt_tokens": 1162,
+    "answer_tokens": 62,
+    "tokens_per_second": 16.9
+   },
+   "latency_s": 10.3,
+   "retrieved": [
+    "Sagrada Família",
+    "Sagrada Família",
+    "Lionel Messi",
+    "Acropolis of Athens",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-22",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which monument was a gift from France to the United States?",
+   "answer": "The Statue of Liberty was a gift from the people of France to the United States [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 65,
+    "first_token_ms": 6037,
+    "total_ms": 7288,
+    "prompt_tokens": 998,
+    "answer_tokens": 20,
+    "tokens_per_second": 16.9
+   },
+   "latency_s": 7.3,
+   "retrieved": [
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Angkor Wat",
+    "Hagia Sophia",
+    "Niagara Falls"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-24",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which Khmer temple complex is in Cambodia?",
+   "answer": "Angkor Wat is a Theravada Buddhist temple complex, originally built as a Vaishnava Hindu temple, in Siem Reap, Cambodia [1]. It is located within the medieval capital of Angkor, and was constructed between 1113 and 1150 CE during the reign of the Khmer king Suryavarman II [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 77,
+    "first_token_ms": 6451,
+    "total_ms": 11044,
+    "prompt_tokens": 1082,
+    "answer_tokens": 73,
+    "tokens_per_second": 16.2
+   },
+   "latency_s": 11.0,
+   "retrieved": [
+    "Angkor Wat",
+    "Angkor Wat",
+    "Giza pyramid complex",
+    "Giza pyramid complex",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-26",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which volcano is the highest peak in Japan?",
+   "answer": "Mount Fuji is the highest mountain in Japan [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 5723,
+    "total_ms": 6394,
+    "prompt_tokens": 1008,
+    "answer_tokens": 12,
+    "tokens_per_second": 19.7
+   },
+   "latency_s": 6.4,
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mount Everest",
+    "Mount Everest",
+    "Niagara Falls"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-28",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which large statue overlooks Rio de Janeiro?",
+   "answer": "The statue that overlooks Rio de Janeiro is Christ the Redeemer, a large Art Deco statue of Jesus [1]. It is located at the peak of the Corcovado mountain in the Tijuca National Park, overlooking the city of Rio de Janeiro [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 61,
+    "first_token_ms": 6701,
+    "total_ms": 9965,
+    "prompt_tokens": 1140,
+    "answer_tokens": 56,
+    "tokens_per_second": 17.5
+   },
+   "latency_s": 10.0,
+   "retrieved": [
+    "Christ the Redeemer (statue)",
+    "Christ the Redeemer (statue)",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "anon-30",
+   "split": "test",
+   "category": "anonymous",
+   "question": "Which singer released the album 1989 and the Eras Tour?",
+   "answer": "The singer who released the album 1989 is Taylor Swift [1]. The Eras Tour was performed by Taylor Swift [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 95,
+    "first_token_ms": 5827,
+    "total_ms": 7528,
+    "prompt_tokens": 1081,
+    "answer_tokens": 28,
+    "tokens_per_second": 18.2
+   },
+   "latency_s": 7.5,
+   "retrieved": [
+    "Taylor Swift",
+    "Taylor Swift",
+    "Frida Kahlo",
+    "Taylor Swift",
+    "Taylor Swift"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-02",
+   "split": "test",
+   "category": "named",
+   "question": "Where was Albert Einstein born?",
+   "answer": "Einstein was born in Ulm [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 39,
+    "first_token_ms": 5632,
+    "total_ms": 6252,
+    "prompt_tokens": 1060,
+    "answer_tokens": 11,
+    "tokens_per_second": 19.1
+   },
+   "latency_s": 6.3,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-04",
+   "split": "test",
+   "category": "named",
+   "question": "Who designed the Eiffel Tower's company?",
+   "answer": "The Eiffel Tower's company was designed by Maurice Koechlin and Émile Nouguier [3]. The company's architectural department, led by Stephen Sauvestre, also contributed to the design [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 52,
+    "first_token_ms": 5733,
+    "total_ms": 8367,
+    "prompt_tokens": 1071,
+    "answer_tokens": 46,
+    "tokens_per_second": 17.8
+   },
+   "latency_s": 8.4,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-06",
+   "split": "test",
+   "category": "named",
+   "question": "In which city is Hagia Sophia located?",
+   "answer": "Hagia Sophia is located in Istanbul, Turkey [1]. Istanbul is the city where Hagia Sophia is located [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 45,
+    "first_token_ms": 7626,
+    "total_ms": 9388,
+    "prompt_tokens": 1124,
+    "answer_tokens": 27,
+    "tokens_per_second": 15.7
+   },
+   "latency_s": 9.4,
+   "retrieved": [
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-08",
+   "split": "test",
+   "category": "named",
+   "question": "In what country is Machu Picchu?",
+   "answer": "Machu Picchu is located in Peru [1]. The town of Machu Picchu, also known as Aguas Calientes, is located in Peru [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 56,
+    "first_token_ms": 7073,
+    "total_ms": 9209,
+    "prompt_tokens": 973,
+    "answer_tokens": 35,
+    "tokens_per_second": 16.9
+   },
+   "latency_s": 9.2,
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-10",
+   "split": "test",
+   "category": "named",
+   "question": "When did Nikola Tesla die?",
+   "answer": "Nikola Tesla died on 7 January 1943 [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 51,
+    "first_token_ms": 6555,
+    "total_ms": 7512,
+    "prompt_tokens": 933,
+    "answer_tokens": 16,
+    "tokens_per_second": 17.7
+   },
+   "latency_s": 7.5,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-12",
+   "split": "test",
+   "category": "named",
+   "question": "Who sculpted the Statue of Liberty?",
+   "answer": "The Statue of Liberty was designed by French sculptor Frédéric Auguste Bartholdi [1]. The metal framework was built by Gustave Eiffel [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 7746,
+    "total_ms": 10134,
+    "prompt_tokens": 1074,
+    "answer_tokens": 36,
+    "tokens_per_second": 15.4
+   },
+   "latency_s": 10.1,
+   "retrieved": [
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-14",
+   "split": "test",
+   "category": "named",
+   "question": "Where was William Shakespeare born?",
+   "answer": "William Shakespeare was born in Stratford-upon-Avon [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 50,
+    "first_token_ms": 7122,
+    "total_ms": 8021,
+    "prompt_tokens": 1019,
+    "answer_tokens": 15,
+    "tokens_per_second": 17.7
+   },
+   "latency_s": 8.0,
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-16",
+   "split": "test",
+   "category": "named",
+   "question": "What river carved the Grand Canyon?",
+   "answer": "The Colorado River carved the Grand Canyon [1]. The ancestral Colorado River responded by cutting its channel faster and deeper [5].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 54,
+    "first_token_ms": 7097,
+    "total_ms": 8640,
+    "prompt_tokens": 1001,
+    "answer_tokens": 26,
+    "tokens_per_second": 17.5
+   },
+   "latency_s": 8.6,
+   "retrieved": [
+    "Grand Canyon",
+    "Grand Canyon",
+    "Grand Canyon",
+    "Grand Canyon",
+    "Grand Canyon"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "named-18",
+   "split": "test",
+   "category": "named",
+   "question": "Which company did Steve Jobs found after leaving Apple?",
+   "answer": "Steve Jobs founded NeXT after leaving Apple [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 51,
+    "first_token_ms": 8567,
+    "total_ms": 9310,
+    "prompt_tokens": 1181,
+    "answer_tokens": 12,
+    "tokens_per_second": 17.4
+   },
+   "latency_s": 9.3,
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-03",
+   "split": "test",
+   "category": "list",
+   "question": "Which famous place is located in Egypt?",
+   "answer": "The Giza pyramid complex is located in Egypt [1]. The Great Pyramid and the Pyramid of Khafre are the largest pyramids built in ancient Egypt, and they have historically been common as emblems of Ancient Egypt in the Western imagination [1]. The site is at the edge of the Western Desert, approximately 9 km (5.6 mi) west of the Nile River in the city of Giza, and about 13 km (8.1 mi) southwest of the city centre of Cairo [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 53,
+    "first_token_ms": 8335,
+    "total_ms": 14849,
+    "prompt_tokens": 1147,
+    "answer_tokens": 106,
+    "tokens_per_second": 16.4
+   },
+   "latency_s": 14.8,
+   "retrieved": [
+    "Giza pyramid complex",
+    "Giza pyramid complex",
+    "Petra",
+    "Petra",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-05",
+   "split": "test",
+   "category": "list",
+   "question": "Which famous place is located in India?",
+   "answer": "The Taj Mahal is located in India [1]. The Taj Mahal is a symbol of Indian history [1]. The Archaeological Survey of India has been responsible for the maintenance of the monument since Indian independence in 1947 [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 64,
+    "first_token_ms": 7518,
+    "total_ms": 10575,
+    "prompt_tokens": 1045,
+    "answer_tokens": 50,
+    "tokens_per_second": 16.7
+   },
+   "latency_s": 10.6,
+   "retrieved": [
+    "Taj Mahal",
+    "Angkor Wat",
+    "Taj Mahal",
+    "Angkor Wat",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-06",
+   "split": "test",
+   "category": "list",
+   "question": "Which famous place is located in France?",
+   "answer": "The Eiffel Tower is located in France [2]. The Eiffel Tower is named after the engineer Gustave Eiffel [2]. The Eiffel Tower was constructed as the centrepiece of the 1889 World's Fair, and to crown the centennial anniversary of the French Revolution [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 59,
+    "first_token_ms": 8119,
+    "total_ms": 12243,
+    "prompt_tokens": 1081,
+    "answer_tokens": 66,
+    "tokens_per_second": 16.3
+   },
+   "latency_s": 12.2,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Acropolis of Athens"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-08",
+   "split": "test",
+   "category": "list",
+   "question": "Which landmark is in Greece?",
+   "answer": "The Acropolis of Athens is located in Greece [2]. The Parthenon is a famous ancient building within the Acropolis [2]. The Acropolis was also more properly known as Cecropia in ancient times [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 56,
+    "first_token_ms": 8589,
+    "total_ms": 11440,
+    "prompt_tokens": 1096,
+    "answer_tokens": 47,
+    "tokens_per_second": 16.8
+   },
+   "latency_s": 11.4,
+   "retrieved": [
+    "Acropolis of Athens",
+    "Acropolis of Athens",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Stonehenge"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-10",
+   "split": "test",
+   "category": "list",
+   "question": "Which footballers are the most famous in the world?",
+   "answer": "Cristiano Ronaldo and Lionel Messi are widely regarded as two of the greatest footballers of all time, with Ronaldo being considered the greatest Portuguese football player of all time [1]. Messi is the most decorated player in the history of professional football, having won 47 team trophies across more than 1,200 career appearances [2]. Both players have received numerous individual accolades, including Ballons d'Or and European Golden Shoes, and have been named the world's best player by FIFA multiple times [1, 2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 59,
+    "first_token_ms": 7645,
+    "total_ms": 14469,
+    "prompt_tokens": 1082,
+    "answer_tokens": 107,
+    "tokens_per_second": 15.8
+   },
+   "latency_s": 14.5,
+   "retrieved": [
+    "Cristiano Ronaldo",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "list-12",
+   "split": "test",
+   "category": "list",
+   "question": "Which famous place is located in England?",
+   "answer": "Stonehenge is a prehistoric megalithic structure located in Wiltshire, England [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 97,
+    "first_token_ms": 7886,
+    "total_ms": 9368,
+    "prompt_tokens": 1074,
+    "answer_tokens": 23,
+    "tokens_per_second": 16.6
+   },
+   "latency_s": 9.4,
+   "retrieved": [
+    "Stonehenge",
+    "Tower of London",
+    "Tower of London",
+    "Eiffel Tower",
+    "Stonehenge"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-02",
+   "split": "test",
+   "category": "typo",
+   "question": "Where is the Eifel Tower?",
+   "answer": "The Eiffel Tower is located on the Champ de Mars in Paris, France [3]. The tower itself is located at the intersection of the quai Branly and the Pont d'Iéna [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 50,
+    "first_token_ms": 6765,
+    "total_ms": 10204,
+    "prompt_tokens": 937,
+    "answer_tokens": 44,
+    "tokens_per_second": 13.0
+   },
+   "latency_s": 10.2,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-04",
+   "split": "test",
+   "category": "typo",
+   "question": "Who built the Collosseum?",
+   "answer": "The Colosseum was built under the Emperor Vespasian, who started construction in 72 AD, and was completed under his successor and heir, Titus, in AD 80 [2]. The Flavian dynasty, consisting of Vespasian, Titus, and Domitian, were patrons of the work, but it is not specified who built the Colosseum [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 69,
+    "first_token_ms": 9182,
+    "total_ms": 15812,
+    "prompt_tokens": 1133,
+    "answer_tokens": 83,
+    "tokens_per_second": 12.7
+   },
+   "latency_s": 15.8,
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-06",
+   "split": "test",
+   "category": "typo",
+   "question": "Where is Machu Pichu?",
+   "answer": "Machu Picchu is located in the Eastern Cordillera of southern Peru, on a mountain ridge at 2,430 meters [5]. It is situated in the Machu Picchu District of Urubamba Province, about 80 kilometers northwest of Cusco [5].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 50,
+    "first_token_ms": 8886,
+    "total_ms": 13548,
+    "prompt_tokens": 1130,
+    "answer_tokens": 58,
+    "tokens_per_second": 12.6
+   },
+   "latency_s": 13.5,
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "typo-08",
+   "split": "test",
+   "category": "typo",
+   "question": "What did Isaac Newtn discover?",
+   "answer": "Isaac Newton discovered that white light is actually a mixture of immutable spectral colors [2]. He also quantified gravitational attraction [2].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 57,
+    "first_token_ms": 7457,
+    "total_ms": 9610,
+    "prompt_tokens": 992,
+    "answer_tokens": 28,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 9.6,
+   "retrieved": [
+    "Isaac Newton",
+    "Isaac Newton",
+    "Isaac Newton",
+    "Isaac Newton",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-02",
+   "split": "test",
+   "category": "ambiguous",
+   "question": "How swift was the construction of the Great Wall?",
+   "answer": "The construction of the Great Wall was not swift, as transporting large quantities of materials required for construction was difficult, implying that the process was laborious [1]. The use of local resources, such as stone and rammed earth, also suggests that the construction process was not rapid [1]. In contrast, the Ming dynasty's use of bricks and other materials made construction quicker, but the exact speed of construction is not specified [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 105,
+    "first_token_ms": 7120,
+    "total_ms": 13863,
+    "prompt_tokens": 956,
+    "answer_tokens": 88,
+    "tokens_per_second": 13.3
+   },
+   "latency_s": 13.9,
+   "retrieved": [
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-04",
+   "split": "test",
+   "category": "ambiguous",
+   "question": "How swift was Lionel Messi's rise at Barcelona?",
+   "answer": "Messi began the 2004–05 season as a guaranteed starter for the Barcelona B team, but was promoted to the first team by manager Frank Rijkaard after some lobbying by the senior players, indicating a relatively swift rise [1]. He made his La Liga debut for Barcelona on 16 October 2004, at 17 years old, showing his rapid integration into the first team [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 51,
+    "first_token_ms": 7775,
+    "total_ms": 14046,
+    "prompt_tokens": 1062,
+    "answer_tokens": 84,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 14.0,
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "trap-06",
+   "split": "test",
+   "category": "ambiguous",
+   "question": "Which albums did Swift release in 2020?",
+   "answer": "Swift released two albums in 2020: Folklore and Evermore [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 53,
+    "first_token_ms": 9343,
+    "total_ms": 10693,
+    "prompt_tokens": 1230,
+    "answer_tokens": 18,
+    "tokens_per_second": 13.9
+   },
+   "latency_s": 10.7,
+   "retrieved": [
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-02",
+   "split": "test",
+   "category": "compare",
+   "question": "Compare the Eiffel Tower and the Statue of Liberty.",
+   "answer": "The Eiffel Tower and the Statue of Liberty are both iconic structures, but they were built for different purposes [1]. The Eiffel Tower was constructed as the centrepiece of the 1889 World's Fair, while the Statue of Liberty was a gift to the United States from the people of France, intended to symbolize French liberty [3]. The Eiffel Tower was designed by Gustave Eiffel, while the Statue of Liberty was designed by Frédéric Auguste Bartholdi [3]. The Eiffel Tower received 5,889,000 visitors in 2022, while the Statue of Liberty was dedicated on October 28, 1886 [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 57,
+    "first_token_ms": 6813,
+    "total_ms": 17412,
+    "prompt_tokens": 960,
+    "answer_tokens": 143,
+    "tokens_per_second": 13.6
+   },
+   "latency_s": 17.4,
+   "retrieved": [
+    "Statue of Liberty",
+    "Eiffel Tower",
+    "Statue of Liberty",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-04",
+   "split": "test",
+   "category": "compare",
+   "question": "Compare Mount Fuji and Mount Everest.",
+   "answer": "Mount Fuji is a Japanese cultural icon and is frequently depicted in art and photography, as well as visited by sightseers, hikers, and mountain climbers [1]. In contrast, Mount Everest attracts many climbers, including highly experienced mountaineers [5]. Mount Fuji is one of Japan's \"Three Holy Mountains\" along with Mount Tate and Mount Haku [3], whereas Mount Everest is the highest mountain on Earth above sea level [5]. Mount Fuji has \"inspired artists and poets and been the object of pilgrimage for centuries\" according to UNESCO [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 53,
+    "first_token_ms": 8140,
+    "total_ms": 16787,
+    "prompt_tokens": 1110,
+    "answer_tokens": 115,
+    "tokens_per_second": 13.4
+   },
+   "latency_s": 16.8,
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mount Everest",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "compare-06",
+   "split": "test",
+   "category": "compare",
+   "question": "Compare Albert Einstein and the Eiffel Tower.",
+   "answer": "The Eiffel Tower is a lattice tower on the Champ de Mars in Paris, France, named after the engineer Gustave Eiffel, whereas Albert Einstein was a German-born theoretical physicist best known for developing the theory of relativity [3]. The Eiffel Tower has been the inspiration for the creation of many replicas and similar towers, including Blackpool Tower in England and Tokyo Tower in Japan [2]. Einstein's intellectual achievements and originality made him broadly synonymous with genius, whereas the Eiffel Tower has become a global cultural icon of France and one of the most recognisable structures in the world [1].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 57,
+    "first_token_ms": 6638,
+    "total_ms": 16049,
+    "prompt_tokens": 934,
+    "answer_tokens": 126,
+    "tokens_per_second": 13.5
+   },
+   "latency_s": 16.0,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-02",
+   "split": "test",
+   "category": "turkish",
+   "question": "Ayasofya nerede?",
+   "answer": "Ayasofya, Istanbul, Türkiye'de located [3].",
+   "language": "tr",
+   "translated": "Where is Hagia Sophia?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 1403,
+    "retrieve_ms": 43,
+    "first_token_ms": 7388,
+    "total_ms": 9850,
+    "prompt_tokens": 870,
+    "answer_tokens": 15,
+    "tokens_per_second": 14.8
+   },
+   "latency_s": 9.8,
+   "retrieved": [
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-04",
+   "split": "test",
+   "category": "turkish",
+   "question": "Mona Lisa'yı kim yaptı?",
+   "answer": "Mona Lisa'yı Leonardo da Vinci yaptı [1].",
+   "language": "tr",
+   "translated": "Who painted the Mona Lisa?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 624,
+    "retrieve_ms": 8,
+    "first_token_ms": 8754,
+    "total_ms": 10277,
+    "prompt_tokens": 1020,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.6
+   },
+   "latency_s": 10.3,
+   "retrieved": [
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-06",
+   "split": "test",
+   "category": "turkish",
+   "question": "Elektrikle ilişkilendirilen ünlü mucit kimdir?",
+   "answer": "Elektrikle ilişkilendirilen ünlü mucit Nikola Tesla'dir [1].",
+   "language": "tr",
+   "translated": "Who is the famous inventor associated with electricity?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 836,
+    "retrieve_ms": 48,
+    "first_token_ms": 8199,
+    "total_ms": 10463,
+    "prompt_tokens": 957,
+    "answer_tokens": 20,
+    "tokens_per_second": 14.5
+   },
+   "latency_s": 10.5,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Isaac Newton",
+    "Isaac Newton",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-08",
+   "split": "test",
+   "category": "turkish",
+   "question": "Peru'daki antik İnka şehri hangisidir?",
+   "answer": "Peru'daki antik İnka şehri Machu Picchu'dur [1]. Machu Picchu, Inca emperor Pachacuti'nin estate olarak kullanıldığı düşünülmektedir [1]. Machu Picchu, \"Lost City of the Incas\" olarak da bilinir [1].",
+   "language": "tr",
+   "translated": "What is the ancient Inca city in Peru?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 909,
+    "retrieve_ms": 60,
+    "first_token_ms": 10284,
+    "total_ms": 16284,
+    "prompt_tokens": 1181,
+    "answer_tokens": 67,
+    "tokens_per_second": 13.3
+   },
+   "latency_s": 16.3,
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Petra",
+    "Acropolis of Athens",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-10",
+   "split": "test",
+   "category": "turkish",
+   "question": "Çin Seddi nerede bulunur?",
+   "answer": "Çin Seddi, Çin'in historical northern bordersındaki eski devletler ve İmparatorluklar arasında inşa edildi [1]. Çin Seddi, Ming Hanedanı (1368-1644) tarafından en iyi bilinen bölümü inşa edildi [1]. Çin Seddi, Jiayu Pass'in batı ucunda, Ming Hanedanı tarafından first major walls erected edildi [2].",
+   "language": "tr",
+   "translated": "Where is the Great Wall of China?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 763,
+    "retrieve_ms": 52,
+    "first_token_ms": 8448,
+    "total_ms": 15063,
+    "prompt_tokens": 972,
+    "answer_tokens": 80,
+    "tokens_per_second": 13.8
+   },
+   "latency_s": 15.1,
+   "retrieved": [
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-12",
+   "split": "test",
+   "category": "turkish",
+   "question": "Dünyanın en yüksek dağı hangisidir?",
+   "answer": "Dünya'nın en yüksek dağı Mount Everest'dir [2].",
+   "language": "tr",
+   "translated": "What is the world's highest mountain?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 636,
+    "retrieve_ms": 57,
+    "first_token_ms": 3518,
+    "total_ms": 5242,
+    "prompt_tokens": 911,
+    "answer_tokens": 15,
+    "tokens_per_second": 14.6
+   },
+   "latency_s": 5.2,
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Fuji",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "tr-14",
+   "split": "test",
+   "category": "turkish",
+   "question": "Leonardo da Vinci hangi şehirde doğdu?",
+   "answer": "Leonardo da Vinci'nin doğduğu şehir hakkında bilgi verilemiyor [4]. Vinci şehrinde doğduğu düşünülüyor [3], ancak exact location hakkında kesin bir bilgi yok [4].",
+   "language": "tr",
+   "translated": "Where did Leonardo da Vinci die?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 727,
+    "retrieve_ms": 53,
+    "first_token_ms": 7673,
+    "total_ms": 11331,
+    "prompt_tokens": 876,
+    "answer_tokens": 40,
+    "tokens_per_second": 13.9
+   },
+   "latency_s": 11.3,
+   "retrieved": [
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "refuse-02",
+   "split": "test",
+   "category": "refusal",
+   "question": "Tell me about a random unknown person John Doe.",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 63,
+    "first_token_ms": 7964,
+    "total_ms": 8760,
+    "prompt_tokens": 979,
+    "answer_tokens": 11,
+    "tokens_per_second": 15.0
+   },
+   "latency_s": 8.8,
+   "retrieved": [
+    "Stephen Hawking",
+    "William Shakespeare",
+    "Frida Kahlo",
+    "Leonardo da Vinci",
+    "Alan Turing"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-04",
+   "split": "test",
+   "category": "refusal",
+   "question": "What is the boiling point of water at sea level?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 7593,
+    "total_ms": 8536,
+    "prompt_tokens": 1040,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.5
+   },
+   "latency_s": 8.5,
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Grand Canyon",
+    "Hagia Sophia",
+    "Grand Canyon"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-06",
+   "split": "test",
+   "category": "refusal",
+   "question": "What is Lionel Messi's favourite pizza topping?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 62,
+    "first_token_ms": 6929,
+    "total_ms": 7870,
+    "prompt_tokens": 966,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.8
+   },
+   "latency_s": 7.9,
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-08",
+   "split": "test",
+   "category": "refusal",
+   "question": "How many floors does the Eiffel Tower's underground parking garage in Tokyo have?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 57,
+    "first_token_ms": 6029,
+    "total_ms": 6974,
+    "prompt_tokens": 867,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.7
+   },
+   "latency_s": 7.0,
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-10",
+   "split": "test",
+   "category": "refusal",
+   "question": "Python'da liste nasıl sıralanır?",
+   "answer": "Monty Python Live (Mostly) show'da listeler sıralanır [2].",
+   "language": "tr",
+   "translated": "How do lists sort in Python?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": true,
+    "correct": false,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 1520,
+    "retrieve_ms": 52,
+    "first_token_ms": 8416,
+    "total_ms": 11484,
+    "prompt_tokens": 932,
+    "answer_tokens": 21,
+    "tokens_per_second": 14.1
+   },
+   "latency_s": 11.5,
+   "retrieved": [
+    "Cleopatra",
+    "Stephen Hawking",
+    "Alan Turing",
+    "William Shakespeare",
+    "Alan Turing"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "refuse-12",
+   "split": "test",
+   "category": "refusal",
+   "question": "What did Albert Einstein say about smartphones in his 2015 interview?",
+   "answer": "I don't know based on the available information.",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 52,
+    "first_token_ms": 8947,
+    "total_ms": 9902,
+    "prompt_tokens": 1087,
+    "answer_tokens": 13,
+    "tokens_per_second": 14.4
+   },
+   "latency_s": 9.9,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {}
+  },
+  {
+   "id": "follow-02",
+   "split": "test",
+   "category": "followup",
+   "question": "What prize did he win?",
+   "answer": "Einstein won the 1921 Nobel Prize in Physics [1] and the 1922 Nobel Prize in Physics [3].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 49,
+    "first_token_ms": 8025,
+    "total_ms": 10044,
+    "prompt_tokens": 1084,
+    "answer_tokens": 27,
+    "tokens_per_second": 13.7
+   },
+   "latency_s": 10.1,
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "follow-04",
+   "split": "test",
+   "category": "followup",
+   "question": "And when did he die?",
+   "answer": "Nikola Tesla died on 7 January 1943 [4].",
+   "language": "en",
+   "translated": null,
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": true,
+   "timings": {
+    "translate_ms": 0,
+    "retrieve_ms": 46,
+    "first_token_ms": 6702,
+    "total_ms": 7889,
+    "prompt_tokens": 948,
+    "answer_tokens": 16,
+    "tokens_per_second": 14.1
+   },
+   "latency_s": 8.0,
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  },
+  {
+   "id": "follow-06",
+   "split": "test",
+   "category": "followup",
+   "question": "Peki nerede?",
+   "answer": "Ayasofya'nın locationu, Hagia Sophia Grand Mosque, Istanbul, Turkey'de [3].",
+   "language": "tr",
+   "translated": "Where are you?",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": true
+   },
+   "invalid_citations": 0,
+   "uncited_sentences": 0,
+   "inferred_sentences": 0,
+   "numbers_grounded": null,
+   "timings": {
+    "translate_ms": 482,
+    "retrieve_ms": 45,
+    "first_token_ms": 6933,
+    "total_ms": 9051,
+    "prompt_tokens": 815,
+    "answer_tokens": 23,
+    "tokens_per_second": 14.5
+   },
+   "latency_s": 10.5,
+   "retrieved": [
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   }
+  }
+ ]
+}

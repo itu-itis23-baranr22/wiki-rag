@@ -1,0 +1,3836 @@
+{
+ "label": "baseline-origin-main",
+ "rows": [
+  {
+   "id": "anon-01",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.14,
+   "answer": "Albert Einstein developed the theory of general relativity.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 14.3
+  },
+  {
+   "id": "anon-02",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "Marie Curie, along with her husband Pierre Curie, discovered radium and polonium. They isolated radium from pitchblende, a complex mineral, and named it after the Latin word for 'ray'. Polonium, on the other hand, was named after Marie Curie's native Poland. The Curies' discovery of these elements was a significant milestone in the field of radioactivity, and they published numerous scientific papers on their findings, including one that announced the existence of polonium in 1898.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 16.5
+  },
+  {
+   "id": "anon-03",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "William Shakespeare wrote both Hamlet and Macbeth.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 9.9
+  },
+  {
+   "id": "anon-04",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Vincent van Gogh",
+    "Vincent van Gogh",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.7
+  },
+  {
+   "id": "anon-05",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Leonardo da Vinci",
+    "Vincent van Gogh",
+    "Frida Kahlo",
+    "Leonardo da Vinci",
+    "Vincent van Gogh"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "Vincent van Gogh painted The Starry Night.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.6
+  },
+  {
+   "id": "anon-06",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.06,
+   "answer": "Charles Darwin proposed natural selection and wrote On the Origin of Species. He introduced his scientific theory of natural selection, which he believed resulted from the struggle for existence, in a joint presentation with Alfred Russel Wallace. The book On the Origin of Species was published in 1859, presenting his theory of evolution with compelling evidence.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 12.1
+  },
+  {
+   "id": "anon-07",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "Steve Jobs co-founded Apple with his early business partner Steve Wozniak as Apple Computer Company in 1976. There is no mention of the iPhone in the provided context.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 11.9
+  },
+  {
+   "id": "anon-08",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.07,
+   "answer": "Alan Turing was a leading participant in the breaking of German ciphers at Bletchley Park during the Second World War. He worked part-time with the Government Code and Cypher School (GC&CS) and concentrated on cryptanalysis of the Enigma cipher machine used by Nazi Germany, together with Dilly Knox.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 13.6
+  },
+  {
+   "id": "anon-09",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Ada Lovelace wrote the first computer program for the Analytical Engine.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.3
+  },
+  {
+   "id": "anon-10",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mahatma Gandhi",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Mustafa Kemal Atatürk led the Turkish War of Independence. According to the context, he directed the Turkish National Movement in a nationalist resistance against Turkey's partition among the victorious Allied powers, achieving a Turkish victory against Greece, Armenia, France, and the United Kingdom, confirmed in the Treaty of Lausanne.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 12.4
+  },
+  {
+   "id": "anon-11",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mahatma Gandhi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "Mahatma Gandhi led the Salt March in India. The Salt March was a 388-kilometre march from Ahmedabad to Dandi, Gujarat, where Gandhi and volunteers made salt themselves to break the British salt laws.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 12.1
+  },
+  {
+   "id": "anon-12",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Cleopatra",
+    "Cleopatra",
+    "Cleopatra",
+    "Cleopatra",
+    "Cleopatra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "Cleopatra VII was the last active ruler of the Ptolemaic Kingdom of Egypt.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.8
+  },
+  {
+   "id": "anon-13",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Mozart",
+    "Mozart",
+    "William Shakespeare",
+    "Mozart",
+    "Mozart"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "The Magic Flute was composed by Wolfgang Amadeus Mozart.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.3
+  },
+  {
+   "id": "anon-14",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Alan Turing",
+    "Stephen Hawking",
+    "Albert Einstein",
+    "Stephen Hawking",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "Stephen Hawking wrote A Brief History of Time.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 9.5
+  },
+  {
+   "id": "anon-15",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Christ the Redeemer (statue)",
+    "Petra",
+    "Taj Mahal",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.18,
+   "answer": "Frida Kahlo married Diego Rivera. According to the context, Frida Kahlo and Diego Rivera were in a relationship that began in earnest shortly after their encounter in 1928. They married in a civil ceremony on 21 August 1929, and later remarried in a simple civil ceremony on 8 December 1940.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 20.4
+  },
+  {
+   "id": "anon-16",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "William Shakespeare",
+    "Cleopatra",
+    "Ada Lovelace",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.17,
+   "answer": "The Taj Mahal was built by Shah Jahan for his wife, Mumtaz Mahal. According to the information provided, Mumtaz Mahal died in 1631 while giving birth to their 14th child, and Shah Jahan commissioned the construction of the mausoleum in her memory. The mausoleum was completed in 1648, and it also houses the tomb of Shah Jahan himself.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 22.1
+  },
+  {
+   "id": "anon-17",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Cappadocia",
+    "Cappadocia",
+    "Mount Everest",
+    "Eiffel Tower",
+    "Cappadocia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Fairy chimneys can be found in Cappadocia, a region in Turkey, characterized by its unique natural wonders, including fairy chimneys, and a rich religious heritage. \n\nHot air balloons can be found in Cappadocia, particularly around Göreme, offering sunrise flights over the region's fairy chimneys and valleys.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 13.8
+  },
+  {
+   "id": "anon-18",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Machu Picchu",
+    "Acropolis of Athens",
+    "Machu Picchu",
+    "Mount Fuji",
+    "Cleopatra",
+    "Isaac Newton",
+    "Cleopatra",
+    "Ada Lovelace"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.2,
+   "answer": "Machu Picchu is the Inca citadel located in the Eastern Cordillera of southern Peru on a mountain ridge at 2,430 meters (7,970 ft). It is situated in the Machupicchu District of Urubamba Province about 80 kilometers (50 miles) northwest of Cusco, above the Sacred Valley and along the Urubamba River.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 20.9
+  },
+  {
+   "id": "anon-19",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Petra",
+    "Petra",
+    "Acropolis of Athens",
+    "Cappadocia",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.12,
+   "answer": "Petra is the ancient city in Jordan that is carved into rock. The city is famous for its rock-cut architecture and water conduit systems. The sandstone from which Petra is carved is of a distinctive red color, earning it the nickname \"Rose City\".",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 14.2
+  },
+  {
+   "id": "anon-20",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Sagrada Família",
+    "Sagrada Família",
+    "Sagrada Família",
+    "Sagrada Família",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Frida Kahlo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.16,
+   "answer": "The Sagrada Família basilica in Barcelona is still unfinished. According to the context, work on the sculptures and decorative details of the Glory Facade, along with a controversial monumental stairway, is expected to continue until 2034.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 18.6
+  },
+  {
+   "id": "anon-21",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Petra",
+    "Cleopatra",
+    "Mozart",
+    "William Shakespeare",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.19,
+   "answer": "The Colosseum in Rome hosted gladiator fights. It is described as having a low easy access for the gladiators, with a miniature training arena within the Ludus Magnus nearby, which was a popular attraction for Roman spectators. The Colosseum underwent various repairs and renovations over the centuries, with the last recorded gladiatorial fight taking place around 435.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 25.2
+  },
+  {
+   "id": "anon-22",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.57,
+   "answer": "The Statue of Liberty was a gift from France to the United States. According to the information provided, Édouard René de Laboulaye, the president of the French Anti-Slavery Society, proposed the idea of a monument to be built by the French people for the United States in 1865. The project was conceived as a symbol of freedom and democracy, and it was designed by Frédéric Auguste Bartholdi, a sculptor. The statue was completed in France, shipped to the United States, and assembled on Bedloe's Island, where it was dedicated in 1886.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": false,
+   "latency_s": 24.0
+  },
+  {
+   "id": "anon-23",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.36,
+   "answer": "Mount Everest is the highest mountain above sea level on Earth, with a height of 8,848.86 m (29,031 ft 8+1⁄2 in) as of 2020.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 17.7
+  },
+  {
+   "id": "anon-24",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Angkor Wat",
+    "Giza pyramid complex",
+    "Giza pyramid complex",
+    "Angkor Wat",
+    "Angkor Wat"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.23,
+   "answer": "Angkor Wat is the Khmer temple complex mentioned in the context as being located in Cambodia.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.8
+  },
+  {
+   "id": "anon-25",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Stonehenge",
+    "Stonehenge",
+    "Stonehenge",
+    "Stonehenge",
+    "Cleopatra",
+    "Leonardo da Vinci",
+    "Cleopatra",
+    "Charles Darwin"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 7.08,
+   "answer": "Stonehenge is the prehistoric megalithic structure on Salisbury Plain in Wiltshire, England.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 27.2
+  },
+  {
+   "id": "anon-26",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Cristiano Ronaldo",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Cristiano Ronaldo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 6.96,
+   "answer": "Mount Fuji is the highest mountain in Japan, with a summit elevation of 3,776.24 m (12,389 ft 3 in).",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 30.1
+  },
+  {
+   "id": "anon-27",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Niagara Falls",
+    "Niagara Falls",
+    "Niagara Falls",
+    "Niagara Falls",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Vincent van Gogh",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 6.86,
+   "answer": "The waterfalls on the border of Canada and New York are Horseshoe Falls (also known as the Canadian Falls) and American Falls, with Bridal Veil Falls lying within the United States.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 30.1
+  },
+  {
+   "id": "anon-28",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Christ the Redeemer (statue)",
+    "Christ the Redeemer (statue)",
+    "Isaac Newton",
+    "Christ the Redeemer (statue)",
+    "Christ the Redeemer (statue)",
+    "Ada Lovelace",
+    "Cleopatra",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 6.73,
+   "answer": "The large statue that overlooks Rio de Janeiro is Christ the Redeemer. It is located at the peak of the 700-metre Corcovado mountain in the Tijuca National Park, and is the largest Art Deco-style sculpture in the world.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 35.3
+  },
+  {
+   "id": "anon-29",
+   "split": "dev",
+   "category": "anonymous",
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 5.42,
+   "answer": "Nikola Tesla designed the alternating current induction motor. According to passage [4], Tesla developed an induction motor that ran on alternating current (AC) in 1887, and it used polyphase current, which generated a rotating magnetic field to turn the motor.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 20.6
+  },
+  {
+   "id": "anon-30",
+   "split": "test",
+   "category": "anonymous",
+   "retrieved": [
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.83,
+   "answer": "Taylor Swift released the album 1989. I don't know based on the available information if she also released the Eras Tour, as the context only mentions the 1989 World Tour.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 18.6
+  },
+  {
+   "id": "named-01",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.58,
+   "answer": "Marie Curie was born on 7 November 1867.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 18.4
+  },
+  {
+   "id": "named-02",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Albert Einstein was born in Ulm, which was part of the Kingdom of Württemberg in the German Empire.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 16.1
+  },
+  {
+   "id": "named-03",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.27,
+   "answer": "Albert Einstein received the Nobel Prize in Physics in 1921.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 14.8
+  },
+  {
+   "id": "named-04",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.68,
+   "answer": "Gustave Eiffel designed the Eiffel Tower's company. According to passage [3], Eiffel's company designed and built the tower from 1887 to 1889.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 19.0
+  },
+  {
+   "id": "named-05",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.3,
+   "answer": "The Eiffel Tower is approximately 330 meters (1,083 ft) tall.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 15.4
+  },
+  {
+   "id": "named-06",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.49,
+   "answer": "Hagia Sophia is located in Istanbul, Turkey.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.8
+  },
+  {
+   "id": "named-07",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum",
+    "Colosseum"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.68,
+   "answer": "The emperor who built the Colosseum was Vespasian, with his son Titus completing the construction under his rule. The construction began under Vespasian in 72 AD and was completed in 80 AD.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 20.6
+  },
+  {
+   "id": "named-08",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.05,
+   "answer": "Machu Picchu is located in Peru.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 16.5
+  },
+  {
+   "id": "named-09",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal",
+    "Taj Mahal"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 5.1,
+   "answer": "According to the information provided, the Taj Mahal was built by Shah Jahan, a Mughal emperor, in memory of his wife Mumtaz Mahal. The construction of the mausoleum was completed in 1648, but work continued on other phases of the project for another five years, with the complex being completed in its entirety in 1653.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 23.2
+  },
+  {
+   "id": "named-10",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.98,
+   "answer": "Nikola Tesla died on January 7, 1943.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 17.0
+  },
+  {
+   "id": "named-11",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "According to the information provided, Tenzing Norgay and Edmund Hillary made the first documented ascent of Everest in 1953, using the Southeast Ridge route. However, it is also mentioned that George Mallory and Andrew Irvine made a final summit attempt on 8 June 1924, but they never returned, leading to debate as to whether they were the first to reach the top.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 22.5
+  },
+  {
+   "id": "named-12",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.82,
+   "answer": "Frédéric Auguste Bartholdi was the sculptor of the Statue of Liberty. He designed the colossal neoclassical sculpture, which was a gift to the United States from the people of France.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 19.9
+  },
+  {
+   "id": "named-13",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace",
+    "Ada Lovelace"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Ada Lovelace is known for being the first computer programmer and for her work on Charles Babbage's Analytical Engine. She is also recognized for her notes on the engine, which are considered to be the first published computer program. Additionally, she is known for her vision of using technology to manipulate and encode information, such as music, and for her concept of \"poetical science\".",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 19.3
+  },
+  {
+   "id": "named-14",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 3.37,
+   "answer": "William Shakespeare was born in Stratford-upon-Avon, Warwickshire.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 16.0
+  },
+  {
+   "id": "named-15",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.23,
+   "answer": "Mustafa Kemal Atatürk died in 1938.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 16.3
+  },
+  {
+   "id": "named-16",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Grand Canyon",
+    "Grand Canyon",
+    "Grand Canyon",
+    "Grand Canyon",
+    "Grand Canyon"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.07,
+   "answer": "The Colorado River is the river that carved the Grand Canyon. According to the passages, the ancestral Colorado River responded to increased water conditions during the ice ages by cutting its channel faster and deeper, eventually creating the Grand Canyon's current depth by 1.2 million years ago.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 17.8
+  },
+  {
+   "id": "named-17",
+   "split": "dev",
+   "category": "named",
+   "retrieved": [
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing",
+    "Alan Turing"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.11,
+   "answer": "During the Second World War, Alan Turing worked for the Government Code and Cypher School at Bletchley Park, Britain's codebreaking centre that produced Ultra intelligence. He led Hut 8, the section responsible for German naval cryptanalysis.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.4
+  },
+  {
+   "id": "named-18",
+   "split": "test",
+   "category": "named",
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.38,
+   "answer": "Steve Jobs founded NeXT after leaving Apple. NeXT was a workstation computer company that was introduced in 1988.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 18.4
+  },
+  {
+   "id": "list-01",
+   "split": "dev",
+   "category": "list",
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Acropolis of Athens",
+    "Cappadocia",
+    "Mount Fuji"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.5,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.25,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "There are two famous places mentioned in the context that are located in Turkey: Cappadocia and Mount Fuji is not located in Turkey, it is located in Japan. \n\nCappadocia is a historical region in Central Anatolia region, Turkey, while Mount Fuji is not mentioned as being in Turkey, it is mentioned as being in Japan.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 21.4
+  },
+  {
+   "id": "list-02",
+   "split": "dev",
+   "category": "list",
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Cappadocia",
+    "Acropolis of Athens",
+    "Cappadocia"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.12,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.7
+  },
+  {
+   "id": "list-03",
+   "split": "test",
+   "category": "list",
+   "retrieved": [
+    "Acropolis of Athens",
+    "Machu Picchu",
+    "Giza pyramid complex",
+    "Machu Picchu",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.3333333333333333,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "The Giza pyramid complex is located in Egypt. It is one of the most famous ancient monuments in Egypt and has been a popular tourist destination for centuries. The complex includes several pyramids, including the Great Pyramid, which is the oldest and only remaining structure of the Seven Wonders of the Ancient World.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 14.0
+  },
+  {
+   "id": "list-04",
+   "split": "dev",
+   "category": "list",
+   "retrieved": [
+    "Mount Fuji",
+    "Machu Picchu",
+    "Mount Fuji",
+    "Cappadocia",
+    "Acropolis of Athens"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "Mount Fuji is located in Japan. It is the highest mountain in Japan and is visible from Tokyo on clear days.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.9
+  },
+  {
+   "id": "list-05",
+   "split": "test",
+   "category": "list",
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Angkor Wat",
+    "Angkor Wat",
+    "Tower of London"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 8.4
+  },
+  {
+   "id": "list-06",
+   "split": "test",
+   "category": "list",
+   "retrieved": [
+    "Machu Picchu",
+    "Machu Picchu",
+    "Cappadocia",
+    "Machu Picchu",
+    "Machu Picchu"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.06,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 9.8
+  },
+  {
+   "id": "list-07",
+   "split": "dev",
+   "category": "list",
+   "retrieved": [
+    "Eiffel Tower",
+    "Christ the Redeemer (statue)",
+    "Stonehenge",
+    "Taj Mahal",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.3
+  },
+  {
+   "id": "list-08",
+   "split": "test",
+   "category": "list",
+   "retrieved": [
+    "Acropolis of Athens",
+    "Petra",
+    "Stonehenge",
+    "Mount Fuji",
+    "Acropolis of Athens"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.07,
+   "answer": "The Acropolis of Athens is located in Greece.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.0
+  },
+  {
+   "id": "list-09",
+   "split": "dev",
+   "category": "list",
+   "retrieved": [
+    "Isaac Newton",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.12,
+   "answer": "Isaac Newton and Marie Curie won a Nobel Prize.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.4
+  },
+  {
+   "id": "list-10",
+   "split": "test",
+   "category": "list",
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Giza pyramid complex",
+    "Eiffel Tower",
+    "Colosseum",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.15,
+   "answer": "Based on the information provided, Lionel Messi and Cristiano Ronaldo are widely regarded as two of the most famous footballers in the world. Both players have achieved immense success and recognition throughout their careers, with numerous awards and accolades, including Ballon d'Or awards, FIFA's world's best player titles, and UEFA Ultimate Team of the Year selections. While Cristiano Ronaldo has been ranked the world's highest-paid athlete by Forbes on five occasions, Messi has been named the All Time Men's World Best Player by the IFFHS in 2025.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 22.2
+  },
+  {
+   "id": "list-11",
+   "split": "dev",
+   "category": "list",
+   "retrieved": [
+    "Eiffel Tower",
+    "Christ the Redeemer (statue)",
+    "Machu Picchu",
+    "Mount Fuji",
+    "Mount Fuji"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 9.1
+  },
+  {
+   "id": "list-12",
+   "split": "test",
+   "category": "list",
+   "retrieved": [
+    "Machu Picchu",
+    "Cappadocia",
+    "Tower of London",
+    "Mount Everest",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.3333333333333333,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.15,
+   "answer": "None of the famous places mentioned in the provided information are located in England.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.2
+  },
+  {
+   "id": "typo-01",
+   "split": "dev",
+   "category": "typo",
+   "retrieved": [
+    "Mozart",
+    "Mozart",
+    "Alan Turing",
+    "Mozart",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.2,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.14,
+   "answer": "Albert Einstein was a physicist whose outward persona was calm and gentle, but who had a \"highly emotional temperament\" that drove his \"extraordinary intellectual energy\". He was a renowned scientist who made significant contributions to the field of physics, and was also known for his interactions with celebrities, such as Charlie Chaplin, with whom he shared a memorable experience at a film premiere.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 14.9
+  },
+  {
+   "id": "typo-02",
+   "split": "test",
+   "category": "typo",
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.11,
+   "answer": "The Eiffel Tower is located in Paris, France, specifically on the Champ de Mars.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.2
+  },
+  {
+   "id": "typo-03",
+   "split": "dev",
+   "category": "typo",
+   "retrieved": [
+    "Marie Curie",
+    "Isaac Newton",
+    "Marie Curie",
+    "Marie Curie",
+    "Stonehenge",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.13,
+   "answer": "Marie Curie discovered the element thorium, which is radioactive. She also discovered that pitchblende, a uranium mineral, is four times as active as uranium itself, and chalcolite, another uranium mineral, is twice as active. Additionally, she discovered that diseased, tumour-forming cells are destroyed faster than healthy cells when exposed to radium.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 20.4
+  },
+  {
+   "id": "typo-04",
+   "split": "test",
+   "category": "typo",
+   "retrieved": [
+    "Ada Lovelace",
+    "Marie Curie",
+    "Isaac Newton",
+    "Isaac Newton",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.05,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.8
+  },
+  {
+   "id": "typo-05",
+   "split": "dev",
+   "category": "typo",
+   "retrieved": [
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.07,
+   "answer": "Nikola Tesla is famous for his contributions to the design of the modern alternating current (AC) electricity supply system. He is known for his work on the development of AC motors, generators, and transmission systems, which have become the backbone of the electrical power industry. His patents and inventions, including the AC induction motor and polyphase AC system, have had a significant impact on the world's electrical infrastructure.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 13.7
+  },
+  {
+   "id": "typo-06",
+   "split": "test",
+   "category": "typo",
+   "retrieved": [
+    "Machu Picchu",
+    "Grand Canyon",
+    "Mount Fuji",
+    "Machu Picchu",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "Machu Picchu is located on a narrow saddle between two mountain peaks, Machu Picchu and Huayna Picchu.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.0
+  },
+  {
+   "id": "typo-07",
+   "split": "dev",
+   "category": "typo",
+   "retrieved": [
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare",
+    "William Shakespeare"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Shakespeare was an English playwright, poet, and actor. He is widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet and the \"Bard of Avon\" or simply \"the Bard\".",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 12.9
+  },
+  {
+   "id": "typo-08",
+   "split": "test",
+   "category": "typo",
+   "retrieved": [
+    "Isaac Newton",
+    "Charles Darwin",
+    "Isaac Newton",
+    "Alan Turing",
+    "Machu Picchu",
+    "Machu Picchu",
+    "Stonehenge",
+    "Stonehenge"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.15,
+   "answer": "Isaac Newton made several significant discoveries, including the generalised binomial theorem, Newton's identities, Newton's method, the Newton polygon, and classified cubic plane curves. He also developed calculus, although he developed it years before Gottfried Wilhelm Leibniz, with whom he shared credit for formulating infinitesimal calculus.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 21.0
+  },
+  {
+   "id": "trap-01",
+   "split": "dev",
+   "category": "ambiguous",
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": true
+   },
+   "retrieve_s": 4.17,
+   "answer": "Marie Curie had several jobs throughout her career. She worked as a tutor, earning barely enough to support herself, and later studied physics at the University of Paris, earning two degrees in physics. She also worked in an industrial laboratory, where she investigated the magnetic properties of various steels. Additionally, she worked with her husband Pierre Curie, and later became involved in scientific coordination with the League of Nations.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 18.1
+  },
+  {
+   "id": "trap-02",
+   "split": "test",
+   "category": "ambiguous",
+   "retrieved": [
+    "Great Wall of China",
+    "Great Wall of China",
+    "Great Wall of China",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": true
+   },
+   "retrieve_s": 4.25,
+   "answer": "The construction of the Great Wall was not swift, as it was a labor-intensive process that required the movement of large quantities of materials over long distances. The use of local resources, such as stone and rammed earth, also slowed down the construction process. While the Han, Northern dynasties, and Sui dynasties later repaired and expanded sections of the wall, there is no indication that the original construction was rapid. In fact, the exact length and course of the Qin walls are unknown due to erosion over the centuries.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 21.4
+  },
+  {
+   "id": "trap-03",
+   "split": "dev",
+   "category": "ambiguous",
+   "retrieved": [
+    "Charles Darwin",
+    "Charles Darwin",
+    "Charles Darwin",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": true
+   },
+   "retrieve_s": 4.16,
+   "answer": "Before his voyage, Charles Darwin considered a position as a naturalist on HMS Beagle, which was initially proposed to him by his brother-in-law, Josiah Wedgwood II, and later funded by him.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 16.4
+  },
+  {
+   "id": "trap-04",
+   "split": "test",
+   "category": "ambiguous",
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": true
+   },
+   "retrieve_s": 4.18,
+   "answer": "Lionel Messi's rise at Barcelona was relatively swift. He joined the club's youth teams at a young age and quickly made a name for himself, helping the Juvenil B team win the league. He also scored 36 goals in all official competitions, demonstrating his talent and potential. His progress was reflected in his first professional contract, which was signed in 2004 and contained an initial buyout clause of €30 million. This suggests that Messi's rise to prominence was rapid, and he was able to make a significant impact on the team at a relatively young age.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 25.7
+  },
+  {
+   "id": "trap-05",
+   "split": "dev",
+   "category": "ambiguous",
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.1,
+   "answer": "Steve Jobs bought the computer graphics division of Lucasfilm in 1986, which was spun off independently as Pixar. Pixar produced the first computer-animated feature film, Toy Story (1995), and became a leading animation studio, producing dozens of commercially successful and critically acclaimed films.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 19.6
+  },
+  {
+   "id": "trap-06",
+   "split": "test",
+   "category": "ambiguous",
+   "retrieved": [
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift",
+    "Taylor Swift"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.07,
+   "answer": "Based on the available information, Taylor Swift released the song \"The Man\" in 2020.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": null,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 19.7
+  },
+  {
+   "id": "compare-01",
+   "split": "dev",
+   "category": "compare",
+   "retrieved": [
+    "Albert Einstein",
+    "Nikola Tesla",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Nikola Tesla",
+    "Nikola Tesla"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.21,
+   "answer": "Albert Einstein and Nikola Tesla were both renowned scientists of the 20th century, but their contributions and personalities differed significantly. Einstein is widely regarded as one of the most influential scientists of the 20th century, known for his theory of relativity and the famous equation E=mc². In contrast, Tesla is credited with developing the modern alternating current (AC) electricity supply system. While Einstein's work had a profound impact on modern physics, Tesla's work revolutionized the field of electrical engineering.\n\nBoth scientists were also known for their innovative and inventive minds, with Einstein taking great pleasure in invention and Tesla being a prolific inventor in his own right. However, Einstein's work was more focused on theoretical physics, whereas Tesla's work was more practical and applied. Additionally, Einstein's work had a more immediate impact on the development of modern physics, whereas Tesla's work had a more lasting impact on the development of electrical engineering and technology.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 26.7
+  },
+  {
+   "id": "compare-02",
+   "split": "test",
+   "category": "compare",
+   "retrieved": [
+    "Eiffel Tower",
+    "Statue of Liberty",
+    "Eiffel Tower",
+    "Statue of Liberty",
+    "Eiffel Tower",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.16,
+   "answer": "The Eiffel Tower and the Statue of Liberty share some similarities, but they also have distinct differences. Both are iconic landmarks and symbols of their respective countries, France and the United States. They are both freestanding structures, with the Eiffel Tower being the tallest freestanding structure in France and the Statue of Liberty standing as a symbol of freedom and democracy.\n\nOne notable difference is their design and construction. The Eiffel Tower was built using iron lattice structures, while the Statue of Liberty was designed with a copper sheet skin, with internal framework of iron and steel. The Eiffel Tower was also built in France and then disassembled and transported to Paris, whereas the Statue of Liberty was built in France and then assembled on Bedloe's Island in New York Harbor.\n\nBoth structures have become symbols of their countries and have been visited by millions of people. The Eiffel Tower is the most-visited paid monument in the world, with over 300 million visitors since its",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 28.8
+  },
+  {
+   "id": "compare-03",
+   "split": "dev",
+   "category": "compare",
+   "retrieved": [
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Lionel Messi",
+    "Cristiano Ronaldo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.17,
+   "answer": "Lionel Messi and Cristiano Ronaldo are often compared due to their similarities and differences in playing styles, personalities, and achievements. Both players are widely regarded as two of the greatest players of their generation, known for their exceptional skills, speed, and goal-scoring abilities. They share similarities in their playing styles as left-footed playmakers, and both have achieved numerous individual accolades, including numerous Ballon d'Or awards.\n\nHowever, their personalities and approaches to the game differ. Messi is often portrayed as a shy, humble character, while Ronaldo is sometimes depicted as an arrogant and theatrical showoff. Additionally, their playing styles and roles in their teams have varied over the years. Messi has primarily played as a central midfielder or attacking midfielder, while Ronaldo has often played as a winger or attacking forward.\n\nDespite these differences, both players have consistently pushed each other to be the best, with their rivalry being compared to iconic sports rivalries such as Muhammad Ali-Joe Frazier and Borg-McEn",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 31.9
+  },
+  {
+   "id": "compare-04",
+   "split": "test",
+   "category": "compare",
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Fuji",
+    "Mount Everest",
+    "Mount Fuji",
+    "Mount Fuji"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.19,
+   "answer": "Mount Fuji and Mount Everest are both iconic mountains in Asia, but they have distinct differences. One of the main differences is their elevation: Mount Everest stands at 8,848 m (29,028.9 ft) above sea level, while Mount Fuji has a summit elevation of 3,776 m (12,388 ft) above sea level. This significant difference in elevation affects the climbing experience and the environment at the summit.\n\nAnother difference is the accessibility and popularity of the two mountains. Mount Fuji has multiple routes to the summit, with the most popular being the Yoshida route, which is also the most accessible due to its proximity to Tokyo and the availability of transportation services. In contrast, Mount Everest is a more remote and challenging mountain to climb, requiring extensive experience and preparation.\n\nDespite these differences, both mountains are revered for their natural beauty and cultural significance. Mount Fuji is a symbol of Japanese culture and is often featured in art, literature, and film, while Mount Everest is considered one",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": false,
+   "latency_s": 33.3
+  },
+  {
+   "id": "compare-05",
+   "split": "dev",
+   "category": "compare",
+   "retrieved": [
+    "Stephen Hawking",
+    "Isaac Newton",
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Isaac Newton",
+    "Isaac Newton"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.19,
+   "answer": "Isaac Newton and Stephen Hawking are connected through their work in physics. Newton is mentioned in the context as a key figure in the Scientific Revolution and the development of calculus, which Einstein praised as a significant advance in thought. In contrast, Hawking's work built upon the foundations laid by Newton, particularly in the area of black hole mechanics. Hawking's development of the four laws of black hole mechanics, which drew an analogy with thermodynamics, shows the influence of Newton's work on Hawking's research.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 23.8
+  },
+  {
+   "id": "compare-06",
+   "split": "test",
+   "category": "compare",
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.19,
+   "answer": "Albert Einstein and the Eiffel Tower share some interesting similarities. Both are iconic symbols of French culture and innovation. The Eiffel Tower was a groundbreaking feat of engineering when it was built in 1889, much like Einstein's groundbreaking theories in physics, which revolutionized our understanding of space and time. Both have also become synonymous with Paris, the City of Light.\n\nHowever, there are also some notable differences. The Eiffel Tower is a physical structure with a rich history, while Einstein was a human being with a remarkable scientific mind. The tower has been a source of inspiration for many artists and scientists, including Gustave Eiffel himself, who engraved the names of 72 French scientists and engineers on the building. Einstein, on the other hand, was a prolific inventor and innovator, but his work was primarily focused on theoretical physics.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 32.3
+  },
+  {
+   "id": "tr-01",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.08,
+   "answer": "Mustafa Kemal Atatürk, 1881 yılında doğdu.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 9.4
+  },
+  {
+   "id": "tr-02",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": false,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.06,
+   "answer": "Ayasofya, also known as Hagia Sophia, is located in Istanbul, Turkey.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.0
+  },
+  {
+   "id": "tr-03",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Eiffel Tower",
+    "Mustafa Kemal Atatürk",
+    "Petra",
+    "Taj Mahal",
+    "Mount Fuji",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.28,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 15.1
+  },
+  {
+   "id": "tr-04",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Frida Kahlo",
+    "Cleopatra",
+    "Leonardo da Vinci",
+    "Mustafa Kemal Atatürk",
+    "Hagia Sophia",
+    "Hagia Sophia",
+    "Statue of Liberty",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.3333333333333333,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.19,
+   "answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.6
+  },
+  {
+   "id": "tr-05",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "William Shakespeare",
+    "Colosseum",
+    "Mustafa Kemal Atatürk",
+    "Frida Kahlo",
+    "William Shakespeare",
+    "Cappadocia",
+    "Cappadocia",
+    "Mount Fuji"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.17,
+   "answer": "The play \"Hamlet\" was written by William Shakespeare.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 18.3
+  },
+  {
+   "id": "tr-06",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Steve Jobs",
+    "Steve Jobs",
+    "Steve Jobs",
+    "Nikola Tesla",
+    "Cappadocia",
+    "Christ the Redeemer (statue)",
+    "Christ the Redeemer (statue)",
+    "Eiffel Tower"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.25,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.36,
+   "answer": "The song \"Elektrikle ilişkilendirilen\" is not mentioned in the provided context. However, the context does mention Steve Jobs, who was known for his work in the computer industry, and Nikola Tesla, who experimented with transmitting power wirelessly. There is no information about a song with this title in the context.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 22.1
+  },
+  {
+   "id": "tr-07",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "Eiffel Tower",
+    "Cappadocia",
+    "Mahatma Gandhi",
+    "Christ the Redeemer (statue)",
+    "Sagrada Família",
+    "Leonardo da Vinci",
+    "Lionel Messi",
+    "Frida Kahlo"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.46,
+   "answer": "The Eiffel Tower is the famous iron lattice tower in Paris, France, named after engineer Gustave Eiffel. It was constructed for the 1889 World's Fair and has become a global cultural icon of France.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 19.1
+  },
+  {
+   "id": "tr-08",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Mahatma Gandhi",
+    "Mahatma Gandhi",
+    "Mustafa Kemal Atatürk",
+    "Mahatma Gandhi",
+    "Taj Mahal",
+    "Grand Canyon",
+    "Hagia Sophia",
+    "Petra"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.27,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 19.9
+  },
+  {
+   "id": "tr-09",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.14,
+   "answer": "Marie Curie, along with her husband Pierre Curie, discovered the elements polonium and radium.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 14.0
+  },
+  {
+   "id": "tr-10",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Cleopatra",
+    "Eiffel Tower",
+    "Mustafa Kemal Atatürk",
+    "Colosseum",
+    "Mount Fuji",
+    "Acropolis of Athens",
+    "Leonardo da Vinci",
+    "Stephen Hawking"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.21,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 18.6
+  },
+  {
+   "id": "tr-11",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "Frida Kahlo",
+    "Leonardo da Vinci",
+    "Vincent van Gogh",
+    "Steve Jobs",
+    "Petra",
+    "Cappadocia",
+    "Christ the Redeemer (statue)",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.18,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 15.8
+  },
+  {
+   "id": "tr-12",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Eiffel Tower",
+    "Mustafa Kemal Atatürk",
+    "Vincent van Gogh",
+    "Niagara Falls",
+    "Mustafa Kemal Atatürk",
+    "Taj Mahal",
+    "Mount Everest"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.125,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.14,
+   "answer": "The highest mountain in the world is Mount Everest.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 15.8
+  },
+  {
+   "id": "tr-13",
+   "split": "dev",
+   "category": "turkish",
+   "retrieved": [
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia",
+    "Cappadocia"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": null,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.09,
+   "answer": "Kapadokya, modern-day Cappadocia, is considered famous due to its unique natural landscape and rich history. The region is known for its distinctive fairy chimneys, honeycombed hills, and ancient cave dwellings, which have been shaped by millions of years of erosion. These natural wonders have attracted tourists and adventure seekers, making Cappadocia a popular destination for outdoor activities such as hiking, rock climbing, and hot air balloon rides.\n\nIn addition to its natural beauty, Cappadocia is also famous for its well-preserved ancient history, including the remains of monasteries, churches, and underground cities. The region has a rich cultural heritage, with many historical sites and landmarks, such as Göreme and Ihlara, that showcase its significance in the ancient world.\n\nThe region's fame can also be attributed to its association with famous historical figures, such as Herodotus, who wrote about the Cappadocians and their region",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 24.7
+  },
+  {
+   "id": "tr-14",
+   "split": "test",
+   "category": "turkish",
+   "retrieved": [
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {
+    "success": true,
+    "recall": 1.0,
+    "hit_at_1": true,
+    "reciprocal_rank": 1.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 2.07,
+   "answer": "Leonardo da Vinci Florence'de doğdu.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.7
+  },
+  {
+   "id": "refuse-01",
+   "split": "dev",
+   "category": "refusal",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Lionel Messi",
+    "Stephen Hawking",
+    "Alan Turing",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.24,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.5
+  },
+  {
+   "id": "refuse-02",
+   "split": "test",
+   "category": "refusal",
+   "retrieved": [
+    "Vincent van Gogh",
+    "Nikola Tesla",
+    "Steve Jobs",
+    "Isaac Newton",
+    "Vincent van Gogh"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.09,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 12.0
+  },
+  {
+   "id": "refuse-03",
+   "split": "dev",
+   "category": "refusal",
+   "retrieved": [
+    "Petra",
+    "Machu Picchu",
+    "Cappadocia",
+    "Machu Picchu",
+    "Ada Lovelace",
+    "Cristiano Ronaldo",
+    "Ada Lovelace",
+    "Cleopatra"
+   ],
+   "retrieval": {},
+   "retrieve_s": 4.21,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.1
+  },
+  {
+   "id": "refuse-04",
+   "split": "test",
+   "category": "refusal",
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Mount Everest",
+    "Isaac Newton",
+    "Albert Einstein",
+    "Isaac Newton",
+    "Albert Einstein"
+   ],
+   "retrieval": {},
+   "retrieve_s": 4.17,
+   "answer": "I don't know based on the available information. The provided context does not mention the boiling point of water at sea level.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.3
+  },
+  {
+   "id": "refuse-05",
+   "split": "dev",
+   "category": "refusal",
+   "retrieved": [
+    "Lionel Messi",
+    "Cristiano Ronaldo",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Cristiano Ronaldo"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.11,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.3
+  },
+  {
+   "id": "refuse-06",
+   "split": "test",
+   "category": "refusal",
+   "retrieved": [
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi",
+    "Lionel Messi"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.07,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.4
+  },
+  {
+   "id": "refuse-07",
+   "split": "dev",
+   "category": "refusal",
+   "retrieved": [
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie",
+    "Marie Curie"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.08,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 10.4
+  },
+  {
+   "id": "refuse-08",
+   "split": "test",
+   "category": "refusal",
+   "retrieved": [
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower",
+    "Eiffel Tower"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.07,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 11.1
+  },
+  {
+   "id": "refuse-09",
+   "split": "dev",
+   "category": "refusal",
+   "retrieved": [
+    "Mount Fuji",
+    "Mount Fuji",
+    "Mustafa Kemal Atatürk",
+    "Taylor Swift",
+    "Mount Everest",
+    "Cappadocia",
+    "Mozart",
+    "Mustafa Kemal Atatürk"
+   ],
+   "retrieval": {},
+   "retrieve_s": 4.28,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 17.9
+  },
+  {
+   "id": "refuse-10",
+   "split": "test",
+   "category": "refusal",
+   "retrieved": [
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Vincent van Gogh",
+    "Eiffel Tower",
+    "Petra",
+    "Petra",
+    "Cappadocia"
+   ],
+   "retrieval": {},
+   "retrieve_s": 4.32,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 18.8
+  },
+  {
+   "id": "refuse-11",
+   "split": "dev",
+   "category": "refusal",
+   "retrieved": [
+    "Cappadocia",
+    "Hagia Sophia",
+    "Mustafa Kemal Atatürk",
+    "Sagrada Família",
+    "Machu Picchu",
+    "Mahatma Gandhi",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci"
+   ],
+   "retrieval": {},
+   "retrieve_s": 4.19,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 16.5
+  },
+  {
+   "id": "refuse-12",
+   "split": "test",
+   "category": "refusal",
+   "retrieved": [
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein",
+    "Albert Einstein"
+   ],
+   "retrieval": {},
+   "retrieve_s": 2.09,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 19.8
+  },
+  {
+   "id": "follow-01",
+   "split": "dev",
+   "category": "followup",
+   "retrieved": [
+    "Frida Kahlo",
+    "Frida Kahlo",
+    "Leonardo da Vinci",
+    "Ada Lovelace",
+    "Petra",
+    "Stonehenge",
+    "Grand Canyon",
+    "Stonehenge"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": false,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.24,
+   "answer": "Frida Kahlo was born in Coyoacán, a village on the outskirts of Mexico City.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 20.9
+  },
+  {
+   "id": "follow-02",
+   "split": "test",
+   "category": "followup",
+   "retrieved": [
+    "Stephen Hawking",
+    "Stephen Hawking",
+    "Marie Curie",
+    "Marie Curie",
+    "Eiffel Tower",
+    "Mount Everest",
+    "Christ the Redeemer (statue)",
+    "Statue of Liberty"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": true,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.19,
+   "answer": "Stephen Hawking won the Nobel Prize in Physics in 1982, but the context does not mention this specific prize. However, it does mention that he received numerous awards and honours, including being elected a Fellow of the Royal Society (FRS) in 1974.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": true,
+    "correct": true,
+    "cited": false
+   },
+   "numbers_grounded": false,
+   "latency_s": 18.8
+  },
+  {
+   "id": "follow-03",
+   "split": "dev",
+   "category": "followup",
+   "retrieved": [
+    "Mount Everest",
+    "Mount Everest",
+    "Eiffel Tower",
+    "Mount Everest",
+    "Leonardo da Vinci",
+    "Leonardo da Vinci",
+    "Cristiano Ronaldo",
+    "Lionel Messi"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.3333333333333333,
+    "passage_hit": false,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.17,
+   "answer": "To answer your question, I'll need to clarify that you're asking about the height of Mount Everest. According to the context, the height of Mount Everest is 8,848 m (29,029 ft) above sea level.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 18.2
+  },
+  {
+   "id": "follow-04",
+   "split": "test",
+   "category": "followup",
+   "retrieved": [
+    "Mozart",
+    "William Shakespeare",
+    "Mozart",
+    "Leonardo da Vinci",
+    "Niagara Falls",
+    "Niagara Falls",
+    "Grand Canyon",
+    "Grand Canyon"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 0.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.0,
+    "passage_hit": false,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.2,
+   "answer": "Mozart died on 5 December 1791, at the age of 35.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 18.2
+  },
+  {
+   "id": "follow-05",
+   "split": "dev",
+   "category": "followup",
+   "retrieved": [
+    "Cappadocia",
+    "Mozart",
+    "Nikola Tesla",
+    "Hagia Sophia",
+    "Mustafa Kemal Atatürk",
+    "Mustafa Kemal Atatürk",
+    "Cappadocia",
+    "Hagia Sophia"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.2,
+    "passage_hit": false,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.18,
+   "answer": "Nikola Tesla öldü 1943 yılında, 86 yaşında.",
+   "answer_score": {
+    "refused": false,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": true,
+   "latency_s": 17.5
+  },
+  {
+   "id": "follow-06",
+   "split": "test",
+   "category": "followup",
+   "retrieved": [
+    "Stephen Hawking",
+    "Hagia Sophia",
+    "Frida Kahlo",
+    "Mahatma Gandhi",
+    "Acropolis of Athens",
+    "Cappadocia",
+    "Marie Curie",
+    "Mount Fuji"
+   ],
+   "retrieval": {
+    "success": false,
+    "recall": 1.0,
+    "hit_at_1": false,
+    "reciprocal_rank": 0.5,
+    "passage_hit": false,
+    "forbidden_retrieved": false
+   },
+   "retrieve_s": 4.41,
+   "answer": "I don't know based on the available information.",
+   "answer_score": {
+    "refused": true,
+    "expect_refusal": false,
+    "answer_match": false,
+    "correct": false,
+    "cited": false
+   },
+   "numbers_grounded": null,
+   "latency_s": 18.4
+  }
+ ],
+ "all": {
+  "overall": {
+   "questions": 112,
+   "retrieval_success": 0.77,
+   "entity_recall": 0.855,
+   "hit_at_1": 0.74,
+   "mrr": 0.7835833333333333,
+   "answer_correct": 0.8,
+   "false_refusal": 0.13,
+   "refusal_correct": 1.0,
+   "numbers_grounded": 0.925,
+   "cited_answers": 0.0,
+   "median_latency_s": 17.4
+  },
+  "categories": {
+   "anonymous": {
+    "questions": 30,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.9333333333333333,
+    "mrr": 0.9666666666666667,
+    "answer_correct": 0.9,
+    "false_refusal": 0.06666666666666667,
+    "numbers_grounded": 0.9333333333333333,
+    "cited_answers": 0.0,
+    "median_latency_s": 16.5
+   },
+   "named": {
+    "questions": 18,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 17.8
+   },
+   "list": {
+    "questions": 12,
+    "retrieval_success": 0.5,
+    "entity_recall": 0.5416666666666666,
+    "hit_at_1": 0.25,
+    "mrr": 0.3680555555555556,
+    "answer_correct": 0.5,
+    "false_refusal": 0.4166666666666667,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 10.4
+   },
+   "typo": {
+    "questions": 8,
+    "retrieval_success": 0.875,
+    "entity_recall": 0.875,
+    "hit_at_1": 0.75,
+    "mrr": 0.775,
+    "answer_correct": 0.75,
+    "false_refusal": 0.125,
+    "cited_answers": 0.0,
+    "median_latency_s": 13.7
+   },
+   "ambiguous": {
+    "questions": 6,
+    "retrieval_success": 0.3333333333333333,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 19.7
+   },
+   "compare": {
+    "questions": 6,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 0.75,
+    "cited_answers": 0.0,
+    "median_latency_s": 31.9
+   },
+   "turkish": {
+    "questions": 14,
+    "retrieval_success": 0.5714285714285714,
+    "entity_recall": 0.6428571428571429,
+    "hit_at_1": 0.5,
+    "mrr": 0.550595238095238,
+    "answer_correct": 0.7142857142857143,
+    "false_refusal": 0.2857142857142857,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 17.6
+   },
+   "followup": {
+    "questions": 6,
+    "retrieval_success": 0.0,
+    "entity_recall": 0.5,
+    "hit_at_1": 0.0,
+    "mrr": 0.1722222222222222,
+    "answer_correct": 0.16666666666666666,
+    "false_refusal": 0.16666666666666666,
+    "numbers_grounded": 0.75,
+    "cited_answers": 0.0,
+    "median_latency_s": 18.4
+   },
+   "refusal": {
+    "questions": 12,
+    "refusal_correct": 1.0,
+    "median_latency_s": 16.5
+   }
+  }
+ },
+ "dev": {
+  "overall": {
+   "questions": 56,
+   "retrieval_success": 0.78,
+   "entity_recall": 0.87,
+   "hit_at_1": 0.76,
+   "mrr": 0.7996666666666666,
+   "answer_correct": 0.82,
+   "false_refusal": 0.1,
+   "refusal_correct": 1.0,
+   "numbers_grounded": 1.0,
+   "cited_answers": 0.0,
+   "median_latency_s": 16.5
+  },
+  "categories": {
+   "anonymous": {
+    "questions": 15,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.9333333333333333,
+    "mrr": 0.9666666666666667,
+    "answer_correct": 0.9333333333333333,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 14.2
+   },
+   "named": {
+    "questions": 9,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 18.4
+   },
+   "list": {
+    "questions": 6,
+    "retrieval_success": 0.3333333333333333,
+    "entity_recall": 0.4166666666666667,
+    "hit_at_1": 0.16666666666666666,
+    "mrr": 0.2916666666666667,
+    "answer_correct": 0.5,
+    "false_refusal": 0.5,
+    "cited_answers": 0.0,
+    "median_latency_s": 11.7
+   },
+   "typo": {
+    "questions": 4,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.75,
+    "mrr": 0.8,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 14.9
+   },
+   "ambiguous": {
+    "questions": 3,
+    "retrieval_success": 0.3333333333333333,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 18.1
+   },
+   "compare": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 26.7
+   },
+   "turkish": {
+    "questions": 7,
+    "retrieval_success": 0.7142857142857143,
+    "entity_recall": 0.7142857142857143,
+    "hit_at_1": 0.7142857142857143,
+    "mrr": 0.7142857142857143,
+    "answer_correct": 0.7142857142857143,
+    "false_refusal": 0.2857142857142857,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 15.8
+   },
+   "followup": {
+    "questions": 3,
+    "retrieval_success": 0.0,
+    "entity_recall": 0.6666666666666666,
+    "hit_at_1": 0.0,
+    "mrr": 0.17777777777777778,
+    "answer_correct": 0.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 18.2
+   },
+   "refusal": {
+    "questions": 6,
+    "refusal_correct": 1.0,
+    "median_latency_s": 16.5
+   }
+  }
+ },
+ "test": {
+  "overall": {
+   "questions": 56,
+   "retrieval_success": 0.76,
+   "entity_recall": 0.84,
+   "hit_at_1": 0.72,
+   "mrr": 0.7675,
+   "answer_correct": 0.78,
+   "false_refusal": 0.16,
+   "refusal_correct": 1.0,
+   "numbers_grounded": 0.8571428571428571,
+   "cited_answers": 0.0,
+   "median_latency_s": 17.8
+  },
+  "categories": {
+   "anonymous": {
+    "questions": 15,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 0.9333333333333333,
+    "mrr": 0.9666666666666667,
+    "answer_correct": 0.8666666666666667,
+    "false_refusal": 0.13333333333333333,
+    "numbers_grounded": 0.8888888888888888,
+    "cited_answers": 0.0,
+    "median_latency_s": 17.8
+   },
+   "named": {
+    "questions": 9,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 17.8
+   },
+   "list": {
+    "questions": 6,
+    "retrieval_success": 0.6666666666666666,
+    "entity_recall": 0.6666666666666666,
+    "hit_at_1": 0.3333333333333333,
+    "mrr": 0.4444444444444444,
+    "answer_correct": 0.5,
+    "false_refusal": 0.3333333333333333,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 10.2
+   },
+   "typo": {
+    "questions": 4,
+    "retrieval_success": 0.75,
+    "entity_recall": 0.75,
+    "hit_at_1": 0.75,
+    "mrr": 0.75,
+    "answer_correct": 0.5,
+    "false_refusal": 0.25,
+    "cited_answers": 0.0,
+    "median_latency_s": 11.2
+   },
+   "ambiguous": {
+    "questions": 3,
+    "retrieval_success": 0.3333333333333333,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 1.0,
+    "cited_answers": 0.0,
+    "median_latency_s": 21.4
+   },
+   "compare": {
+    "questions": 3,
+    "retrieval_success": 1.0,
+    "entity_recall": 1.0,
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "answer_correct": 1.0,
+    "false_refusal": 0.0,
+    "numbers_grounded": 0.6666666666666666,
+    "cited_answers": 0.0,
+    "median_latency_s": 32.3
+   },
+   "turkish": {
+    "questions": 7,
+    "retrieval_success": 0.42857142857142855,
+    "entity_recall": 0.5714285714285714,
+    "hit_at_1": 0.2857142857142857,
+    "mrr": 0.3869047619047619,
+    "answer_correct": 0.7142857142857143,
+    "false_refusal": 0.2857142857142857,
+    "cited_answers": 0.0,
+    "median_latency_s": 17.6
+   },
+   "followup": {
+    "questions": 3,
+    "retrieval_success": 0.0,
+    "entity_recall": 0.3333333333333333,
+    "hit_at_1": 0.0,
+    "mrr": 0.16666666666666666,
+    "answer_correct": 0.3333333333333333,
+    "false_refusal": 0.3333333333333333,
+    "numbers_grounded": 0.5,
+    "cited_answers": 0.0,
+    "median_latency_s": 18.4
+   },
+   "refusal": {
+    "questions": 6,
+    "refusal_correct": 1.0,
+    "median_latency_s": 17.3
+   }
+  }
+ }
+}
